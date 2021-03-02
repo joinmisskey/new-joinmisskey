@@ -19,13 +19,15 @@ export default defineComponent({
 html, body {
   margin: 0;
   padding: 0;
-}
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #1d1d1d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-feature-settings:"palt";
+  font-family: GenEiUniverSans-w, SourceHanSans-w, sans-serif;
 }
 </style>

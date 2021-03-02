@@ -1,0 +1,88 @@
+image_compressing_strategy_version: 1.0.0
+images:
+  files:
+    all:
+      image:
+        pngquant:
+        - "--speed=1"
+        mozjpeg:
+        - "-optimize"
+        - "-progressive"
+        concurrent: 16
+      responsive:
+        rotate: true
+        quality: 99
+        compressionLevel: 0
+        progressive: true
+        errorOnEnlargement: false
+        errorOnUnusedConfig: false
+        errorOnUnusedImage: false
+        passThroughUnused: false
+    responsive:
+    - width: 1200
+      withoutEnlargement: true
+      crop: false
+    - width: 1200
+      crop: false
+      withoutEnlargement: true
+      quality: 80
+      # format: webp
+      rename:
+        extname: ".webp"
+    - width: 720
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      rename:
+        suffix: ".720"
+    - width: 720
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      quality: 80
+      # format: webp
+      rename:
+        suffix: ".720"
+        extname: ".webp"
+    - width: 360
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      rename:
+        suffix: ".360"
+    - width: 360
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      quality: 70
+      # format: webp
+      rename:
+        suffix: ".360"
+        extname: ".webp"
+icons:
+  - path: "/files/images/imports/2020/03/icon-2.svg"
+    sizes: 192x192
+    type: "image/svg+xml"
+  - path: "/files/images/imports/2020/03/icon-2-maskable.svg"
+    sizes: 192x192
+    type: "image/svg+xml"
+    purpose: maskable
+  - path: "/files/images/imports/2020/03/icon-2.svg"
+    sizes: 1200x1200
+    type: "image/svg+xml"
+  - path: "/files/images/imports/2020/03/icon-2-maskable.svg"
+    sizes: 1200x1200
+    type: "image/svg+xml"
+    purpose: maskable
+  - path: "/files/images/imports/2020/03/icon-2-maskable.360.png"
+    sizes: 360x360
+    type: "image/png"
+    purpose: maskable
+  - path: "/files/images/imports/2020/03/icon-2-maskable.720.png"
+    sizes: 720x720
+    type: "image/png"
+    purpose: maskable
+  - path: "/files/images/imports/2020/03/icon-2-maskable.png"
+    sizes: 1200x1200
+    type: "image/png"
+    purpose: maskable
