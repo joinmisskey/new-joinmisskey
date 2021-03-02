@@ -9,7 +9,7 @@ const Queue = require('promise-queue');
 
 const instances = loadyaml("../data/instances.yml")
 
-const pqueue = new Queue(20)
+const pqueue = new Queue(32)
 
 getInstancesInfos().then(instanceInfos => {
 	fs.writeFile('./public/instances.json', JSON.stringify(instanceInfos), () => { })
