@@ -21,6 +21,7 @@
     "js-yaml": "^4.0.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.1",
+    "path-browserify": "^1.0.1",
     "promise-queue": "^2.2.5",
     "register-service-worker": "^1.7.1",
     "semver": "^7.3.4",

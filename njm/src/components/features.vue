@@ -1,8 +1,6 @@
 <template>
   <div id="feature-content">
-    <p v-if="featureId === '1'">Feature 1</p>
-    <p v-if="featureId === '2'">Feature 2</p>
-    <p v-if="featureId === '3'">Feature 3</p>
+    <img src=""/>
   </div>
 </template>
 
@@ -10,7 +8,6 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HelloWorld',
   props: {
     featureId: String,
   },

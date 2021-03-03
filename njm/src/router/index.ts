@@ -10,11 +10,6 @@ export function router(lang: string) {
       component: Home
     },
     {
-      path: '/credit',
-      name: 'Credit',
-      component: () => import('../views/Credit.vue')
-    },
-    {
       path: '/instances',
       name: 'Instances',
       component: () => import('../views/Instances.vue')

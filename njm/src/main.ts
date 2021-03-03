@@ -6,6 +6,12 @@ import store from './store'
 import { createI18n } from 'vue-i18n'
 import { loadLocaleMessages } from './i18n'
 
+const redirect = sessionStorage.redirect
+delete sessionStorage.redirect
+if (redirect && redirect !== location.href) {
+    history.replaceState(null, '', redirect)
+}
+
 const supportedLangs = ['ja-JP', 'en-US'];
 const path = location.pathname.split('/');
 let lang: string | null | undefined = localStorage.getItem('lang');
@@ -39,7 +45,7 @@ if (path[1] && supportedLangs.includes(path[1])) {
 const i18n = createI18n({
     legacy: false,
     locale: lang,
-    fallbackLocale: 'ja_JP',
+    fallbackLocale: 'ja-JP',
     messages: loadLocaleMessages()
 });
 
