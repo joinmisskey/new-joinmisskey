@@ -36,7 +36,7 @@ export default defineComponent({
   },
 
   mounted() {
-    setDescription(this.$tc('joinmisskey'), this.$tc('description'));
+    setDescription(this.$t('joinmisskey'), this.$t('description'));
   },
 
   methods: {
