@@ -1,5 +1,14 @@
+const localeMods = require.context('./locales', true, /\.json$/i)
+export const locales = localeMods.keys().reduce((res, key) => {
+    const matched = key.match(/([A-Za-z0-9-_]+)\./i)
+    if (matched && matched.length > 1) {
+      res[matched[1]] = localeMods(key);
+    }
+    return res;
+}, {} as Record<string, Record<string, any>>);
 
-const supportedLangs = ['ja-JP', 'en-US'];
+const supportedLangs = Object.keys(locales);
+
 const path = location.pathname.split('/');
 let _lang: string | null | undefined = localStorage.getItem('lang');
 
@@ -30,6 +39,4 @@ if (path[1] && supportedLangs.includes(path[1])) {
 }
 
 export const lang = _lang;
-
-const localeMods = require.context('./locales', true, /\.json$/i)
-export const locale = localeMods(`./${lang}.json`);
+export const locale = locales[lang];
