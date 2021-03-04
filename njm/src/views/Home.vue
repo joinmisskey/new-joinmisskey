@@ -19,7 +19,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Features from '@/components/features.vue'; // @ is an alias to /src
+import { } from '@fortawesome/free-solid-svg-icons'
+import Features from '@/components/features.vue';
 import { setDescription } from '@/description';
 
 export default defineComponent({

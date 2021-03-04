@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 import App from './App.vue'
 import './registerServiceWorker'
 import { router } from './router'
@@ -19,4 +22,4 @@ app.config.globalProperties = {
 	$ts: i18n.locale,
 };
 
-app.use(store).use(router(lang)).mount('#app');
+app.use(store).use(router(lang)).component('Fa', FontAwesomeIcon).mount('#app');
