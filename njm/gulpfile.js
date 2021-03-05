@@ -18,7 +18,6 @@ gulp.task("image", () => {
 	const streams = []
 	const date = new Date()
 
-
 	const imagesAllFalse = {
 		optipng: false,
 		pngquant: false,
