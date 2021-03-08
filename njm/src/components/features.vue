@@ -1,6 +1,8 @@
 <template>
-  <div id="feature-content">
-    <img src=""/>
+  <div v-if="$store.state.feature" id="features" @click.self="$store.commit('feature', null)">
+    <div id="feature-content">
+      <img src=""/>
+    </div>
   </div>
 </template>
 
@@ -8,26 +10,28 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  props: {
-    featureId: String,
-  },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#features {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 32px;
+  display: flex;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  background-origin: border-box;
+
+  > * {
+    z-index: 1001;
+    margin: auto;
+  }
 }
 </style>
