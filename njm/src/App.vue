@@ -19,7 +19,7 @@ export default defineComponent({
       lang: location.pathname.split('/')[1],
     };
   },
-})
+});
 </script>
 
 <style lang="scss">
@@ -36,5 +36,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-feature-settings:"palt";
   font-family: GenEiUniverSans-w, SourceHanSans-w, sans-serif;
+}
+
+._shadow {
+  box-shadow: 0 4px 32px var(--shadow) !important;
 }
 </style>
