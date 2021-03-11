@@ -4,9 +4,9 @@
     <h1>{{ $t('joinmisskey') }}</h1>
 
     <p>HOME</p>
-    <div @click="$store.commit('feature', '1')">1s</div> 
-    <div @click="$store.commit('feature', '2')">2</div> 
-    <div @click="$store.commit('feature', '3')">3</div>
+    <div @click="$store.commit('feature', 'mfm')">mfm</div> 
+    <div @click="$store.commit('feature', 'reactions')">reactions</div> 
+    <div @click="$store.commit('feature', 'visibility')">visibility</div>
     <p>
       <router-link to="/instances">INSTANCES</router-link>
     </p>

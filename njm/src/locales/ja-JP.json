@@ -19,7 +19,23 @@
   },
 
   "_features": {
-    "posting": "投稿"
+    "posting": "投稿",
+
+    "_details": {
+      "mfm": {
+        "title": "Misskey Flavored Markdown",
+        "description": "MFMのせつめい"
+      },
+      "reactions": {
+        "title": "リアクション",
+        "description": "リアクションのせつめい"
+      },
+      "visibility": {
+        "title": "公開範囲",
+        "description": "公開範囲の説明"
+      }
+
+    }
   },
 
   "instances-list": "インスタンスリスト",
