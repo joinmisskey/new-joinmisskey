@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts">
-import * as path from "path-browserify";
 import { defineComponent } from "vue";
 
 export default defineComponent({
