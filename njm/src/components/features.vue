@@ -4,15 +4,15 @@
     <div id="feature-content" class="_shadow">
       <div id="feature-child">
         <div id="feature-header">
-          <button class="cancel _button" @click="showFeature(null)"><Fa :icon="faTimes"/></button>
+          <button class="cancel _button" @click="showFeature(null)" :aria-label="$ts.close"><Fa :icon="faTimes"/></button>
         </div>
         <Img v-if="img" :src="img" id="feature-image" sizes="95vw, (min-width: 768px) 50vw, (min-width: 1920px) 35vw" />
-        <h1 id="feature-title">{{ $t(`_features._details.${$store.state.feature}.title`) }}</h1>
-        <p id="feature-description">{{ $t(`_features._details.${$store.state.feature}.description`) }}</p>
+        <h1 id="feature-title" v-text="$ts._features._details[$store.state.feature].title"></h1>
+        <p id="feature-description" v-text="$ts._features._details[$store.state.feature].description"></p>
         <div id="feature-paging">
-          <button class="paging-button _button" @click="prev()"><Fa :icon="faChevronLeft"/></button>
+          <button class="paging-button _button" @click="prev()" :aria-label="$ts.prev"><Fa :icon="faChevronLeft"/></button>
           <div class="feature-paging-page">{{ index + 1 }} / {{ features.length }}</div>
-          <button class="paging-button _button" @click="next()"><Fa :icon="faChevronRight"/></button>
+          <button class="paging-button _button" @click="next()" :aria-label="$ts.next"><Fa :icon="faChevronRight"/></button>
         </div>
       </div>
     </div>

@@ -5,9 +5,12 @@
   "description": "Misskeyは、地球で生まれた分散マイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
   "slogan": "新しい世界で<wbr>繋がろう",
 
+  "next": "次へ",
+  "prev": "戻る",
+  "close": "閉じる",
+
   "feature": "機能",
   "instancesList": "",
-  "": "",
 
   "_home": {
     "forever-evolving": "いつまでも進化する<wbr>分散マイクロブログ<wbr>プラットフォーム Misskey（ミスキー）",

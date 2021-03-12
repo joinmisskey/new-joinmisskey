@@ -1,5 +1,5 @@
 <template>
-  <button class="_textButton feature-button" @click="showFeature(name)">{{ $ts._features._details[name].title }}</button>
+  <button class="_textButton feature-button" @click="showFeature(name)" v-text="$ts._features._details[name].title"></button>
 </template>
 
 <script lang="ts">
