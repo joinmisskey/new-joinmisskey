@@ -19,6 +19,12 @@ export default defineComponent({
       lang: location.pathname.split('/')[1],
     };
   },
+
+  mounted() {
+    const html = document.getElementsByTagName('html').item(0);
+    if (html) html.lang = this.lang;
+  }
+
 });
 </script>
 
@@ -30,6 +36,7 @@ html, body {
   font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
   color: var(--fg);
   background: var(--bg);
 }
@@ -82,17 +89,56 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+._buttonPrimary {
+	@extend ._button;
+	color: #fff;
+	background: var(--accent);
+
+	&:not(:disabled):hover {
+		background: var(--X8);
+	}
+
+	&:not(:disabled):active {
+		background: var(--X9);
+	}
+}
+
 ._textButton {
 	@extend ._button;
 	color: var(--accent);
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-width: 100px;
+  padding: 8px 14px;
+  text-align: center;
+  box-shadow: none;
+  text-decoration: none;
+  background: var(--buttonBg);
+  color: var(--fg);
+  border-radius: 999px;
+  overflow: hidden;
 
 	&:not(:disabled):hover {
-		text-decoration: underline;
+    color: var(--fgHighlighted);
+    background: var(--buttonHoverBg);
+    text-decoration: none;
+	}
+}
+
+._textPrimaryButton {
+  @extend ._textButton;
+  color: var(--fg);
+	background: var(--accent);
+
+	&:not(:disabled):hover {
+    background: var(--accentDarken);
+    text-decoration: none;
 	}
 }
 
 :root {
-  --accent: rgb(134, 179, 0);
+  --accent: rgb(126, 168, 0);
   --accentDarken: rgb(96, 128, 0);
   --accentLighten: rgb(172, 230, 0);
   --focus: rgba(134, 179, 0, 0.3);
@@ -105,5 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   --fgHighlighted: rgb(255, 255, 255);
   --radius: 12px;
   --shadow: rgba(0, 0, 0, 0.3);
+  --buttonBg: rgba(255, 255, 255, 0.05);
+  --buttonHoverBg: rgba(255, 255, 255, 0.1);
 }
 </style>

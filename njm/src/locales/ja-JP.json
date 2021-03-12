@@ -1,21 +1,28 @@
 {
   "language": "日本語",
   "joinmisskey": "Misskeyをはじめよう",
+  "joinmisskey-wbr": "Misskeyを<wbr>はじめよう",
   "description": "Misskeyは、地球で生まれた分散マイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
+  "slogan": "新しい世界で<wbr>繋がろう",
 
   "feature": "機能",
+  "instancesList": "",
   "": "",
 
   "_home": {
-    "forever_evolving": "いつまでも進化する分散マイクロブログプラットフォーム",
-    "misskeyisa_decenralized": "Misskeyを見つけていただき、ありがとうございます。Misskeyは、地球で生まれた分散マイクロブログSNSです。Fediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。",
-    "whydontyou_take": "暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
+    "forever-evolving": "いつまでも進化する<wbr>分散マイクロブログ<wbr>プラットフォーム Misskey（ミスキー）",
+    "setup": "自分のインスタンスを建てる",
+    "setup-url": "https://wiki.misskey.io/ja/setup-instance",
+
+    "misskeyisa-decenralized": "Misskeyを見つけていただき、ありがとうございます。Misskeyは、地球で生まれた分散マイクロブログSNSです。Fediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。",
+    "whydontyou-take": "暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
+
 
     "federation": "連合",
-    "federation_detail": "Misskeyはオープンソースソフトウェアであり、自分のサーバー（インスタンス）を作って運営することができます。そして、MisskeyはActivityPubというWeb標準規格のサーバー間通信機能を持っています。これによって、自分のインスタンスと、違うインスタンスやMastodonをはじめとする他のサービスとの間で、ユーザーをフォローしたり投稿を見て反応したりできます。",
+    "federation-detail": "Misskeyはオープンソースソフトウェアであり、自分のサーバー（インスタンス）を作って運営することができます。そして、MisskeyはActivityPubというWeb標準規格のサーバー間通信機能を持っています。これによって、自分のインスタンスと、違うインスタンスやMastodonをはじめとする他のサービスとの間で、ユーザーをフォローしたり投稿を見て反応したりできます。",
 
     "notes": "ノート",
-    "notes_detail": "基本的な投稿機能（Misskeyでは投稿のことを「ノート」とよびます）は、ほかのサービスに比べると機能がたくさんあります。"
+    "notes-detail": "基本的な投稿機能（Misskeyでは投稿のことを「ノート」とよびます）は、ほかのサービスに比べると機能がたくさんあります。"
   },
 
   "_features": {
