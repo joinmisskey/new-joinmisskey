@@ -18,11 +18,13 @@
       </div>
     </div>
 
-    <div id="home-shape-1"></div>
+    <div id="home-shape-1-top"></div>
     <div id="home-1">
+      <Img src="2021/03/misskey.png" alt="Misskey" />
       <p v-text="$ts._home['misskeyisa-decenralized']"></p>
       <p v-text="$ts._home['whydontyou-take']"></p>
     </div>
+    <div id="home-shape-1-end"></div>
 
     <FeatureButton name="mfm" />
   </div>
@@ -33,12 +35,14 @@ import { defineComponent } from 'vue';
 import { } from '@fortawesome/free-solid-svg-icons'
 import { setDescription } from '@/description';
 import FeatureButton from '@/components/feature-button.vue';
+import Img from '@/components/img.vue';
 
 export default defineComponent({
   name: 'Home',
 
   components: {
     FeatureButton,
+    Img,
   },
 
   data() {
@@ -58,17 +62,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 #home {
   width: 100%;
   min-height: 100vh;
 }
 
 #home-0 {
-  display: flex;
   height: 80vh;
   min-height: 35rem;
   max-height: 44rem;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -92,7 +96,7 @@ export default defineComponent({
 
   .home-0-join-misskey {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.3;
     margin-bottom: 0.7rem;
     letter-spacing: 0.03em;
@@ -124,7 +128,7 @@ export default defineComponent({
 
 }
 
-#home-shape-1 {
+#home-shape-1-top {
   width: 100%;
   height: 10vw;
   background: var(--accent);
@@ -134,6 +138,31 @@ export default defineComponent({
 
 #home-1 {
   background: var(--accent);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+
+  img {
+    width: 16rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+#home-shape-1-end {
+  width: 100%;
+  height: 10vw;
+  background: var(--accent);
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  // margin-top: -3vw;
 }
 
 </style>
