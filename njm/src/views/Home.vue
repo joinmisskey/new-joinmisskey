@@ -2,19 +2,21 @@
   <div id="home">
 
     <div id="home-0">
-      <p class="home-0-new-world" v-html="$ts['slogan']"></p>
-      <h1 class="home-0-join-misskey" v-html="$ts['joinmisskey-wbr']"></h1>
-      <p class="home-0-forever-evolving" v-html="$ts._home['forever-evolving']"></p>
-      <div class="home-0-instances-list-button-div">
-        <router-link
-          to="/instances"
-          tag="button"
-          class="_textPrimaryButton home-0-button"
-          v-text="$ts['instances-list']">
-        </router-link>
-        <a :href="$ts._home['setup-url']" class="_textButton home-0-button" target="_blank">
-          {{ $ts._home['setup'] }}
-        </a>
+      <div id="home-0-texts">
+        <p class="home-0-new-world" v-html="$ts['slogan']"></p>
+        <h1 class="home-0-join-misskey" v-html="$ts['joinmisskey-wbr']"></h1>
+        <p class="home-0-forever-evolving" v-html="$ts._home['forever-evolving']"></p>
+        <div class="home-0-instances-list-button-div">
+          <router-link
+            to="/instances"
+            tag="button"
+            class="_textPrimaryButton home-0-button"
+            v-text="$ts['instances-list']">
+          </router-link>
+          <a :href="$ts._home['setup-url']" class="_textButton home-0-button" target="_blank">
+            {{ $ts._home['setup'] }}
+          </a>
+        </div>
       </div>
     </div>
 
@@ -72,57 +74,62 @@ export default defineComponent({
   height: 80vh;
   min-height: 35rem;
   max-height: 44rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 
-  > * {
-    margin: 0;
-    padding: 0 1rem;
-    word-break: keep-all;
-    text-shadow: 0 4px 32px var(--shadow) !important;
-    width: 100%;
-    text-align: center;
-  }
+  #home-0-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  .home-0-new-world {
-    font-size: 2rem;
-    font-weight: 200;
-    letter-spacing: .35em;
-    line-height: 1.3;
-    margin-bottom: 0.5rem;
-  }
-
-  .home-0-join-misskey {
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 1.3;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.03em;
-  }
-
-  .home-0-forever-evolving {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .home-0-instances-list-button-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    > * {
-      margin: .25rem;
+    > p, h1 {
+      margin: 0;
+      padding: 0 1rem;
+      word-break: keep-all;
+      text-shadow: 0 0px 8px #000 !important;
+      width: 100%;
+      text-align: center;
     }
 
-    .home-0-button {
-      padding: 10px 16px;
-      text-align: center;
-      font-weight: 400;
-      font-size: 1.1rem;
-      line-height: 1.5rem;
+    .home-0-new-world {
+      font-size: calc(1.5rem + 0.75vw);
+      font-weight: 200;
+      letter-spacing: .35em;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .home-0-join-misskey {
+      font-size: calc(2rem + 1.5vw);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.02em;
+    }
+
+    .home-0-forever-evolving {
+      font-size: calc(1rem + 0.1vw);
+      margin-bottom: 1rem;
+    }
+
+    .home-0-instances-list-button-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      word-break: keep-all;
+
+      > * {
+        margin: .25rem;
+      }
+
+      .home-0-button {
+        padding: 10px 16px;
+        text-align: center;
+        font-weight: 400;
+        font-size: calc(1rem + 0.1vw);
+        line-height: 1.5em;
+      }
     }
   }
 
@@ -151,6 +158,7 @@ export default defineComponent({
   }
 
   p {
+    font-size: calc(1rem + 0.1vw);
     text-align: center;
     width: 100%;
     padding: 0 1rem;
