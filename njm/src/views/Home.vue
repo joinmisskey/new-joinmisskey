@@ -3,30 +3,30 @@
 
     <div id="home-0">
       <div id="home-0-texts">
-        <p class="home-0-new-world" v-html="$ts['slogan']"></p>
-        <h1 class="home-0-join-misskey" v-html="$ts['joinmisskey-wbr']"></h1>
-        <p class="home-0-forever-evolving" v-html="$ts._home['forever-evolving']"></p>
+        <p class="home-0-new-world" v-html="$ts['slogan']" />
+        <h1 class="home-0-join-misskey" v-html="$ts['joinmisskey-wbr']" />
+        <p class="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
         <div class="home-0-instances-list-button-div">
           <router-link
             to="/instances"
             tag="button"
             class="_textPrimaryButton home-0-button"
-            v-text="$ts['instances-list']">
-          </router-link>
-          <a :href="$ts._home['setup-url']" class="_textButton home-0-button" target="_blank">
-            {{ $ts._home['setup'] }}
-          </a>
+            v-text="$ts['instances-list']"
+          />
+          <a :href="$ts._home['setup-url']" class="_textButton home-0-button" target="_blank" v-text="$ts._home['setup']" />
+          <Img src="2021/03/1273-desktop.png" class="home-0-desktop" alt="Desktop" />
+          <Img src="2021/03/1273-iphone.png" class="home-0-mobile" alt="Mobile" />
         </div>
       </div>
     </div>
 
-    <div id="home-shape-1-top"></div>
+    <div id="home-shape-1-top" />
     <div id="home-1">
       <Img src="2021/03/misskey.png" alt="Misskey" />
       <p v-text="$ts._home['misskeyisa-decenralized']"></p>
       <p v-text="$ts._home['whydontyou-take']"></p>
     </div>
-    <div id="home-shape-1-end"></div>
+    <div id="home-shape-1-end" />
 
     <FeatureButton name="mfm" />
   </div>
@@ -94,7 +94,7 @@ export default defineComponent({
     .home-0-new-world {
       font-size: calc(1.5rem + 0.75vw);
       font-weight: 200;
-      letter-spacing: .35em;
+      letter-spacing: .30em;
       line-height: 1.3;
       margin-bottom: 0.5rem;
     }
@@ -131,8 +131,18 @@ export default defineComponent({
         line-height: 1.5em;
       }
     }
+
   }
 
+  .home-0-desktop {
+    position: absolute;
+    z-index: -2;
+  }
+
+  .home-0-mobile {
+    position: absolute;
+    z-index: -3;
+  }
 }
 
 #home-shape-1-top {
