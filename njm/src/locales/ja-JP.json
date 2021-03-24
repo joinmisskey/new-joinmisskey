@@ -1,16 +1,15 @@
 {
   "language": "日本語",
   "joinmisskey": "Misskeyをはじめよう",
-  "joinmisskey-wbr": "Misskeyを<wbr>はじめよう",
   "description": "Misskeyは、地球で生まれた分散マイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
   "slogan": "新しい世界で<wbr>繋がろう",
 
   "next": "次へ",
   "prev": "戻る",
   "close": "閉じる",
+  "loading": "読み込み中",
 
   "feature": "機能",
-  "instancesList": "",
 
   "_home": {
     "forever-evolving": "いつまでも進化する<wbr>分散マイクロブログ<wbr>プラットフォーム Misskey（ミスキー）",
@@ -48,6 +47,9 @@
     }
   },
 
-  "instances-list": "インスタンスリスト",
-  "instances-list-description": "Misskeyインスタンスを一覧で表示します。"
+  "instances-list": "インスタンス一覧",
+  "instances-list-description": "Misskeyインスタンスを一覧で表示します。",
+
+  "404-text": "お探しのページは見つかりませんでした。",
+  "toppage": "トップページ"
 }

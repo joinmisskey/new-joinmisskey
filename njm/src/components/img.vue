@@ -18,6 +18,7 @@
       :alt="alt"
       :title="title"
       :loading="loading"
+      :sizes="sizes"
     />
   </picture>
 </template>
