@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import punycode from 'punycode';
+import punycode from 'punycode/punycode.es6';
 
 export default defineComponent({
   name: 'Instances',
