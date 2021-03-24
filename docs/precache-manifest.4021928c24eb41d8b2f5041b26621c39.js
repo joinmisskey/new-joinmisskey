@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/.nojekyll"
   },
   {
-    "revision": "a654bc9faf80d43d87ef951bac49ddc3",
+    "revision": "bf97049177083686a6ecc8b3e9d12f66",
     "url": "/404.html"
   },
   {
