@@ -1,11 +1,11 @@
-import merge from 'deepmerge';
+import * as extend from 'extend';
 const localeMods = require.context('./locales', true, /\.json$/i)
 const ja = localeMods('./ja-JP.json');
 
 export const locales = localeMods.keys().reduce((res, key) => {
     const matched = key.match(/([A-Za-z0-9-_]+)\./i)
     if (matched && matched.length > 1) {
-      res[matched[1]] = merge(ja, localeMods(key));
+      res[matched[1]] = extend({}, ja, localeMods(key));
     }
     return res;
 }, {} as Record<string, Record<string, any>>);
