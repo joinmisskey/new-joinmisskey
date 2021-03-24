@@ -27,12 +27,8 @@ export default defineComponent({
   data() {
     return {
       uniUrl: punycode.toUnicode(this.instance.url),
-      hasName: this.instance.meta.name ? this.instance.meta.name !== this.uniUrl : false,
+      hasName: this.instance.meta.name && this.instance.meta.name !== this.uniUrl,
     }
-  },
-
-  created() {
-    console.log(this.uniUrl, punycode)
   },
 
   methods: {
