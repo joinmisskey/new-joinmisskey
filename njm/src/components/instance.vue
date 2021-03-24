@@ -31,6 +31,10 @@ export default defineComponent({
     }
   },
 
+  created() {
+    console.log(this.uniUrl, punycode)
+  },
+
   methods: {
   },
 });
