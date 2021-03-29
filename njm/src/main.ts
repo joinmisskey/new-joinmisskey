@@ -1,8 +1,5 @@
-const redirect = sessionStorage.getItem('redirect');
-sessionStorage.removeItem('redirect');
-if (redirect && redirect !== location.href) {
-	console.log(redirect)
-    history.replaceState(null, '', redirect)
+if (location.href.includes('wiki/instances')) {
+    history.replaceState(null, '', '/instances')
 }
 
 import { createApp } from 'vue'

@@ -4,10 +4,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/.nojekyll"
   },
   {
-    "revision": "bf97049177083686a6ecc8b3e9d12f66",
-    "url": "/404.html"
-  },
-  {
     "revision": "dcacef0c60c64f6a3a6ae163bc552bd1",
     "url": "/CNAME"
   },
@@ -16,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ads.txt"
   },
   {
-    "revision": "b66de8a180185a826a04",
+    "revision": "0186e905e2809fb08780",
     "url": "/css/app.0f1d70d0.css"
   },
   {
@@ -200,12 +196,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/2021/03/visibility.webp"
   },
   {
-    "revision": "584f68599923565db20e044653291b8b",
+    "revision": "cc04fa8444b8ccef21b38290de814795",
     "url": "/index.html"
   },
   {
-    "revision": "b66de8a180185a826a04",
-    "url": "/js/app.d3a476f8.js"
+    "revision": "0186e905e2809fb08780",
+    "url": "/js/app.438300b0.js"
   },
   {
     "revision": "82a3226b966a10378072",
@@ -226,10 +222,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0f368957c627867ef70728c3ba82c4ec",
     "url": "/manifest.json"
-  },
-  {
-    "revision": "f31f7cb34b7c60cd7fd4b2e6bcbc65aa",
-    "url": "/public/_redirect"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
