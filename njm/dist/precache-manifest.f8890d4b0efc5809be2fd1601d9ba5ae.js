@@ -12,7 +12,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "26769bb5271f2b7bb61d",
+    "revision": "121c9525791e7a9bf5cd296f526d4125",
+    "url": "/ads.txt"
+  },
+  {
+    "revision": "b66de8a180185a826a04",
     "url": "/css/app.0f1d70d0.css"
   },
   {
@@ -196,12 +200,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/2021/03/visibility.webp"
   },
   {
-    "revision": "15e22ded08eb8c3858cfd298f92933e0",
+    "revision": "584f68599923565db20e044653291b8b",
     "url": "/index.html"
   },
   {
-    "revision": "26769bb5271f2b7bb61d",
-    "url": "/js/app.bcebbe7f.js"
+    "revision": "b66de8a180185a826a04",
+    "url": "/js/app.d3a476f8.js"
   },
   {
     "revision": "82a3226b966a10378072",
@@ -222,6 +226,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0f368957c627867ef70728c3ba82c4ec",
     "url": "/manifest.json"
+  },
+  {
+    "revision": "f31f7cb34b7c60cd7fd4b2e6bcbc65aa",
+    "url": "/public/_redirect"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",

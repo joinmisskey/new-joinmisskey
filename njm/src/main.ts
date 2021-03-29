@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
+const redirect = sessionStorage.getItem('redirect');
+sessionStorage.removeItem('redirect');
+if (redirect && redirect !== location.href) {
+	console.log(redirect)
+    history.replaceState(null, '', redirect)
+}
 
+import { createApp } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import App from './App.vue'
@@ -8,13 +14,6 @@ import { router } from './router'
 import store from './store'
 import { i18n } from './i18n'
 import { lang } from './locale'
-
-const redirect = sessionStorage.getItem('redirect');
-sessionStorage.removeItem('redirect');
-if (redirect && redirect !== location.href) {
-	console.log(redirect)
-    history.replaceState(null, '', redirect)
-}
 
 const app = createApp(App);
 
