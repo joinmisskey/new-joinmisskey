@@ -3,10 +3,10 @@
 
     <div id="home-0">
       <div id="home-0-texts">
-        <p class="home-0-new-world" v-html="$ts['slogan']" />
-        <Img src="2021/03/misskey.png" alt="Misskey" class="home-0-join-misskey" sizes="18rem" />
-        <p class="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
-        <div class="home-0-instances-list-button-div">
+        <p id="home-0-new-world" v-html="$ts['slogan']" />
+        <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" />
+        <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
+        <div id="home-0-instances-list-button-div">
           <router-link
             to="/instances"
             tag="button"
@@ -17,8 +17,8 @@
         </div>
       </div>
 
-      <Img src="2021/03/1273-desktop.png" class="home-0-desktop" alt="Desktop" sizes="70vw" />
-      <Img src="2021/03/1273-iphone.png" class="home-0-mobile" alt="Mobile" sizes="(max-width: 888px) 160px, 18vw" />
+      <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="70vw" />
+      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 888px) 160px, 18vw" />
 
       <div id="home-shape-1-top" />
     </div>
@@ -90,115 +90,112 @@ export default defineComponent({
   min-height: calc(37rem + 10vw);
   position: relative;
   overflow: hidden;
+}
 
-  #home-0-texts {
-    position: absolute;
+#home-0-texts {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+
+  > p {
+    padding: 0 1rem;
+    word-break: keep-all;
+    text-shadow: 0 0px 8px #000 !important;
     width: 100%;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 10;
+    text-align: center;
+  }
+}
 
-    > p {
-      margin: 0;
-      padding: 0 1rem;
-      word-break: keep-all;
-      text-shadow: 0 0px 8px #000 !important;
-      width: 100%;
-      text-align: center;
-    }
+#home-0-new-world {
+  font-size: calc(1.5rem + 0.75vw);
+  font-weight: 200;
+  letter-spacing: .2em;
+  line-height: 1.2;
+  margin: 0;
+}
 
-    .home-0-new-world {
-      font-size: calc(1.5rem + 0.75vw);
-      font-weight: 200;
-      letter-spacing: .2em;
-      line-height: 1.2;
-    }
+#home-0-join-misskey {
+  display: flex;
+  width: 100%;
+  padding: 0 1rem;
+  opacity: 0.95;
 
-    .home-0-join-misskey {
-      display: flex;
-      width: 100%;
-      padding: 0 1rem;
-      opacity: 0.95;
+  img {
+    margin: auto;
+    width: 18rem;
+    max-width: 100%;
+  }
+}
 
-      img {
-        margin: auto;
-        width: 18rem;
-        max-width: 100%;
-      }
-    }
+#home-0-forever-evolving {
+  font-size: calc(1rem + 0.1vw);
+  margin-bottom: 1rem;
+}
 
-    .home-0-forever-evolving {
-      font-size: calc(1rem + 0.1vw);
-      margin-bottom: 1rem;
-    }
-
-    .home-0-instances-list-button-div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      word-break: keep-all;
-
-      > * {
-        margin: .25rem;
-      }
-
-      .home-0-button {
-        padding: 0.6em 1.5em;
-        text-align: center;
-        font-weight: 400;
-        font-size: calc(1rem + 0.1vw);
-        line-height: 1.5em;
-
-        &._textButton {
-          background: #2e2e2e;
-        }
-      }
-    }
-
+#home-0-instances-list-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  word-break: keep-all;
+  > * {
+    margin: .25rem;
   }
 
-  .home-0-desktop {
-    display: flex;
-    position: absolute;
-    z-index: 2;
-    top: calc(55% + (1030px - 100vw) * 0.1);
-    bottom: 0;
-    right: 0;
-    left: 30vw;
-    max-width: 75rem;
-
-    img {
-      object-fit: cover;
-      object-position: left top;
-      height: 100%;
-      width: 100%;
+  .home-0-button {
+    padding: 0.6em 1.5em;
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(1rem + 0.1vw);
+    line-height: 1.5em;
+    &._textButton {
+      background: #2e2e2e;
     }
   }
+}
 
-  .home-0-mobile {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    left: 5%;
+#home-0-desktop {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: calc(55% + (1030px - 100vw) * 0.1);
+  bottom: 0;
+  right: 0;
+  left: 30vw;
+  max-width: 75rem;
 
-    img {
-      width: 18vw;
-      min-width: 10rem;
-    }
-  }
-
-  #home-shape-1-top {
+  img {
+    object-fit: cover;
+    object-position: left top;
+    height: 100%;
     width: 100%;
-    height: 10vw;
-    background: var(--accent);
-    clip-path: polygon(100% 0, 0 100%, 100% 100%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 20;
   }
+}
+
+#home-0-mobile {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 5%;
+
+  img {
+    width: 18vw;
+    min-width: 10rem;
+  }
+}
+
+#home-shape-1-top {
+  width: 100%;
+  height: 10vw;
+  background: var(--accent);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
 }
 
 #home-1 {
@@ -221,39 +218,37 @@ export default defineComponent({
     width: 100%;
     max-width: 60rem;
   }
+}
 
-  #home-1-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    word-break: keep-all;
-    padding: 2rem 0;
+#home-1-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  word-break: keep-all;
+  padding: 2rem 0;
 
-    > * {
-      margin: .25rem;
+  > * {
+    margin: .25rem;
+  }
+
+  a {
+    padding: 0.6em 1.5em;
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(1rem + 0.05vw);
+    line-height: 1.5em;
+    min-width: 8rem;
+    &:hover {
+      opacity: 0.8;
     }
-
-    a {
-      padding: 0.6em 1.5em;
-      text-align: center;
-      font-weight: 400;
-      font-size: calc(1rem + 0.05vw);
-      line-height: 1.5em;
-      min-width: 8rem;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &.home-1-gh {
-        color: #fff;
-        background: #000;
-      }
-      &.home-1-pa {
-        color: #fff;
-        background: #ff424d;
-      }
+    &.home-1-gh {
+      color: #fff;
+      background: #000;
+    }
+    &.home-1-pa {
+      color: #fff;
+      background: #ff424d;
     }
   }
 }

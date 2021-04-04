@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.f4f571ef384f3062e6256691007e8f76.js"
+  "/precache-manifest.956cb361a49ead8f0bb507d1ea5012e3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "joinmisskey"});

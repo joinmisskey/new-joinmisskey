@@ -1,16 +1,17 @@
+import '@/default.scss';
+
 if (location.href.includes('wiki/instances')) {
-    history.replaceState(null, '', '/instances')
+    history.replaceState(null, '', '/instances');
 }
 
-import { createApp } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { createApp } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App.vue'
-// import './registerServiceWorker'
-import { router } from './router'
-import store from './store'
-import { i18n } from './i18n'
-import { lang } from './locale'
+import { router } from './router';
+import store from './store';
+import { i18n } from './i18n';
+import { lang } from './locale';
 
 const app = createApp(App);
 

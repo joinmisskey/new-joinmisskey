@@ -109,86 +109,84 @@ export default defineComponent({
     z-index: 1001;
     margin: auto;
   }
+}
 
-  #feature-content {
-    max-width: 1080px;
-    width: calc(100vw - 32px);
-    max-height: 720px;
-    height: calc(100vh - 32px);
+#feature-content {
+  max-width: 1080px;
+  width: calc(100vw - 32px);
+  max-height: 720px;
+  height: calc(100vh - 32px);
+  background: var(--bg);
+  border-radius: var(--radius);
+}
 
-    background: var(--bg);
-    border-radius: var(--radius);
-  }
+#feature-child {
+  display: grid;
+  grid-template-rows: 4rem calc(100% - 21.5rem) 1rem 5.5rem 1rem 6.5rem 3.5rem;
+  width: 100%;
+  height: 100%;
+}
 
-  #feature-child {
-    display: grid;
-    grid-template-rows: 4rem calc(100% - 21.5rem) 1rem 5.5rem 1rem 6.5rem 3.5rem;
-    width: 100%;
-    height: 100%;
-  }
+#feature-header {
+  display: flex;
+  padding: 0;
 
-  #feature-header {
-    display: flex;
+  .cancel {
+    margin: 0 0 0 auto;
     padding: 0;
+    font-size: 20px;
+    width: 4rem;
+    line-height: 4rem;
+  }
+}
 
-    .cancel {
-      margin: 0 0 0 auto;
-      padding: 0;
-      font-size: 20px;
-      width: 4rem;
-      line-height: 4rem;
-    }
+#feature-image {
+  grid-row: 2 / 3;
+  display: flex;
+  padding: 0;
+}
+
+#feature-title {
+  grid-row: 4 / 5;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#feature-description {
+  grid-row: 6 / 7;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 1.1em;
+}
+
+#feature-paging {
+  grid-row: 7 / 8;
+  display: flex;
+  justify-content: space-between;
+
+  .paging-button {
+    width: 3.5rem;
+    line-height: 3.5rem;
   }
 
-  #feature-image {
-    grid-row: 2 / 3;
-    display: flex;
-    padding: 0;
-  }
-
-  #feature-title {
-    grid-row: 4 / 5;
-    margin: 0;
-    padding: 0 1rem;
-    line-height: 1.2em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #feature-description {
-    grid-row: 6 / 7;
-    margin: 0;
-    padding: 0 1rem;
-    font-size: 1.1em;
-  }
-
-  #feature-paging {
-    grid-row: 7 / 8;
-    display: flex;
-    justify-content: space-between;
-
-    .paging-button {
-      width: 3.5rem;
-      line-height: 3.5rem;
-    }
-
-    .feature-paging-page {
-      font-weight: 200;
-      font-size: 1.2rem;
-      line-height: 3.5rem;
-    }
+  .feature-paging-page {
+    font-weight: 200;
+    font-size: 1.2rem;
+    line-height: 3.5rem;
   }
 }
 </style>
 
 <style lang="scss">
-  #feature-image {
-    img {
-      margin: auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
+#feature-image {
+  img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
+}
 </style>

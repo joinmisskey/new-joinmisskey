@@ -30,6 +30,15 @@ export default defineComponent({
     return {
       uniUrl,
       hasName: this.instance.meta.name && this.instance.meta.name !== uniUrl,
+      languages: new Map([
+        ['ja', '日本語'],
+        ['ko', '한국어'],
+        ['zh', '中文'],
+        ['zh-cmn-Hans', '中文 (简体字)'],
+        ['zh-cmn-Hant', '中文 (繁體字)'],
+        ['en', 'English'],
+        ['fr', 'français'],
+      ])
     }
   },
 
@@ -39,24 +48,24 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-  .instance {
-    display: block;
-    color: var(--fg);
+.instance {
+  display: block;
+  color: var(--fg);
 
-    .hasName {
-      .instance-name {
-        font-weight: 700;
-      }
-    }
-    
-    :not(.hasName) {
-      .instance-url {
-        font-weight: 700;
-      }
+  .hasName {
+    .instance-name {
+      font-weight: 700;
     }
   }
 
-  .text-bold {
-    font-weight: 700;
+  :not(.hasName) {
+    .instance-url {
+      font-weight: 700;
+    }
   }
+}
+
+.text-bold {
+  font-weight: 700;
+}
 </style>

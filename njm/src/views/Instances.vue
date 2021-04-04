@@ -51,11 +51,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-  #instances {
-    margin: 1rem;
+#instances {
+  margin: 1rem;
 
-    .instance {
-      margin-bottom: 1rem;
-    }
+  .instance {
+    margin-bottom: 1rem;
   }
+}
 </style>
