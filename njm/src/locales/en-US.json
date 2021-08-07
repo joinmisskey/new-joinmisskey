@@ -1,9 +1,9 @@
 {
-  "language": "日本語",
-  "joinmisskey": "Misskeyをはじめよう",
+  "language": "English (US)",
+  "joinmisskey": "Let's start Misskey",
   "description": "Misskeyは、地球で生まれた分散マイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
   "slogan": "新しい世界で<wbr>繋がろう",
-  "next": "Next",
+  "next": "次へ",
   "prev": "戻る",
   "close": "閉じる",
   "loading": "読み込み中",
