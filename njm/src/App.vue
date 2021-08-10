@@ -11,7 +11,6 @@ import Features from '@/components/features.vue';
 import { lang } from '@/locale';
 import { insertLocaleFonts } from '@/main.insert-locale-fonts';
 
-
 export default defineComponent({
   components: {
     Features
