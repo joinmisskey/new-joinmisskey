@@ -1,3 +1,4 @@
+import { markRaw } from "vue";
 import { lang } from "./locale";
 
 export const repositories = ['syuilo/misskey', 'mei23/misskey'] as const;
@@ -15,9 +16,9 @@ export interface InstancesSetting {
     language: typeof instanceLanguages[number][];
 };
 
-export const defaultInstancesSetting: InstancesSetting = {
+export const defaultInstancesSetting: InstancesSetting = markRaw({
     repository: [...repositories],
     sortCriteria: 'default',
     sortDescendingOrder: true,
     language: languageLookup[lang] || [...instanceLanguages],
-};
+});

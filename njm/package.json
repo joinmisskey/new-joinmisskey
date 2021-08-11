@@ -47,6 +47,9 @@
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3"
   },
+  "resolutions": {
+    "sharp": "~0.28.3"
+  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
