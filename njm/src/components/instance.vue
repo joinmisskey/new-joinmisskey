@@ -1,17 +1,22 @@
 <template>
-  <a :href="`https://${instance.url}/`" class="instance">
+  <a :href="`https://${instance.url}/`" target="_blank" class="instance" :lang="instance.langs[0]">
     <div class="instance-title" :class="{ hasName }">
       <template v-if="hasName"><span class="instance-name" v-text="instance.meta.name" /> <span class="instance-url" v-text="uniUrl" /></template>
       <template v-else><span class="instance-url" v-text="uniUrl" /></template>
     </div>
-
-    <div>value: {{instance.value}}</div>
+    <div v-if="description" v-text="description"/>
+    <div class="instance-registration">{{ $ts['instances-list-setting']['registration'] }}: {{ instance.meta.features.registration ? $ts['instances-list-setting']['registration-statuses'].open : $ts['instances-list-setting']['registration-statuses'].close }}</div>
+    <div class="instance-version">{{ instance.repo }} {{ instance.meta.version }}</div>
+    <div class="instance-stats">{{ numeral(instance.stats.originalNotesCount).format('0,0') }} notes
+      | {{ numeral(instance.stats.originalUsersCount).format('0,0') }} users
+      {{ instance.stats.reactionsCount && `| ${numeral(instance.stats.reactionsCount).format('0,0')} reactions` }}</div>
   </a>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import punycode from 'punycode/punycode';
+import * as numeral from 'numeral';
 
 export default defineComponent({
   name: 'Instances',
@@ -32,15 +37,20 @@ export default defineComponent({
     return {
       uniUrl,
       hasName: this.instance.meta.name && this.instance.meta.name !== uniUrl,
-      languages: new Map([
-        ['ja', '日本語'],
-        ['ko', '한국어'],
-        ['zh', '中文'],
-        ['zh-cmn-Hans', '中文 (简体字)'],
-        ['zh-cmn-Hant', '中文 (繁體字)'],
-        ['en', 'English'],
-        ['fr', 'français'],
-      ])
+      numeral,
+    }
+  },
+
+  computed: {
+    description() {
+      if (this.instance.description) {
+        const div = document.createElement('div');
+        div.innerHTML = this.instance.description.trim();
+        const text = div.textContent || '';
+        return text.length < 110 ? text : `${text.slice(0, 100)}......`;
+      }
+
+      return null;
     }
   },
 
@@ -53,6 +63,11 @@ export default defineComponent({
 .instance {
   display: block;
   color: var(--fg);
+  text-decoration: none;
+
+  &:hover {
+    color: #fff !important;
+  }
 
   .hasName {
     .instance-name {
@@ -67,7 +82,14 @@ export default defineComponent({
   }
 }
 
-.text-bold {
-  font-weight: 700;
+.instance-title {
+  text-decoration: underline;
 }
+
+.instance-version,
+.instance-registration,
+.instance-stats {
+  font-size: .8em;
+}
+
 </style>

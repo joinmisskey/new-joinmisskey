@@ -1,6 +1,5 @@
 import { defaultInstancesSetting, InstancesSetting } from '@/instances-list-setting';
 import { createStore } from 'vuex';
-import { reactive } from "vue";
 
 export default createStore({
   state: {
