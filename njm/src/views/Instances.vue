@@ -106,7 +106,7 @@ export default defineComponent({
 
     },
     sort() {
-      let sorted = (this as any).instances;
+      let sorted = this.instances;
 
       //#region sort order
       sorted = sorted.sort((a, b) => {
