@@ -50,6 +50,22 @@
   "instances-list": "インスタンス一覧",
   "instances-list-description": "Misskeyインスタンスを一覧で表示します。",
 
+  "instances-list-setting": {
+    "setting": "リスト",
+    "order": "並び順",
+    "orders": {
+      "default": "デフォルト",
+      "version": "バージョン",
+      "originalNotesCount": "ノート数",
+      "originalUsersCount": "ユーザー数",
+      "reactionsCount": "リアクション数"
+    },
+    "descending": "降順",
+    "ascending": "昇順",
+
+    "accept": "適用"
+  },
+
   "404-text": "お探しのページは見つかりませんでした。",
   "toppage": "トップページ"
 }

@@ -5,15 +5,50 @@
     <h1 v-text="$ts['instances-list']" />
     <p v-text="$ts['instances-list-description']" />
     <div id="instances-list" v-if="!loading">
-      <Instance v-for="instance in instances" :key="instance.url" :instance="instance" />
+      <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
   </div>
 
   <transition :name="'instances-setting'" appear :duration="{ enter: 300, leave: 300 }">
-    <div v-if="showSetting" id="instances-setting" @click.self="() => showSetting = false">
+    <div v-if="showSetting" id="instances-setting" @click.self="acceptSetting">
       <div id="setting-content" class="_shadow">
-        WIP
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h3 v-text="$ts['instances-list-setting']['order']" />
+              <div class="input-group mb-3">
+                <select class="form-select" v-model="orderBy" :aria-label="$ts['instances-list-setting']['order']">
+                  <option
+                    v-for="option in orderOptions"
+                    :key="option"
+                    :value="option"
+                    v-text="$ts['instances-list-setting']['orders'][option]" />
+                </select>
+                <select class="form-select" v-model="orderDesc" :aria-label="$ts['instances-list-setting']['descending']">
+                  <option
+                    :value="true"
+                    v-text="$ts['instances-list-setting']['descending']" />
+                  <option
+                    :value="false"
+                    v-text="$ts['instances-list-setting']['ascending']" />
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              aaa
+            </div>
+            <div class="col-12">
+              aaa
+            </div>
+            <div class="col-12">
+              aaa
+            </div>
+            <div class="col-12">
+              <button type="button" class="btn btn-primary ml-auto" @click="acceptSetting" v-text="$ts['instances-list-setting']['accept']" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </transition>
@@ -23,6 +58,7 @@
 import { defineComponent } from 'vue';
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
+import { InstancesSetting, repositories, orderOptions, instanceLanguages } from '@/instances-list-setting';
 
 export default defineComponent({
   name: 'Instances',
@@ -35,8 +71,14 @@ export default defineComponent({
     return {
       loading: true,
       instances: [] as any[],
-      sortedInstances: [] as any[],
+      sorted: [] as any[],
       showSetting: false,
+
+      repositories,
+      orderOptions,
+      instanceLanguages,
+
+      ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
     }
   },
 
@@ -45,9 +87,11 @@ export default defineComponent({
       .then(res => res.json())
       .then(res => {
         this.loading = false;
-        this.instances = [].concat(res.instancesInfos);
-        this.sortedInstances = [].concat(res.instancesInfos);
+        this.instances = [...res.instancesInfos];
+
+        this.sort();
       });
+
   },
 
   mounted() {
@@ -55,7 +99,28 @@ export default defineComponent({
   },
 
   methods: {
-    
+    acceptSetting() {
+      this.showSetting = false;
+
+      this.sort();
+
+    },
+    sort() {
+      let sorted = (this as any).instances;
+
+      //#region sort order
+      sorted = sorted.sort((a, b) => {
+        switch (this.orderBy) {
+          case 'default':
+            return (b.value - a.value) * (this.orderDesc ? 1 : -1);
+        }
+
+        return 0;
+      })
+      //#endregion
+
+      this.sorted = sorted;
+    }
   },
 });
 </script>

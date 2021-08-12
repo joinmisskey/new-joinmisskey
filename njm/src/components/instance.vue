@@ -4,6 +4,8 @@
       <template v-if="hasName"><span class="instance-name" v-text="instance.meta.name" /> <span class="instance-url" v-text="uniUrl" /></template>
       <template v-else><span class="instance-url" v-text="uniUrl" /></template>
     </div>
+
+    <div>value: {{instance.value}}</div>
   </a>
 </template>
 

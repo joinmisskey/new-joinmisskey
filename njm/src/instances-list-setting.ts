@@ -1,7 +1,8 @@
-import { markRaw } from "vue";
+import { reactive } from "vue";
 import { lang } from "./locale";
 
 export const repositories = ['syuilo/misskey', 'mei23/misskey'] as const;
+export const orderOptions = ['default', 'version', 'originalNotesCount', 'originalUsersCount', 'reactionsCount'] as const;
 export const instanceLanguages = ['ja', 'en', 'de', 'fr', 'zh', 'ko', 'ru', 'de', 'th', 'es'] as const;
 
 const languageLookup: { [x: string]: typeof instanceLanguages[number][] } = {
@@ -11,14 +12,16 @@ const languageLookup: { [x: string]: typeof instanceLanguages[number][] } = {
 
 export interface InstancesSetting {
     repository: typeof repositories[number][];
-    sortCriteria: 'default' | 'version';
-    sortDescendingOrder: boolean;
+    orderBy: typeof orderOptions[number];
+    orderDesc: boolean;
+    registrationStatus: 'open' | 'close' | 'all';
     language: typeof instanceLanguages[number][];
-};
+}
 
-export const defaultInstancesSetting: InstancesSetting = markRaw({
+export const defaultInstancesSetting: InstancesSetting = reactive({
     repository: [...repositories],
-    sortCriteria: 'default',
-    sortDescendingOrder: true,
+    orderBy: 'default',
+    orderDesc: true,
+    registrationStatus: 'open',
     language: languageLookup[lang] || [...instanceLanguages],
 });
