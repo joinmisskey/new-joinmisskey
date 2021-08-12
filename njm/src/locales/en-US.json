@@ -39,10 +39,25 @@
   "instances-list": "インスタンス一覧",
   "instances-list-description": "Misskeyインスタンスを一覧で表示します。",
   "instances-list-setting": {
+    "setting": "List Setting",
+    "order": "Order",
     "orders": {
+      "default": "Default",
+      "version": "Version",
+      "originalNotesCount": "Number of Notes",
+      "originalUsersCount": "Number of Users",
+      "reactionsCount": "Number of Reactions"
     },
+    "descending": "Descending",
+    "ascending": "Ascending",
+    "repository": "Repository",
+    "language": "Language",
+    "registration": "New Registration",
     "registration-statuses": {
-    }
+      "open": "Open",
+      "close": "Closed"
+    },
+    "accept": "Apply"
   },
   "404-text": "お探しのページは見つかりませんでした。",
   "toppage": "トップページ"
