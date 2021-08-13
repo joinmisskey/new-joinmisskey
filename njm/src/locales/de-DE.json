@@ -1,0 +1,55 @@
+{
+  "language": "Deutsch",
+  "joinmisskey": "Misskey beitreten",
+  "description": "Misskey ist ein verteiltes Soziales Netzwerk für Microblogging, das auf der Erde geboren wurde. Lassen Sie uns für eine Weile der Hektik der Stadt entfliehen und tauchen Sie ein in das neue Internet.",
+  "slogan": "Lassen Sie uns in einer neuen Welt zusammenkommen!",
+  "next": "weiter",
+  "prev": "zurück",
+  "close": "schließen",
+  "loading": "wird geladen",
+  "feature": "Funktionen",
+  "_home": {
+    "forever-evolving": "Misskey, die sich immer weiter entwickelnde Microblogging-Plattform.",
+    "setup": "eine eigene Instanz erstellen (englische Anleitung)",
+    "setup-url": "https://github.com/misskey-dev/misskey/blob/master/docs/setup.en.md",
+    "misskeyisa-decenralized": "Danke, dass Sie Misskey gefunden haben. Misskey ist ein verteiltes Microblogging-Netzwerk, das auf der Erde geboren wurde. Da es im Fediverse (einem Universum bestehend aus verschiedenen sozialen Netzwerken) existiert, ist es mit anderen sozialen Netzwerken verbunden.",
+    "whydontyou-take": "Lassen Sie uns für eine Weile der Hektik der Stadt entfliehen und in das neue Internet eintauchen.",
+    "federation": "Föderierung",
+    "federation-detail": "Misskey ist eine Open-Source-Software, mit der Sie Ihren eigenen Server (Instanz) erstellen und betreiben können. Misskey nutzt den Webstandard ActivityPub um zu kommunizieren. So können Sie Benutzern folgen, oder Inhalte von anderen Instanzen (z.B. auch Mastodon) anzeigen und mit diesen interagieren."
+  },
+  "_features": {
+    "_details": {
+      "mfm": {
+      },
+      "reactions": {
+      },
+      "visibility": {
+      }
+    }
+  },
+  "instances-list": "Instanz-Liste",
+  "instances-list-description": "Listet Misskey-Instanzen auf.",
+  "instances-list-setting": {
+    "setting": "Listen-Filter",
+    "order": "Sortierung",
+    "orders": {
+      "default": "Standard",
+      "version": "Version",
+      "originalNotesCount": "Anzahl der Notizen",
+      "originalUsersCount": "Anzahl der Nutzer",
+      "reactionsCount": "Anzahl der Reaktionen"
+    },
+    "descending": "absteigend",
+    "ascending": "aufsteigend",
+    "repository": "Repository",
+    "language": "Sprache",
+    "registration": "Registrierung",
+    "registration-statuses": {
+      "open": "offen",
+      "close": "geschlossen"
+    },
+    "accept": "anwenden"
+  },
+  "404-text": "Diese Seite existiert nicht.",
+  "toppage": "Startseite"
+}
