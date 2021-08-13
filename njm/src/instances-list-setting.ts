@@ -9,6 +9,7 @@ export const instanceLanguages = ['ja', 'en', 'de', 'fr', 'zh', 'ko', 'ru', 'th'
 export const languageLookup: { [x: string]: typeof instanceLanguages[number][] } = {
     'ja-JP': ['ja'],
     'en-US': ['en', 'de', 'fr', 'zh', 'ko', 'ru', 'th', 'es'],
+    'de-DE': ['de'],
 };
 
 export interface InstancesSetting {
