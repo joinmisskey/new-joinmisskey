@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 import { lang } from "./locale";
 
-export const repositories = ['syuilo/misskey', 'mei23/misskey'] as const;
+export const repositories = ['syuilo/misskey', 'mei23/misskey', 'TeamBlackCrystal/misskey'] as const;
 export const orderOptions = ['default', 'originalNotesCount', 'originalUsersCount', 'reactionsCount'] as const;
 export const registrationStatuses = ['open', 'close'] as const;
 export const instanceLanguages = ['ja', 'en', 'de', 'fr', 'zh', 'ko', 'ru', 'th', 'es'] as const;
