@@ -3,18 +3,18 @@
   "joinmisskey": "Let's start Misskey",
   "description": "Misskey is a decentralized microblogging platform born on Earth. Why don't you take a short break from the hustle and bustle of the city, and dive into a new Internet?",
   "slogan": "新しい世界で<wbr>繋がろう",
-  "next": "次へ",
-  "prev": "戻る",
-  "close": "閉じる",
-  "loading": "読み込み中",
+  "next": "next",
+  "prev": "previous",
+  "close": "close",
+  "loading": "loading",
   "feature": "機能",
   "_home": {
-    "forever-evolving": "いつまでも進化する<wbr>分散マイクロブログ<wbr>プラットフォーム Misskey（ミスキー）",
-    "setup": "自分のインスタンスを建てる",
+    "forever-evolving": "A forever evolving, interplanetary microblogging platform.",
+    "setup": "set up your own instance",
     "setup-url": "https://wiki.misskey.io/ja/setup-instance",
-    "misskeyisa-decenralized": "Misskeyを見つけていただき、ありがとうございます。Misskeyは、地球で生まれた分散マイクロブログSNSです。Fediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。",
-    "whydontyou-take": "暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。",
-    "federation": "連合",
+    "misskeyisa-decenralized": "Misskey is a decentralized microblogging platform born on Earth. Since it exists within the Fediverse (a universe where various social media platforms are organized), it is mutually linked with other social media platforms.",
+    "whydontyou-take": "Why don't you take a short break from the hustle and bustle of the city, and dive into a new Internet?",
+    "federation": "Federation",
     "federation-detail": "Misskeyはオープンソースソフトウェアであり、自分のサーバー（インスタンス）を作って運営することができます。そして、MisskeyはActivityPubというWeb標準規格のサーバー間通信機能を持っています。これによって、自分のインスタンスと、違うインスタンスやMastodonをはじめとする他のサービスとの間で、ユーザーをフォローしたり投稿を見て反応したりできます。",
     "notes": "ノート",
     "notes-detail": "基本的な投稿機能（Misskeyでは投稿のことを「ノート」とよびます）は、ほかのサービスに比べると機能がたくさんあります。"
@@ -36,8 +36,8 @@
       }
     }
   },
-  "instances-list": "インスタンス一覧",
-  "instances-list-description": "Misskeyインスタンスを一覧で表示します。",
+  "instances-list": "List of Instances",
+  "instances-list-description": "Lists Misskey instances.",
   "instances-list-setting": {
     "setting": "List Setting",
     "order": "Order",
@@ -59,6 +59,6 @@
     },
     "accept": "Apply"
   },
-  "404-text": "お探しのページは見つかりませんでした。",
-  "toppage": "トップページ"
+  "404-text": "The page you were looking for was not found.",
+  "toppage": "home page"
 }
