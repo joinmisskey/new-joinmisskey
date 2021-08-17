@@ -40,7 +40,7 @@
   "instances-list-description": "This page shows a list of Misskey instances.",
   "instances-list-setting": {
     "setting": "Settings",
-    "order": "Sort Order",
+    "order": "Sorting Order",
     "orders": {
       "default": "Default",
       "version": "Version",
