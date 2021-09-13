@@ -1,5 +1,5 @@
 <template>
-  <Header :title="$ts['instances-list']" />
+  <Header :title="$ts['instances-list']" :icon="faCog" :rightClicked="openSetting"  />
   <div id="instances">
     <div class="row">
       <div class="px-3 col-12 col-xl-7">
@@ -7,7 +7,7 @@
         <p v-text="$ts['instances-list-description']" />
       </div>
       <div class="px-3 col-12 col-xl-5">
-        <div class="alert small instances-list-setting-alert" role="alert" @click="showSetting = true">
+        <div class="alert small instances-list-setting-alert" role="alert" @click="openSetting">
           <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
           <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
           - 
@@ -86,6 +86,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { faCog } from '@fortawesome/free-solid-svg-icons'
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
 import Header from '@/components/header.vue';
@@ -112,6 +113,8 @@ export default defineComponent({
       registrationStatuses,
 
       ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
+
+      faCog,
     };
   },
 
@@ -132,6 +135,10 @@ export default defineComponent({
   },
 
   methods: {
+    openSetting() {
+      this.showSetting = true;
+    },
+
     acceptSetting() {
       this.showSetting = false;
 
@@ -144,6 +151,8 @@ export default defineComponent({
       if (this.registrationStatus.length === 0) {
         this.registrationStatus = [...registrationStatuses];
       }
+
+      window.scroll({top: 0, behavior: 'smooth'});
 
       this.sort();
     },

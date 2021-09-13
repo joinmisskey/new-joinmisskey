@@ -6,15 +6,20 @@
       </router-link>
     </div>
     <div v-text="title" class="title mx-auto" />
+    <div class="buttons right" v-if="icon">
+      <button @click="rightClicked" class="_button button">
+        <Fa :icon="icon" fixed-width />
+      </button>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default defineComponent({
-  props: ['title'],
+  props: ['title', 'icon', 'rightClicked'],
 
   data() {
     return {
