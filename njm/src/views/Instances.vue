@@ -21,7 +21,9 @@
       </div>
     </div>
     <div id="instances-list" class="row p-2" v-if="!loading">
+      <transition-group name="instance-list-trans">
       <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
+      </transition-group>
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
   </div>
@@ -205,6 +207,19 @@ export default defineComponent({
   }
 }
 
+.instance-list-trans-move,
+.instance-list-trans-enter-active,
+.instance-list-trans-leave-active {
+  transition: transform 0.4s ease;
+}
+.instance-list-trans-leave-active {
+  position: absolute;
+}
+.instance-list-trans-enter-from,
+.instance-list-trans-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
 // setting
 .instances-list-setting-alert {
   background-color: #2d2d2d;
