@@ -143,29 +143,28 @@ export default defineComponent({
 
       this.sort();
     },
+
     sort() {
       let sorted = this.instances;
-
-      //#region sort order
-      sorted = sorted.sort((a, b) => {
-        switch (this.orderBy) {
-          case 'originalNotesCount':
-            return (b.stats.originalNotesCount - a.stats.originalNotesCount) * (this.orderDesc ? 1 : -1);
-          case 'originalUsersCount':
-            return (b.stats.originalUsersCount - a.stats.originalUsersCount) * (this.orderDesc ? 1 : -1);
-          case 'reactionsCount':
-            return (b.stats.reactionsCount - a.stats.reactionsCount) * (this.orderDesc ? 1 : -1);
-          default:
-            return (b.value - a.value) * (this.orderDesc ? 1 : -1);
-        }
-      });
-      //#endregion
 
       //#region filter repository
       sorted = sorted.filter(instance => {
         return this.repository.includes(instance.repo);
       });
       //#region
+
+      //#region sort order
+      switch (this.orderBy) {
+        case 'originalNotesCount':
+          sorted = sorted.sort((a, b) => (b.stats.originalNotesCount - a.stats.originalNotesCount) * (this.orderDesc ? 1 : -1));
+        case 'originalUsersCount':
+          sorted = sorted.sort((a, b) => (b.stats.originalUsersCount - a.stats.originalUsersCount) * (this.orderDesc ? 1 : -1));
+        case 'reactionsCount':
+          sorted = sorted.sort((a, b) => (b.stats.reactionsCount - a.stats.reactionsCount) * (this.orderDesc ? 1 : -1));
+        default:
+          sorted = sorted.sort((a, b) => (b.value - a.value) * (this.orderDesc ? 1 : -1));
+      }
+      //#endregion
 
       //#region filter language
       sorted = sorted.filter(instance => {
