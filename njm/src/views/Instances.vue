@@ -1,8 +1,8 @@
 <template>
+  <Header :title="$ts['instances-list']" />
   <div id="instances">
-    <router-link to="/">Back</router-link>
     <div class="row">
-      <div class="col-12 col-xl-7">
+      <div class="px-3 col-12 col-xl-7">
         <h1 v-text="$ts['instances-list']" class="my-2"/>
         <p v-text="$ts['instances-list-description']" />
       </div>
@@ -88,13 +88,15 @@
 import { defineComponent } from 'vue';
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
+import Header from '@/components/header.vue';
 import { InstancesSetting, repositories, orderOptions, registrationStatuses, instanceLanguages } from '@/instances-list-setting';
 
 export default defineComponent({
   name: 'Instances',
 
   components: {
-    Instance
+    Instance,
+    Header,
   },
 
   data() {
