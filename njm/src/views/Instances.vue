@@ -102,7 +102,7 @@ export default defineComponent({
       registrationStatuses,
 
       ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
-    }
+    };
   },
 
   created() {
@@ -195,6 +195,7 @@ export default defineComponent({
 // setting
 .instances-list-setting-alert {
   background-color: #2d2d2d;
+  border-radius: var(--radius);
 }
 
 .instances-setting-enter-active, .instances-setting-leave-active {
