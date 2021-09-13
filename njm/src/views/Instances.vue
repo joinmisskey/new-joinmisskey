@@ -266,7 +266,7 @@ export default defineComponent({
 #setting-content {
   max-width: 1080px;
   width: calc(100vw - 32px);
-  background: var(--bg);
+  background: var(--panel);
   border-radius: var(--radius);
 }
 </style>

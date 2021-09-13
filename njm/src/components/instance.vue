@@ -92,6 +92,7 @@ export default defineComponent({
 .instance {
   display: block;
   color: var(--fg);
+  background-color: var(--panel);
   text-decoration: none;
   border-radius: var(--radius);
   overflow: hidden;
