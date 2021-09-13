@@ -104,22 +104,20 @@ export default defineComponent({
 
 .instance-header {
   background-size: cover;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   background-position: center;
   margin: 0 0 auto 0;
 }
 
 .instance-header:not(.nobanner) {
   height: 10rem;
-}
-
-.instance-header {
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .instance-header {
+  .instance-header.nobanner {
     height: 10rem;
+    padding-bottom: 1rem;
   }
 }
 
