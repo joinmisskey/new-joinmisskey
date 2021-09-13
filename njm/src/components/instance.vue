@@ -3,6 +3,7 @@
   <a :href="`https://${instance.url}/`" target="_blank" class="instance _shadow m-0" :lang="instance.langs[0]">
     <div
       class="instance-header"
+      :class="{ nobanner: !instance.banner && !instance.background }"
       :style="{
         'background-image':
           instance.banner ? barr('banners', instance.url) :
@@ -102,11 +103,24 @@ export default defineComponent({
 }
 
 .instance-header {
-  height: 8rem;
   background-size: cover;
   padding: 1rem;
   background-position: center;
   margin: 0 0 auto 0;
+}
+
+.instance-header:not(.nobanner) {
+  height: 10rem;
+}
+
+.instance-header {
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .instance-header {
+    height: 10rem;
+  }
 }
 
 .instance-title {
@@ -127,7 +141,7 @@ export default defineComponent({
 .instance-description {
   display: -webkit-box;
   font-size: .95em;
-  margin: 8px 8px 4px 8px;
+  margin: 1rem 1rem 6px 1rem;
   line-height: 1.3;
   min-height: 2.6em;
   -webkit-line-clamp: 2;
@@ -140,7 +154,7 @@ export default defineComponent({
 
 .instance-version {
   font-size: .8rem;
-  margin: 0 8px 4px;
+  margin: 0 1rem 6px;
 }
 
 .instance-footer {
@@ -148,7 +162,7 @@ export default defineComponent({
   grid-gap: 4px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6.5em, 1fr));
-  margin: 0 8px 8px 8px;
+  margin: 0 1rem .75rem 1rem;
   line-height: 1.3;
 }
 
