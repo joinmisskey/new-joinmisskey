@@ -1,20 +1,26 @@
 <template>
   <div id="instances">
     <router-link to="/">Back</router-link>
-    <h1 v-text="$ts['instances-list']" class="my-2"/>
-    <p v-text="$ts['instances-list-description']" />
-    <div class="alert small instances-list-setting-alert" role="alert" @click="showSetting = true">
-      <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
-      <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
-      - 
-      <span v-text="orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending " /><br>
-      <span v-text="repository.join(', ')" /><br>
-      <span v-text="language.join(', ')" /><br>
-      <span v-text="$ts['instances-list-setting'].registration"/> 
-      - 
-      <span v-text="registrationStatus.map(v => $ts['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
+    <div class="row">
+      <div class="col-12 col-xl-7">
+        <h1 v-text="$ts['instances-list']" class="my-2"/>
+        <p v-text="$ts['instances-list-description']" />
+      </div>
+      <div class="px-3 col-12 col-xl-5">
+        <div class="alert small instances-list-setting-alert" role="alert" @click="showSetting = true">
+          <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
+          <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
+          - 
+          <span v-text="orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending " /><br>
+          <span v-text="repository.join(', ')" /><br>
+          <span v-text="language.join(', ')" /><br>
+          <span v-text="$ts['instances-list-setting'].registration"/> 
+          - 
+          <span v-text="registrationStatus.map(v => $ts['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
+        </div>
+      </div>
     </div>
-    <div id="instances-list" v-if="!loading">
+    <div id="instances-list" class="row p-2" v-if="!loading">
       <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
@@ -23,7 +29,7 @@
   <transition :name="'instances-setting'" appear :duration="{ enter: 300, leave: 300 }">
     <div v-if="showSetting" id="instances-setting" @click.self="acceptSetting">
       <div id="setting-content" class="_shadow">
-        <div class="container my-2">
+        <div class="p-3">
           <div class="row">
             <div class="col-12 col-lg-6 mb-3">
               <label for="order-by" class="fw-bold" v-text="$ts['instances-list-setting']['order']" />
@@ -173,6 +179,10 @@ export default defineComponent({
           sorted = sorted.filter(instance => {
             return instance.meta.features.registration;
           });
+        } else {
+          sorted = sorted.filter(instance => {
+            return !instance.meta.features.registration;
+          });
         }
       }
       //#region
@@ -225,7 +235,7 @@ export default defineComponent({
   display: flex;
   overflow: auto;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  // backdrop-filter: blur(4px);
   background-origin: border-box;
   text-align: left;
 

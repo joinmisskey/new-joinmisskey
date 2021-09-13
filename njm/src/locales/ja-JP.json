@@ -69,11 +69,15 @@
     "registration": "新規登録",
     "registration-statuses": {
       "open": "解放",
-      "close": "不可"
+      "close": "招待制"
     },
 
     "accept": "適用"
   },
+
+  "notes-count": "ノート数",
+  "users-count": "ユーザー数",
+  "reactions-count": "リアクション数",
 
   "404-text": "お探しのページは見つかりませんでした。",
   "toppage": "トップページ"

@@ -19,7 +19,6 @@ h4,
 h5,
 h6 {
   font-feature-settings: "palt";
-  font-family: GenEiUniverSans-w, sans-serif;
 }
 
 *:lang("ja") {
@@ -49,7 +48,7 @@ h6 {
 }
 
 ._shadow {
-  box-shadow: 0 4px 32px var(--shadow) !important;
+  box-shadow: 0 3px 16px var(--shadow) !important;
 }
 
 ._noSelect {

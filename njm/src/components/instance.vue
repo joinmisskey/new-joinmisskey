@@ -1,16 +1,41 @@
 <template>
-  <a :href="`https://${instance.url}/`" target="_blank" class="instance" :lang="instance.langs[0]">
-    <div class="instance-title" :class="{ hasName }">
-      <template v-if="hasName"><span class="instance-name" v-text="instance.meta.name" /> <span class="instance-url" v-text="uniUrl" /></template>
-      <template v-else><span class="instance-url" v-text="uniUrl" /></template>
+  <div class="instance-outer p-2 col-12 col-md-6 col-xl-4">
+  <a :href="`https://${instance.url}/`" target="_blank" class="instance _shadow m-0" :lang="instance.langs[0]">
+    <div
+      class="instance-header"
+      :style="{
+        'background-image':
+          instance.banner ? barr('banners', instance.url) :
+          instance.background ? barr('backgrounds', instance.url) : null
+      }"
+    >
+      <div class="instance-title">
+        <template v-if="this.instance.meta.name && this.instance.meta.name !== uniUrl"><span class="instance-name" v-text="instance.meta.name" /><br><span class="instance-url" v-text="uniUrl" /></template>
+        <template v-else><span class="instance-name-url" v-text="uniUrl" /></template>
+      </div>
     </div>
-    <div v-if="description" v-text="description"/>
-    <div class="instance-registration">{{ $ts['instances-list-setting']['registration'] }}: {{ instance.meta.features.registration ? $ts['instances-list-setting']['registration-statuses'].open : $ts['instances-list-setting']['registration-statuses'].close }}</div>
+    <div class="instance-description" v-text="description"/>
     <div class="instance-version">{{ instance.repo }} {{ instance.meta.version }}</div>
-    <div class="instance-stats">{{ numeral(instance.stats.originalNotesCount).format('0,0') }} notes
-      | {{ numeral(instance.stats.originalUsersCount).format('0,0') }} users
-      {{ instance.stats.reactionsCount && `| ${numeral(instance.stats.reactionsCount).format('0,0')} reactions` }}</div>
+    <div class="instance-footer">
+      <div class="instance-footer-cell">
+        <div class="instance-footer-key" v-text="$ts['notes-count']" />
+        <div class="instance-footer-value" v-text="numeral(instance.stats.originalNotesCount).format('0,0')" />
+      </div>
+      <div class="instance-footer-cell">
+        <div class="instance-footer-key" v-text="$ts['users-count']" />
+        <div class="instance-footer-value" v-text="numeral(instance.stats.originalUsersCount).format('0,0')" />
+      </div>
+      <div class="instance-footer-cell" v-if="instance.stats.reactionsCount">
+        <div class="instance-footer-key" v-text="$ts['reactions-count']" />
+        <div class="instance-footer-value" v-text="numeral(instance.stats.reactionsCount).format('0,0')" />
+      </div>
+      <div class="instance-footer-cell">
+        <div class="instance-footer-key" v-text="$ts['instances-list-setting']['registration']" />
+        <div class="instance-footer-value" v-text="instance.meta.features.registration ? $ts['instances-list-setting']['registration-statuses'].open : $ts['instances-list-setting']['registration-statuses'].close" />
+      </div>
+    </div>
   </a>
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,8 +61,12 @@ export default defineComponent({
 
     return {
       uniUrl,
-      hasName: this.instance.meta.name && this.instance.meta.name !== uniUrl,
       numeral,
+      barr: (b: string, url: string) => [
+        `url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg')`,
+        `-webkit-image-set(url('https://instanceapp.misskey.page/instance-${b}/${url}.webp') type('image/webp'), url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg') type('image/jpeg'))`,
+        `image-set(url('https://instanceapp.misskey.page/instance-${b}/${url}.webp') type('image/webp'), url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg') type('image/jpeg'))`
+      ]
     }
   },
 
@@ -46,8 +75,7 @@ export default defineComponent({
       if (this.instance.description) {
         const div = document.createElement('div');
         div.innerHTML = this.instance.description.trim();
-        const text = div.textContent || '';
-        return text.length < 110 ? text : `${text.slice(0, 100)}......`;
+        return div.textContent || null;
       }
 
       return null;
@@ -64,32 +92,72 @@ export default defineComponent({
   display: block;
   color: var(--fg);
   text-decoration: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: auto;
 
   &:hover {
     color: #fff !important;
   }
+}
 
-  .hasName {
-    .instance-name {
-      font-weight: 700;
-    }
-  }
-
-  :not(.hasName) {
-    .instance-url {
-      font-weight: 700;
-    }
-  }
+.instance-header {
+  height: 8rem;
+  background-size: cover;
+  padding: 1rem;
+  background-position: center;
+  margin: 0 0 auto 0;
 }
 
 .instance-title {
-  text-decoration: underline;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: 0 1px;
+  background-color: rgba(0,0,0,.7);
+  font-weight: 700;
+}
+.instance-name {
+  font-size: 1.75rem;
+}
+.instance-name-url {
+  font-size: 1.8rem;
 }
 
-.instance-version,
-.instance-registration,
-.instance-stats {
-  font-size: .8em;
+.instance-description {
+  display: -webkit-box;
+  font-size: .95em;
+  margin: 8px 8px 4px 8px;
+  line-height: 1.3;
+  min-height: 2.6em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.instance-version {
+  font-size: .8rem;
+  margin: 0 8px 4px;
+}
+
+.instance-footer {
+  font-size: .8rem;
+  grid-gap: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.5em, 1fr));
+  margin: 0 8px 8px 8px;
+  line-height: 1.3;
+}
+
+.instance-footer-key {
+  font-size: .7rem;
+}
+
+.instance-footer-value {
+  font-size: 1rem;
+  color: var(--accent)
+}
 </style>
