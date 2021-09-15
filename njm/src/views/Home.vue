@@ -116,18 +116,25 @@ export default defineComponent({
   > p {
     padding: 0 1rem;
     word-break: keep-all;
-    text-shadow: 0 0px 8px #000 !important;
+    text-shadow: 0 0px 8px var(--bg), 0 0px 8px var(--bg), 0 0px 8px var(--bg) !important;
     width: 100%;
     text-align: center;
+  }
+
+  img {
+    filter: drop-shadow(0 0px 8px var(--bg));
   }
 }
 
 #home-0-new-world {
   font-size: calc(1.5rem + 0.75vw);
   font-weight: 200;
-  letter-spacing: .2em;
   line-height: 1.2;
   margin: 0;
+
+  &:lang("ja") {
+    letter-spacing: .2em;
+  }
 }
 
 #home-0-join-misskey {
