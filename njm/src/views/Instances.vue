@@ -159,6 +159,10 @@ export default defineComponent({
         this.registrationStatus = [...registrationStatuses];
       }
 
+      if (this.language.length === 0) {
+        this.language = [...instanceLanguages];
+      }
+
       window.scroll({top: 0, behavior: 'smooth'});
 
       this.sort();
