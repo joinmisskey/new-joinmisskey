@@ -17,8 +17,8 @@
         </div>
       </div>
 
-      <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" />
-      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" />
+      <Img src="2021/09/scnsht-desktop.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" />
+      <Img src="2021/09/scnsht-9t.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" />
 
       <div id="home-shape-1-top" />
     </div>

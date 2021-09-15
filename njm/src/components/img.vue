@@ -9,12 +9,12 @@
     />
     <source
       :srcset="
-        `${iu.dir}/${iu.name}.360${iu.ext} 360w, ${iu.dir}/${iu.name}.720${iu.ext} 720w, ${iu.dir}/${iu.name}.1200${iu.ext} 1200w ${iu.dir}/${iu.name}${iu.ext}`
+        `${iu.dir}/${iu.name}.360${iu.ext} 360w, ${iu.dir}/${iu.name}.720${iu.ext} 720w, ${iu.dir}/${iu.name}.1200${iu.ext} 1200w, ${iu.dir}/${iu.name}${iu.ext}`
       "
       :sizes="sizes"
     />
     <img
-      :src="`${iu.root}${iu.base}`"
+      :src="`${iu.dir}/${iu.base}`"
       :alt="alt"
       :title="title"
       :loading="imgOnLoad ? 'eager' : loading"
