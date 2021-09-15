@@ -1,4 +1,4 @@
-import { defaultInstancesSetting, InstancesSetting } from '@/instances-list-setting';
+import { defaultInstancesSetting } from '@/instances-list-setting';
 import { createStore } from 'vuex';
 
 export default createStore({
