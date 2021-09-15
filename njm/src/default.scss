@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: GenEiUniverSans-w, SourceHanSans-w, 'Noto Sans SC', sans-serif;
+  font-family: GenEiUniverSans-w, SourceHanSans-w, 'Noto Sans SC', sans-serif, -apple-system;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
@@ -22,7 +22,7 @@ h6 {
 }
 
 *:lang("ja") {
-  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif;
+  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif, -apple-system;
 
   h1,
   h2,
@@ -31,20 +31,20 @@ h6 {
   h5,
   h6 {
     font-feature-settings: "palt";
-    font-family: GenEiUniverSans-w, SourceHanSans-w, sans-serif;
+    font-family: GenEiUniverSans-w, SourceHanSans-w, sans-serif, -apple-system;
   }
 }
 
 *:lang("zh") {
-  font-family: GenEiUniverSans-w, 'Noto Sans SC', SourceHanSans-w, sans-serif;
+  font-family: GenEiUniverSans-w, 'Noto Sans SC', SourceHanSans-w, sans-serif, -apple-system;
 }
 
 *:lang("ko") {
-  font-family: GenEiUniverSans-w, 'Noto Sans KR', SourceHanSans-w, sans-serif;
+  font-family: GenEiUniverSans-w, 'Noto Sans KR', SourceHanSans-w, sans-serif, -apple-system;
 }
 
 *:lang("th") {
-  font-family: GenEiUniverSans-w, 'Sarabun', SourceHanSans-w, sans-serif;
+  font-family: GenEiUniverSans-w, 'Sarabun', SourceHanSans-w, sans-serif, -apple-system;
 }
 
 ._shadow {
