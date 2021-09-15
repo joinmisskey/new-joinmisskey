@@ -38,10 +38,12 @@
         </a>
       </div>
     </div>
-    <!--<div id="home-shape-1-end" />-->
+    <div id="home-shape-1-end" />
 
     <!--<FeatureButton name="mfm" />-->
   </div>
+
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -51,13 +53,14 @@ import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
 // import FeatureButton from '@/components/feature-button.vue';
 import Img from '@/components/img.vue';
+import Footer from '@/components/footer.vue';
 
 export default defineComponent({
   name: 'Home',
 
   components: {
     // FeatureButton,
-    Img,
+    Img, Footer,
   },
 
   data() {
@@ -205,7 +208,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 1rem;
 
   img {
     width: 16rem;

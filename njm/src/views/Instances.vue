@@ -27,6 +27,7 @@
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
   </div>
+  <Footer />
 
   <transition :name="'instances-setting'" appear :duration="{ enter: 300, leave: 300 }">
     <div v-if="showSetting" id="instances-setting" @click.self="acceptSetting">
@@ -90,6 +91,7 @@ import { faCog } from '@fortawesome/free-solid-svg-icons'
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
 import Header from '@/components/header.vue';
+import Footer from '@/components/footer.vue';
 import { InstancesSetting, repositories, orderOptions, registrationStatuses, instanceLanguages } from '@/instances-list-setting';
 
 export default defineComponent({
