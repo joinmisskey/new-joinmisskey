@@ -18,7 +18,7 @@
       </div>
 
       <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="70vw" :imgOnLoad="imgOnLoad" />
-      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1440px) 20vw" :imgOnLoad="imgOnLoad" />
+      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" />
 
       <div id="home-shape-1-top" />
     </div>
@@ -197,7 +197,7 @@ export default defineComponent({
   img {
     width: 18rem;
     max-width: 44vw;
-    min-width: 20vw;
+    min-width: 18vw;
   }
 }
 
