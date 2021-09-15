@@ -5,10 +5,17 @@ export default createStore({
   state: {
     feature: null as string | null,
     instancesSetting: defaultInstancesSetting,
+    splash: true,
   },
   mutations: {
     feature(state, n: string | null) {
       state.feature = n;
+    },
+    showSplash(state) {
+      state.splash = true;
+    },
+    hideSplash(state) {
+      state.splash = false;
     },
   },
   actions: {

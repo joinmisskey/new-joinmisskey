@@ -4,7 +4,7 @@
     <div id="home-0">
       <div id="home-0-texts">
         <p id="home-0-new-world" v-html="$ts['slogan']" />
-        <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" />
+        <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" :imgOnLoad="imgOnLoad" />
         <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
         <div id="home-0-instances-list-button-div">
           <router-link
@@ -17,8 +17,8 @@
         </div>
       </div>
 
-      <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="70vw" />
-      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 888px) 160px, 18vw" />
+      <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="70vw" :imgOnLoad="imgOnLoad" />
+      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 888px) 160px, 18vw" :imgOnLoad="imgOnLoad" />
 
       <div id="home-shape-1-top" />
     </div>
@@ -60,14 +60,19 @@ export default defineComponent({
 
   components: {
     // FeatureButton,
-    Img, Footer,
+    Img, Footer
   },
 
   data() {
     return {
+      loadCount: 0,
 
       faGithub, faPatreon
     }
+  },
+
+  beforeCreate() {
+    (this as any).$store.commit('showSplash');
   },
 
   mounted() {
@@ -78,6 +83,12 @@ export default defineComponent({
     showFeature(v: string | null) {
       (this as any).$store.commit('feature', v);
     },
+    imgOnLoad() {
+      this.loadCount = this.loadCount + 1;
+      console.log(this.loadCount);
+
+      if (this.loadCount >= 3) (this as any).$store.commit('hideSplash');
+    }
   },
 });
 </script>

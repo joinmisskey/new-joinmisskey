@@ -17,8 +17,9 @@
       :src="`${iu.root}${iu.base}`"
       :alt="alt"
       :title="title"
-      :loading="loading"
+      :loading="imgOnLoad ? 'eager' : loading"
       :sizes="sizes"
+      @load="imgOnLoad"
     />
   </picture>
 </template>
@@ -52,6 +53,10 @@ export default defineComponent({
       type: String,
       required: false,
       default: "lazy"
+    },
+    imgOnLoad: {
+      type: Function,
+      required: false
     }
   },
 

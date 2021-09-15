@@ -121,6 +121,10 @@ export default defineComponent({
     };
   },
 
+  beforeCreate() {
+    (this as any).$store.commit('hideSplash');
+  },
+
   created() {
     fetch('https://instanceapp.misskey.page/instances.json')
       .then(res => res.json())

@@ -10,6 +10,17 @@
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: '404',
+  beforeCreate() {
+    (this as any).$store.commit('hideSplash');
+  },
+});
+</script>
+
 <style lang="scss" scoped>
 #nf {
   margin: 1rem;
