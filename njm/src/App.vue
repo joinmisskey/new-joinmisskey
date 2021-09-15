@@ -2,7 +2,7 @@
   <div id="app">
     <Splash :show="$store.state.splash" />
     <router-view/>
-    <Features/>
+    <!--<Features/>-->
   </div>
 </template>
 

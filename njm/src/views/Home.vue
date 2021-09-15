@@ -71,7 +71,7 @@ export default defineComponent({
     }
   },
 
-  beforeCreate() {
+  created() {
     (this as any).$store.commit('showSplash');
   },
 
@@ -85,7 +85,6 @@ export default defineComponent({
     },
     imgOnLoad() {
       this.loadCount = this.loadCount + 1;
-      console.log(this.loadCount);
 
       if (this.loadCount >= 3) (this as any).$store.commit('hideSplash');
     }
@@ -196,8 +195,8 @@ export default defineComponent({
   left: 5%;
 
   img {
-    width: 18vw;
-    min-width: 10rem;
+    width: 18rem;
+    max-width: 44vw;
   }
 }
 

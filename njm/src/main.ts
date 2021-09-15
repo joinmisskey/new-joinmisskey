@@ -23,3 +23,5 @@ app.config.globalProperties = {
 console.info('App create');
 
 app.use(store).use(router(lang)).component('Fa', FontAwesomeIcon).mount('#app');
+
+navigator.serviceWorker.register('/sw.js');

@@ -30,8 +30,8 @@ export default defineComponent({
 	height: 100vh;
 	cursor: wait;
 	background-color: var(--bg);
-	transition: opacity .5s ease;
 	opacity: 1;
+	transition: opacity .5s ease;
 
   > img {
     margin: auto;
@@ -42,23 +42,14 @@ export default defineComponent({
 }
 
 #splash.splash-enter-active {
-  animation: splash-enter 0.5s;
-  opacity: 0;
+	transition: opacity .1s ease;
+  // animation: splash-enter 0.3s;
 }
-@keyframes splash-enter {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#splash.splash-leave-active {
+	cursor: default;
 }
-#splash.splash-leave-from {
-  opacity: 0;
-}
+#splash.splash-enter-from,
+#splash.splash-leave-from,
 #splash.splash-leave-to {
   opacity: 0;
 }
