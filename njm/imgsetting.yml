@@ -20,16 +20,38 @@ images:
         passThroughUnused: false
     responsive:
     - crop: false
+    - crop: false
+      quality: 90
+      # format: webp
+      rename:
+        extname: ".webp"
+    #- width: 2000
+    #  withoutEnlargement: true
+    #  crop: false
+    #  rename:
+    #    suffix: ".2000"
+    #- width: 2000
+    #  crop: false
+    #  withoutEnlargement: true
+    #  # sharpen: "0.5x0.5+0.5+0.008"
+    #  quality: 90
+    #  # format: webp
+    #  rename:
+    #    suffix: ".2000"
+    #    extname: ".webp"
     - width: 1200
       withoutEnlargement: true
       crop: false
       rename:
         suffix: ".1200"
-    - crop: false
+    - width: 1200
+      crop: false
       withoutEnlargement: true
+      # sharpen: "0.5x0.5+0.5+0.008"
       quality: 90
       # format: webp
       rename:
+        suffix: ".1200"
         extname: ".webp"
     - width: 720
       crop: false

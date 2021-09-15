@@ -2,14 +2,14 @@
   <picture>
     <source
       :srcset="
-        `${iu.dir}/${iu.name}.360.webp 360w, ${iu.dir}/${iu.name}.720.webp 720w, ${iu.dir}/${iu.name}.webp 1200w`
+        `${images.map(size => `${iu.dir}/${iu.name}.${size}.webp ${size}w`).join(', ')}, ${iu.dir}/${iu.name}.webp ${original}w`
       "
       type="image/webp"
       :sizes="sizes"
     />
     <source
       :srcset="
-        `${iu.dir}/${iu.name}.360${iu.ext} 360w, ${iu.dir}/${iu.name}.720${iu.ext} 720w, ${iu.dir}/${iu.name}.1200${iu.ext} 1200w, ${iu.dir}/${iu.name}${iu.ext}`
+        `${images.map(size => `${iu.dir}/${iu.name}.${size}${iu.ext} ${size}w`).join(', ')}, ${iu.dir}/${iu.name}${iu.ext} ${original}w`
       "
       :sizes="sizes"
     />
@@ -38,6 +38,16 @@ export default defineComponent({
       type: String,
       required: false,
       default: "100vw, (min-width: 576px) 50vw, (min-width: 1200px) 30vw"
+    },
+    images: {
+      type: Array,
+      required: false,
+      default: () => [360, 720]
+    },
+    original: {
+      type: Number,
+      required: false,
+      default: 1200
     },
     alt: {
       type: String,
