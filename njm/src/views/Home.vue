@@ -168,7 +168,7 @@ export default defineComponent({
   bottom: 0;
   right: 0;
   left: 30vw;
-  max-width: 75rem;
+  max-width: 100%;
 
   img {
     object-fit: cover;
