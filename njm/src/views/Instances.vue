@@ -100,6 +100,7 @@ export default defineComponent({
   components: {
     Instance,
     Header,
+    Footer,
   },
 
   data() {
