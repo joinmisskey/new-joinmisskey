@@ -278,7 +278,7 @@ export default defineComponent({
   width: 100%;
   height: 10vw;
   background: var(--accent);
-  clip-path: polygon(0 0, 0 100%, 100% 0);
+  clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
   // margin-top: -3vw;
 }
 
