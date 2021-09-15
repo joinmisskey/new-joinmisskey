@@ -1,29 +1,38 @@
 <template>
+  <Header :title="$ts['instances-list']" :icon="faCog" :rightClicked="openSetting"  />
   <div id="instances">
-    <router-link to="/">Back</router-link>
-    <h1 v-text="$ts['instances-list']" class="my-2"/>
-    <p v-text="$ts['instances-list-description']" />
-    <div class="alert small instances-list-setting-alert" role="alert" @click="showSetting = true">
-      <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
-      <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
-      - 
-      <span v-text="orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending " /><br>
-      <span v-text="repository.join(', ')" /><br>
-      <span v-text="language.join(', ')" /><br>
-      <span v-text="$ts['instances-list-setting'].registration"/> 
-      - 
-      <span v-text="registrationStatus.map(v => $ts['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
+    <div class="row">
+      <div class="px-3 col-12 col-xl-7">
+        <h1 v-text="$ts['instances-list']" class="my-2"/>
+        <p v-text="$ts['instances-list-description']" />
+      </div>
+      <div class="px-3 col-12 col-xl-5">
+        <div class="alert small instances-list-setting-alert" role="alert" @click="openSetting">
+          <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
+          <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
+          - 
+          <span v-text="orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending " /><br>
+          <span v-text="repository.join(', ')" /><br>
+          <span v-text="language.join(', ')" /><br>
+          <span v-text="$ts['instances-list-setting'].registration"/> 
+          - 
+          <span v-text="registrationStatus.map(v => $ts['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
+        </div>
+      </div>
     </div>
-    <div id="instances-list" v-if="!loading">
+    <div id="instances-list" class="row p-2" v-if="!loading">
+      <transition-group name="instance-list-trans">
       <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
+      </transition-group>
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
   </div>
+  <Footer />
 
   <transition :name="'instances-setting'" appear :duration="{ enter: 300, leave: 300 }">
     <div v-if="showSetting" id="instances-setting" @click.self="acceptSetting">
       <div id="setting-content" class="_shadow">
-        <div class="container my-2">
+        <div class="p-3">
           <div class="row">
             <div class="col-12 col-lg-6 mb-3">
               <label for="order-by" class="fw-bold" v-text="$ts['instances-list-setting']['order']" />
@@ -78,15 +87,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { faCog } from '@fortawesome/free-solid-svg-icons'
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
+import Header from '@/components/header.vue';
+import Footer from '@/components/footer.vue';
 import { InstancesSetting, repositories, orderOptions, registrationStatuses, instanceLanguages } from '@/instances-list-setting';
 
 export default defineComponent({
   name: 'Instances',
 
   components: {
-    Instance
+    Instance,
+    Header,
+    Footer,
   },
 
   data() {
@@ -102,7 +116,13 @@ export default defineComponent({
       registrationStatuses,
 
       ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
-    }
+
+      faCog,
+    };
+  },
+
+  beforeCreate() {
+    (this as any).$store.commit('hideSplash');
   },
 
   created() {
@@ -122,6 +142,10 @@ export default defineComponent({
   },
 
   methods: {
+    openSetting() {
+      this.showSetting = true;
+    },
+
     acceptSetting() {
       this.showSetting = false;
 
@@ -135,31 +159,36 @@ export default defineComponent({
         this.registrationStatus = [...registrationStatuses];
       }
 
+      window.scroll({top: 0, behavior: 'smooth'});
+
       this.sort();
     },
+
     sort() {
       let sorted = this.instances;
-
-      //#region sort order
-      sorted = sorted.sort((a, b) => {
-        switch (this.orderBy) {
-          case 'originalNotesCount':
-            return (b.stats.originalNotesCount - a.stats.originalNotesCount) * (this.orderDesc ? 1 : -1);
-          case 'originalUsersCount':
-            return (b.stats.originalUsersCount - a.stats.originalUsersCount) * (this.orderDesc ? 1 : -1);
-          case 'reactionsCount':
-            return (b.stats.reactionsCount - a.stats.reactionsCount) * (this.orderDesc ? 1 : -1);
-          default:
-            return (b.value - a.value) * (this.orderDesc ? 1 : -1);
-        }
-      });
-      //#endregion
 
       //#region filter repository
       sorted = sorted.filter(instance => {
         return this.repository.includes(instance.repo);
       });
       //#region
+
+      //#region sort order
+      switch (this.orderBy) {
+        case 'originalNotesCount':
+          sorted = sorted.sort((a, b) => (b.stats.originalNotesCount - a.stats.originalNotesCount) * (this.orderDesc ? 1 : -1));
+          break;
+        case 'originalUsersCount':
+          sorted = sorted.sort((a, b) => (b.stats.originalUsersCount - a.stats.originalUsersCount) * (this.orderDesc ? 1 : -1));
+          break;
+        case 'reactionsCount':
+          sorted = sorted.sort((a, b) => (b.stats.reactionsCount - a.stats.reactionsCount) * (this.orderDesc ? 1 : -1));
+          break;
+        default:
+          sorted = sorted.sort((a, b) => (b.value - a.value) * (this.orderDesc ? 1 : -1));
+          break;
+      }
+      //#endregion
 
       //#region filter language
       sorted = sorted.filter(instance => {
@@ -172,6 +201,10 @@ export default defineComponent({
         if (this.registrationStatus[0] === 'open') {
           sorted = sorted.filter(instance => {
             return instance.meta.features.registration;
+          });
+        } else {
+          sorted = sorted.filter(instance => {
+            return !instance.meta.features.registration;
           });
         }
       }
@@ -192,9 +225,23 @@ export default defineComponent({
   }
 }
 
+.instance-list-trans-move,
+.instance-list-trans-enter-active,
+.instance-list-trans-leave-active {
+  transition: transform 0.4s ease;
+}
+.instance-list-trans-leave-active {
+  position: absolute;
+}
+.instance-list-trans-enter-from,
+.instance-list-trans-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
 // setting
 .instances-list-setting-alert {
   background-color: #2d2d2d;
+  border-radius: var(--radius);
 }
 
 .instances-setting-enter-active, .instances-setting-leave-active {
@@ -224,7 +271,7 @@ export default defineComponent({
   display: flex;
   overflow: auto;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  // backdrop-filter: blur(4px);
   background-origin: border-box;
   text-align: left;
 
@@ -237,7 +284,7 @@ export default defineComponent({
 #setting-content {
   max-width: 1080px;
   width: calc(100vw - 32px);
-  background: var(--bg);
+  background: var(--panel);
   border-radius: var(--radius);
 }
 </style>

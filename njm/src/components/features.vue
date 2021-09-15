@@ -116,7 +116,7 @@ export default defineComponent({
   width: calc(100vw - 32px);
   max-height: 720px;
   height: calc(100vh - 32px);
-  background: var(--bg);
+  background: var(--panel);
   border-radius: var(--radius);
 }
 

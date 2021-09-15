@@ -14,16 +14,16 @@ const supportedLangs = Object.keys(locales);
 export const localeNames = Object.entries(locales).map(([name, locale]) => [name, locale.language]):
 
 const path = location.pathname.split('/');
-let _lang: string | null | undefined = localStorage.getItem('lang');
+let _lang: string | null | undefined = localStorage ? localStorage.getItem('lang') : null;
 
 if (path[1]) path[1] = path[1].replace('_', '-');
 
 if (path[1] && supportedLangs.includes(path[1])) {
     _lang = path[1];
-    localStorage.setItem('lang', _lang);
+    if (localStorage) localStorage.setItem('lang', _lang);
 } else if (path[1] && supportedLangs.some(v => v.startsWith(path[1]))) {
     _lang = supportedLangs.find(v => v.startsWith(path[1])) as string;
-    localStorage.setItem('lang', _lang);
+    if (localStorage) localStorage.setItem('lang', _lang);
     path[1] = _lang;
     history.replaceState('locale overwrite', '', path.join('/'));
 } else {

@@ -19,11 +19,10 @@ h4,
 h5,
 h6 {
   font-feature-settings: "palt";
-  font-family: GenEiUniverSans-w, sans-serif;
 }
 
 *:lang("ja") {
-  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, 'Noto Sans SC', sans-serif;
+  font-family: YakuHanJP, GenEiUniverSans-w, SourceHanSans-w, sans-serif;
 
   h1,
   h2,
@@ -32,7 +31,7 @@ h6 {
   h5,
   h6 {
     font-feature-settings: "palt";
-    font-family: GenEiUniverSans-w, SourceHanSans-w, 'Noto Sans SC', sans-serif;
+    font-family: GenEiUniverSans-w, SourceHanSans-w, sans-serif;
   }
 }
 
@@ -49,7 +48,7 @@ h6 {
 }
 
 ._shadow {
-  box-shadow: 0 4px 32px var(--shadow) !important;
+  box-shadow: 0 3px 16px var(--shadow) !important;
 }
 
 ._noSelect {
@@ -154,6 +153,8 @@ h6 {
   --accentDarken: rgb(96, 128, 0);
   --accentLighten: rgb(172, 230, 0);
   --focus: rgba(134, 179, 0, 0.3);
+  --panel: rgba(45, 45, 45, 0.7);
+  --X16: rgba(45, 45, 45, 0.7);
   --bg: rgb(35, 35, 35);
   --panel: rgb(45, 45, 45);
   --panelBorder: rgba(0, 0, 0, 0);
@@ -167,4 +168,5 @@ h6 {
   --shadow: rgba(0, 0, 0, 0.3);
   --buttonBg: rgba(255, 255, 255, 0.05);
   --buttonHoverBg: rgba(255, 255, 255, 0.1);
+  --divider: rgba(255, 255, 255, 0.14);
 }

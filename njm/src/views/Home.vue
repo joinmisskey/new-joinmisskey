@@ -4,7 +4,7 @@
     <div id="home-0">
       <div id="home-0-texts">
         <p id="home-0-new-world" v-html="$ts['slogan']" />
-        <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" />
+        <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" :imgOnLoad="imgOnLoad" />
         <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
         <div id="home-0-instances-list-button-div">
           <router-link
@@ -17,8 +17,8 @@
         </div>
       </div>
 
-      <Img src="2021/03/1273-desktop.png" id="home-0-desktop" alt="Desktop" sizes="70vw" />
-      <Img src="2021/03/1273-iphone.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 888px) 160px, 18vw" />
+      <Img src="2021/09/scnsht-3.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200, 2000]" original="5100" />
+      <Img src="2021/09/scnsht-9t.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" original="1080" />
 
       <div id="home-shape-1-top" />
     </div>
@@ -38,10 +38,12 @@
         </a>
       </div>
     </div>
-    <!--<div id="home-shape-1-end" />-->
+    <div id="home-shape-1-end" />
 
     <!--<FeatureButton name="mfm" />-->
   </div>
+
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -51,20 +53,26 @@ import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
 // import FeatureButton from '@/components/feature-button.vue';
 import Img from '@/components/img.vue';
+import Footer from '@/components/footer.vue';
 
 export default defineComponent({
   name: 'Home',
 
   components: {
     // FeatureButton,
-    Img,
+    Img, Footer
   },
 
   data() {
     return {
+      loadCount: 0,
 
       faGithub, faPatreon
     }
+  },
+
+  created() {
+    (this as any).$store.commit('showSplash');
   },
 
   mounted() {
@@ -75,6 +83,11 @@ export default defineComponent({
     showFeature(v: string | null) {
       (this as any).$store.commit('feature', v);
     },
+    imgOnLoad() {
+      this.loadCount = this.loadCount + 1;
+
+      if (this.loadCount >= 3) (this as any).$store.commit('hideSplash');
+    }
   },
 });
 </script>
@@ -165,7 +178,7 @@ export default defineComponent({
   bottom: 0;
   right: 0;
   left: 30vw;
-  max-width: 75rem;
+  max-width: 100%;
 
   img {
     object-fit: cover;
@@ -182,8 +195,9 @@ export default defineComponent({
   left: 5%;
 
   img {
-    width: 18vw;
-    min-width: 10rem;
+    width: 18rem;
+    max-width: 44vw;
+    min-width: 18vw;
   }
 }
 
@@ -205,7 +219,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 1rem;
 
   img {
     width: 16rem;

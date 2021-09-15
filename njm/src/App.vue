@@ -1,19 +1,22 @@
 <template>
   <div id="app">
+    <Splash :show="$store.state.splash" />
     <router-view/>
-    <Features/>
+    <!--<Features/>-->
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Features from '@/components/features.vue';
+// import Features from '@/components/features.vue';
+import Splash from '@/components/splash.vue';
 import { lang } from '@/locale';
-import { injectLang } from '@/main.insert-locale-fonts';
+import { injectLang } from '@/inject-lang';
 
 export default defineComponent({
   components: {
-    Features
+    Splash,
+    // Features
   },
 
   data() {
