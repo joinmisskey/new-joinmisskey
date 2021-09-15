@@ -11,7 +11,7 @@ export const locales = localeMods.keys().reduce((res, key) => {
 }, {} as Record<string, Record<string, any>>);
 
 const supportedLangs = Object.keys(locales);
-export const localeNames = Object.entries(locales).map(([name, locale]) => [name, locale.language]):
+export const localeNames = Object.entries(locales).map(([name, locale]) => [name, locale.language]);
 
 const path = location.pathname.split('/');
 let _lang: string | null | undefined = localStorage ? localStorage.getItem('lang') : null;
