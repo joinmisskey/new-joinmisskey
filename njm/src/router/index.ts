@@ -1,21 +1,22 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import NotFound from '@/views/404.vue';
 
 export function router(lang: string) {
   const routes: Array<RouteRecordRaw> = [
     {
       path: '/',
       name: 'Home',
-      component: () => import('../views/Home.vue'),
+      component: () => import('../views/Home.vue').catch(() => location.href = '/'),
     },
     {
       path: '/instances',
       name: 'Instances',
-      component: () => import('../views/Instances.vue'),
+      component: () => import('../views/Instances.vue').catch(() => location.href = '/instances'),
     },
     {
       path: '/:pathMatch(.*)*',
       name: '404',
-      component: () => import('../views/404.vue'),
+      component: NotFound,
     },
   ];
   
