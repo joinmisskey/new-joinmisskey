@@ -32,7 +32,7 @@
 
     <div id="home-2">
       <div class="container">
-      <div id="home-2-inner" class="row w-100">
+      <div id="home-2-inner" class="row">
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
           <div class="home-2-value" v-text="numeral(stats.notesCount).format('0,0')" />
