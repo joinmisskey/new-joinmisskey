@@ -130,10 +130,11 @@ h6 {
 
 ._textPrimaryButton {
   @extend ._textButton;
-  color: var(--fg);
+  color: var(--fgHighlighted);
   background: var(--accentDarken);
 
   &:not(:disabled):hover {
+    color: var(--fg);
     background: var(--accent);
     text-decoration: none;
   }
@@ -150,7 +151,8 @@ h6 {
 
 :root {
   --accent: rgb(126, 168, 0);
-  --accentDarken: rgb(96, 128, 0);
+  --accentDarken: #739900;
+  --accentDarked: rgb(96, 128, 0);
   --accentLighten: rgb(172, 230, 0);
   --focus: rgba(134, 179, 0, 0.3);
   --panel: rgba(45, 45, 45, 0.7);
