@@ -59,6 +59,9 @@
     },
     "accept": "Apply"
   },
+  "notes-count": "Note",
+  "users-count": "User",
+  "reactions-count": "Reaction",
   "404-text": "The page you were looking for is not found.",
   "toppage": "home page"
 }
