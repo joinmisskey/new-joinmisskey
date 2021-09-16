@@ -24,21 +24,53 @@
     </div>
 
     <div id="home-1">
-      <p v-text="$ts._home['misskeyisa-decenralized']"></p>
-      <p v-text="$ts._home['whydontyou-take']"></p>
+      <p v-text="$ts._home['misskeyisa-decenralized']" />
+      <p v-text="$ts._home['whydontyou-take']" />
+    </div>
 
-      <div id="home-1-buttons">
-        <a href="https://github.com/misskey-dev/misskey" class="_textButton home-1-gh" target="_blank">
-          <fa :icon="faGithub" />
-          GitHub
-        </a>
+    <div id="home-shape-1-end"><div></div></div>
+
+    <div id="home-2">
+      <div class="container">
+      <div id="home-2-inner" class="row w-100">
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
+          <div class="home-2-value" v-text="numeral(stats.notesCount).format('0,0')" />
+          <div class="home-2-key" v-text="$ts._home['notes-count-post']" />
+        </div>
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="$ts._home['users-count-pre']" />
+          <div class="home-2-value" v-text="numeral(stats.usersCount).format('0,0')" />
+          <div class="home-2-key" v-text="$ts._home['users-count-post']" />
+        </div>
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="$ts._home['instances-count-pre']" />
+          <div class="home-2-value" v-text="numeral(stats.instancesCount).format('0,0')" />
+          <div class="home-2-key" v-text="$ts._home['instances-count-post']" />
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="home-shape-2-end"><div></div></div>
+
+    <div id="home-3">
+      <p v-text="$ts._home['donate-misskey']" />
+      <div class="home-1-buttons">
         <a href="https://www.patreon.com/syuilo" class="_textButton home-1-pa" target="_blank">
           <fa :icon="faPatreon" />
           Patreon
         </a>
       </div>
+      <p v-text="$ts._home['donate-server']" class="mt-3" />
+      <p v-text="$ts._home['develop-misskey']" class="pt-5" />
+      <div class="home-1-buttons">
+        <a href="https://github.com/misskey-dev/misskey" class="_textButton home-1-gh" target="_blank">
+          <fa :icon="faGithub" />
+          GitHub
+        </a>
+      </div>
     </div>
-    <div id="home-shape-1-end" />
 
     <!--<FeatureButton name="mfm" />-->
   </div>
@@ -48,6 +80,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import * as numeral from 'numeral';
 import { } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
@@ -66,13 +99,21 @@ export default defineComponent({
   data() {
     return {
       loadCount: 0,
+      stats: null as any | null,
 
+      numeral,
       faGithub, faPatreon
     }
   },
 
   created() {
     (this as any).$store.commit('showSplash');
+    fetch('https://instanceapp.misskey.page/instances.json')
+      .then(res => res.json())
+      .then(res => {
+        this.imgOnLoad();
+        this.stats = res.stats;
+      });
   },
 
   mounted() {
@@ -86,7 +127,7 @@ export default defineComponent({
     imgOnLoad() {
       this.loadCount = this.loadCount + 1;
 
-      if (this.loadCount >= 3) (this as any).$store.commit('hideSplash');
+      if (this.loadCount >= 4) (this as any).$store.commit('hideSplash');
     }
   },
 });
@@ -226,7 +267,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 1rem 1rem;
+  padding: 8rem 1rem 7rem;
 
   img {
     width: 16rem;
@@ -234,14 +275,14 @@ export default defineComponent({
   }
 
   p {
-    font-size: calc(1rem + 0.05vw);
+    font-size: calc(1rem + 0.1vw);
     text-align: center;
     width: 100%;
-    max-width: 60rem;
+    max-width: 65rem;
   }
 }
 
-#home-1-buttons {
+.home-1-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,11 +316,63 @@ export default defineComponent({
 }
 
 #home-shape-1-end {
-  width: 100%;
-  height: 10vw;
-  background: var(--accent);
-  clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
-  // margin-top: -3vw;
+  background: #fff;
+
+  > div {
+    width: 100%;
+    height: 10vw;
+    background: var(--accent);
+    clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
+    // margin-top: -3vw;
+  }
+}
+
+#home-2 {
+  background: #fff;
+  color: var(--bg);
+  padding: 8rem 1rem 7rem;
+}
+
+.home-2-item {
+  text-align: center;
+
+  > .home-2-key {
+    font-size: calc(1.5rem + 0.05vw);
+    color: var(--bg);
+  }
+  > .home-2-value {
+    font-size: calc(2rem + 0.05vw);
+    color: #000;
+  }
+}
+
+#home-shape-2-end {
+  background: var(--bg);
+
+  > div {
+    width: 100%;
+    height: 10vw;
+    background: #fff;
+    clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
+    // margin-top: -3vw;
+  }
+}
+
+#home-3 {
+  background: var(--bg);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+
+  p {
+    font-size: calc(1rem + 0.05vw);
+    text-align: center;
+    width: 100%;
+    max-width: 65rem;
+  }
 }
 
 </style>
