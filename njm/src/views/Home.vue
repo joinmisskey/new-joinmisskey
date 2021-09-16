@@ -32,7 +32,7 @@
 
     <div id="home-2">
       <div class="container">
-      <div id="home-2-inner" class="row">
+      <div id="home-2-inner" class="row" v-if="stats">
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
           <div class="home-2-value" v-text="numeral(stats.notesCount).format('0,0')" />
@@ -252,7 +252,7 @@ export default defineComponent({
 #home-shape-1-top {
   width: 100%;
   height: 10vw;
-  background: var(--accent);
+  background: var(--accentDarken);
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
   position: absolute;
   bottom: 0;
@@ -261,7 +261,7 @@ export default defineComponent({
 }
 
 #home-1 {
-  background: var(--accent);
+  background: var(--accentDarken);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -321,7 +321,7 @@ export default defineComponent({
   > div {
     width: 100%;
     height: 10vw;
-    background: var(--accent);
+    background: var(--accentDarken);
     clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
     // margin-top: -3vw;
   }
@@ -337,12 +337,14 @@ export default defineComponent({
   text-align: center;
 
   > .home-2-key {
-    font-size: calc(1.5rem + 0.05vw);
-    color: var(--bg);
+    font-size: calc(1.25rem + .05vw);
+    color: #333;
+    font-weight: 700;
   }
   > .home-2-value {
-    font-size: calc(2rem + 0.05vw);
+    font-size: calc(2rem + .05vw);
     color: #000;
+    font-weight: 700;
   }
 }
 
