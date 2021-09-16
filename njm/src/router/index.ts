@@ -6,12 +6,12 @@ export function router(lang: string) {
     {
       path: '/',
       name: 'Home',
-      component: () => import('../views/Home.vue').catch(() => location.href = '/'),
+      component: () => import('../views/Home.vue').catch(() => location.href = `/${lang}/`),
     },
     {
       path: '/instances',
       name: 'Instances',
-      component: () => import('../views/Instances.vue').catch(() => location.href = '/instances'),
+      component: () => import('../views/Instances.vue').catch(() => location.href = `/${lang}/instances`),
     },
     {
       path: '/:pathMatch(.*)*',
