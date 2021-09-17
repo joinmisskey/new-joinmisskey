@@ -5,7 +5,7 @@
         <div class="p-3 pl-xl-5">
           <p><router-link to="/" class="h3 fw-light" v-text="$ts['joinmisskey']" /></p>
           <ul class="list-inline">
-            <li v-for="([key, lang]) in localeNames" :key="key" class="list-inline-item">
+            <li v-for="([key, lang]) in localeNames" :key="key" class="list-inline-item" :lang="key">
               <a :href="localeLink(key)" v-text="lang" />
             </li>
           </ul>
