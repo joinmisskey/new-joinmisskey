@@ -25,6 +25,7 @@
         <div class="p-3">
           <ul class="list-unstyled">
             <li><a href="https://github.com/joinmisskey/new-joinmisskey" target="_blank"><Fa :icon="faGithub" fixed-width /> joinmisskey/new-joinmisskey</a></li>
+            <li><a href="https://github.com/joinmisskey/api" target="_blank"><Fa :icon="faGithub" fixed-width /> joinmisskey/api</a></li>
             <li><a href="https://gitlocalize.com/repo/6342" target="_blank"><Fa :icon="faLanguage" fixed-width /> GitLocalize</a></li>
             <li><a href="https://misskey.io/@joinmisskey" target="_blank"><Fa :icon="mkMi" fixed-width /> @joinmisskey@misskey.io</a></li>
           </ul>
