@@ -5,7 +5,9 @@
     <p>
       <router-link to="/" v-text="$ts['toppage']" /> /
       <router-link to="/instances" v-text="$ts['instances-list']" /><br />
-      <a href="https://wiki.misskey.io">Misskey Wiki</a>
+      <a href="https://wiki.misskey.io">Misskey Hub</a><br />
+      <a href="https://hide.ac/articles/kTkaNrnEP">joinmisskey Wikiの一部記事はHiÐΞへ移転しました。</a><br />
+      <a href="https://github.com/tamaina/joinmisskey.github.io/tree/pages/ja/wiki">移転しなかった記事はGitHubのアーカイブをご覧ください。</a>
     </p>
   </div>
 </template>

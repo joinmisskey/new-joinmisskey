@@ -7,13 +7,13 @@
         <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" :imgOnLoad="imgOnLoad" />
         <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
         <div id="home-0-instances-list-button-div">
+          <a href="https://misskey-hub.net" class="_textPrimaryButton home-0-button fw-bold" target="_blank">Misskey Hub</a>
           <router-link
             to="/instances"
             tag="button"
             class="_textPrimaryButton home-0-button"
             v-text="$ts['instances-list']"
           />
-          <a :href="$ts._home['setup-url']" class="_textButton home-0-button" target="_blank" v-text="$ts._home['setup']" />
         </div>
       </div>
 

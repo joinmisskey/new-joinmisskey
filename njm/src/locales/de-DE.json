@@ -11,7 +11,6 @@
   "_home": {
     "forever-evolving": "Misskey, die sich immer weiter entwickelnde Microblogging-Plattform.",
     "setup": "eine eigene Instanz erstellen (englische Anleitung)",
-    "setup-url": "https://github.com/misskey-dev/misskey/blob/master/docs/setup.en.md",
     "misskeyisa-decenralized": "Danke, dass Sie Misskey gefunden haben. Misskey ist ein verteiltes Microblogging-Netzwerk, das auf der Erde geboren wurde. Da es im Fediverse (einem Universum bestehend aus verschiedenen sozialen Netzwerken) existiert, ist es mit anderen sozialen Netzwerken verbunden.",
     "whydontyou-take": "Lassen Sie uns für eine Weile der Hektik der Stadt entfliehen und in das neue Internet eintauchen.",
     "federation": "Föderierung",
