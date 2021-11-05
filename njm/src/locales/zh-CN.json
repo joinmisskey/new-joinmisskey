@@ -1,0 +1,72 @@
+{
+  "language": "简体中文",
+  "joinmisskey": "开始使用 Misskey",
+  "description": "Misskey是一个诞生于地球的分布式微博客SNS。\n让我们暂时远离城市的喧嚣，进入新的互联网世界。",
+  "slogan": "在新世界中互相联系",
+  "next": "继续",
+  "prev": "返回",
+  "close": "关闭",
+  "loading": "加载中",
+  "feature": "特色",
+  "_home": {
+    "forever-evolving": "永远在不断更新的分布式微博客平台",
+    "setup": "搭建属于自己的实例",
+    "misskeyisa-decenralized": "感谢您能找到Misskey。\n\nMisskey是一个诞生于地球的分布式微博客SNS。由于它存在于 Fediverse（一个由各种 SNS 组成的宇宙）中，因此它可以与其他 SNS 相互关联",
+    "whydontyou-take": "让我们暂时远离城市的喧嚣，进入新的互联网世界吧!",
+    "notes-count-pre": "总帖子数",
+    "users-count-pre": "总用户数",
+    "instances-count-pre": "总实例数",
+    "donate-misskey": "Misskey不是企业，它是免费开源使用的。所以开发者只赚取您的捐赠资金（某些情况下可能赚取广告收入，但是这是运营服务器的收入，并直接给开发者。这不会是一个收入）。\n如果您捐赠开发，您将能够为继续开发保持动力并为项目做出贡献。\n在Patreon 上接受捐赠。\n如果您捐赠了一定数量，您可以在 Misskey 信息页面上列出您的名字",
+    "donate-server": "还有，服务器运营商基本不能赚钱。由于运营服务器成本较高，请考虑支持运营商。它与开发虽没有直接关系，但如果没有服务器就没有人有继续开发的动力，因此保持其运行与开发一样重要。",
+    "develop-misskey": "如果您有此项目的开发能力并对此感到有兴趣，则可以通过编辑源代码为项目做出贡献。",
+    "federation": "联合",
+    "federation-detail": "Misskey 是一种开源软件，允许您创建和操作自己的服务器（实例）。 Misskey 有一个 Web 标准的服务器到服务器通信功能，称为 ActivityPub。这允许您关注用户并查看您的实例与其他实例（例如不同实例和 Mastodon）之间的帖子并做出回应。",
+    "notes": "帖子",
+    "notes-detail": "与其他服务相比，Misskey的发布功能上（在 Misskey 中，发布的帖子称为“Note”）具有许多功能。"
+  },
+  "_features": {
+    "posting": "投稿",
+    "_details": {
+      "mfm": {
+        "title": "Misskey Flavored Markdown",
+        "description": "MFM的介绍"
+      },
+      "reactions": {
+        "title": "回应",
+        "description": "回应的介绍"
+      },
+      "visibility": {
+        "title": "公开范围",
+        "description": "公开范围的说明"
+      }
+    }
+  },
+  "instances-list": "实例列表",
+  "instances-list-description": "列出 Misskey 实例。",
+  "instances-list-setting": {
+    "setting": "列表设置",
+    "order": "排列顺序",
+    "orders": {
+      "default": "默认",
+      "version": "版本",
+      "originalNotesCount": "帖子数",
+      "originalUsersCount": "用户数",
+      "reactionsCount": "回应数"
+    },
+    "descending": "降序",
+    "ascending": "升序",
+    "repository": "开发者",
+    "language": "语言",
+    "registration": "语言",
+    "registration-statuses": {
+      "open": "开放",
+      "close": "邀请制"
+    },
+    "accept": "确认"
+  },
+  "notes-count": "帖子数",
+  "users-count": "用户数",
+  "reactions-count": "回应数",
+  "404-text": "未能找到您要查找的页面。",
+  "toppage": "首页"
+}
