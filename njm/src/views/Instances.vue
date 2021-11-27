@@ -57,7 +57,7 @@
             <div class="col-12 col-lg-6 mb-3">
               <div class="fw-bold" v-text="$ts['instances-list-setting']['repository']" />
               <div class="form-check form-check-inline"  v-for="repo in repositories" :key="repo">
-                <input class="form-check-input" type="checkbox" :id="`select-${repo}`" :value="repo" v-model="repository" :disabled="this.orderBy === 'reactionsCount' && repo === 'mei23/misskey'">
+                <input class="form-check-input" type="checkbox" :id="`select-${repo}`" :value="repo" v-model="repository">
                 <label class="form-check-label" :for="`select-${repo}`" v-text="repo" />
               </div>
             </div>
@@ -152,8 +152,6 @@ export default defineComponent({
       if (this.repository.length === 0) {
         this.repository = [...repositories];
       }
-
-      if (this.orderBy === 'reactionsCount') this.repository = this.repository.filter(r => r !== 'mei23/misskey');
 
       if (this.registrationStatus.length === 0) {
         this.registrationStatus = [...registrationStatuses];
