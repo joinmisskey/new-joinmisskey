@@ -13,28 +13,31 @@
     "setup": "Run your Instance",
     "misskeyisa-decenralized": "Misskey is a decentralized microblogging platform born on Earth. Since it exists within the Fediverse (a universe where various social media platforms are organized), it is mutually linked with other social media platforms.",
     "whydontyou-take": "Why don't you take a short break from the hustle and bustle of the city, and dive into a new Internet?",
-    "notes-count-pre": "Notes",
-    "users-count-pre": "Users",
-    "instances-count-pre": "Instances",
+    "notes-count-pre": "Total Notes",
+    "users-count-pre": "Total Users",
+    "instances-count-pre": "Total Instances",
+    "donate-misskey": "Misskey is not a business, it's free to use, so the only revenue we get is from your donations (in some instances we may get advertising revenue, but that's the operator's revenue and not directly to the developers). If you donate, you will be contributing to the project by allowing us to continue development. Donations are generally accepted via Patreon. If you donate a certain amount, your name will be listed on Misskey's information page.",
+    "donate-server": "Also, the server operators are essentially not earning any revenue. Running a server is expensive, so please consider supporting the server operator.",
+    "develop-misskey": "If you have software engineering skills, you can contribute to the project by editing the source code.",
     "federation": "Federation",
-    "federation-detail": "Misskeyはオープンソースソフトウェアであり、自分のサーバー（インスタンス）を作って運営することができます。そして、MisskeyはActivityPubというWeb標準規格のサーバー間通信機能を持っています。これによって、自分のインスタンスと、違うインスタンスやMastodonをはじめとする他のサービスとの間で、ユーザーをフォローしたり投稿を見て反応したりできます。",
-    "notes": "ノート",
-    "notes-detail": "基本的な投稿機能（Misskeyでは投稿のことを「ノート」とよびます）は、ほかのサービスに比べると機能がたくさんあります。"
+    "federation-detail": "Misskey is an open source software that allows you to create and run your own servers (instances). Misskey has a web standard called ActivityPub for inter-server communication. This allows you to follow users and respond to their posts between your instance and other instances or other services, such as Mastodon.",
+    "notes": "Notes",
+    "notes-detail": "The basic posting function ( Misskey calls posts \"notes\") has many more features than other services."
   },
   "_features": {
-    "posting": "投稿",
+    "posting": "Posts",
     "_details": {
       "mfm": {
         "title": "Misskey Flavored Markdown",
-        "description": "MFMのせつめい"
+        "description": "MFM Statements"
       },
       "reactions": {
-        "title": "リアクション",
-        "description": "リアクションのせつめい"
+        "title": "Reactions",
+        "description": "Reactions Statements"
       },
       "visibility": {
-        "title": "公開範囲",
-        "description": "公開範囲の説明"
+        "title": "Scope of publication",
+        "description": "Scope of publication Statements"
       }
     }
   },
