@@ -2,22 +2,24 @@
 
 ## Project setup
 ```
-yarn install
+# setup node.js and...
+sudo apt install libimagequant-dev
+npx yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npx yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+npx yarn build
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+npx yarn lint
 ```
 
 ### Customize configuration

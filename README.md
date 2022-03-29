@@ -8,6 +8,7 @@ Vue-cliで新しくjoinmisskeyを作りました。
 
 Translation: https://gitlocalize.com/repo/6342
 
+Develop: ./njm/README.md
+
 ## WARNING
 パス名に_を指定しないでください。-に置き換えられます。
-
