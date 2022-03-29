@@ -12,7 +12,7 @@ export const languageLookup: { [x: string]: typeof instanceLanguages[number][] }
     'de-DE': ['de'],
     'ko-KR': ['ko'],
     'zh-CN': ['zh'],
-	'ru-RU': ['ru']
+    'ru-RU': ['ru']
 };
 
 export interface InstancesSetting {
