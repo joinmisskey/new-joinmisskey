@@ -8,9 +8,8 @@
         <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
         <div id="home-0-instances-list-button-div">
           <a href="https://misskey-hub.net" class="_textPrimaryButton home-0-button fw-bold" target="_blank">Misskey Hub</a>
-          <router-link
-            to="/instances"
-            tag="button"
+          <button
+            @click="$router.push('/instances')"
             class="_textPrimaryButton home-0-button"
             v-text="$ts['instances-list']"
           />
