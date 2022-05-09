@@ -227,7 +227,7 @@ export default defineComponent({
         acc.push({ type: 'instance', data: instance });
         if (i === arr.length - 1) {
           acc.push({ type: 'ad', data: 'end' });
-        } else if (i % 7 === 6) {
+        } else if (i % 9 === 2) {
           acc.push({ type: 'ad', data: `${i / 5}` });
         }
         return acc;
