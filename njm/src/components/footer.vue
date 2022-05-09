@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <div class="py-3">
+    <div class="pt-5">
       <Adsense
         data-ad-layout="in-article"
         data-ad-format="fluid"
@@ -36,6 +36,7 @@
             <li><a href="https://github.com/joinmisskey/api" target="_blank"><Fa :icon="faGithub" fixed-width /> joinmisskey/api</a></li>
             <li><a href="https://gitlocalize.com/repo/6342" target="_blank"><Fa :icon="faLanguage" fixed-width /> GitLocalize</a></li>
             <li><a href="https://misskey.io/@joinmisskey" target="_blank"><Fa :icon="mkMi" fixed-width /> @joinmisskey@misskey.io</a></li>
+            <li><a href="https://github.com/joinmisskey/new-joinmisskey/wiki" target="_blank" v-text="$ts['privacy-policy']" /></li>
           </ul>
         </div>
       </div>
