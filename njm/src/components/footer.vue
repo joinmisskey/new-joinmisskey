@@ -1,9 +1,7 @@
 <template>
   <div id="footer">
     <div class="pt-5 container">
-      <Adsense
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
+      <InArticleAdsense
         data-ad-client="ca-pub-1736621122676736"
         data-ad-slot="9725932695"
       />

@@ -29,6 +29,7 @@ app
 .use(router(lang))
 .use(ScriptX)
 .use(Ads.Adsense)
+.use(Ads.InArticleAdsense)
 .component('Fa', FontAwesomeIcon)
 .mount('#app');
 
