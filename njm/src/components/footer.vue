@@ -22,6 +22,7 @@
       <div class="col-12 col-lg-4 col-xl-3">
         <div class="p-3">
           <ul class="list-unstyled">
+            <li><a href="https://misskey-hub.net/" target="_blank"><Fa :icon="faRocket" fixed-width /> Misskey Hub</a></li>
             <li><a href="https://github.com/misskey-dev/misskey" target="_blank"><Fa :icon="faGithub" fixed-width /> misskey-dev/misskey</a></li>
             <li><a href="https://www.patreon.com/syuilo" target="_blank"><Fa :icon="faPatreon" fixed-width /> Patreon</a></li>
             <li><a href="https://crowdin.com/project/misskey" target="_blank"><Fa :icon="faLanguage" fixed-width /> Crowdin</a></li>
@@ -49,7 +50,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faLanguage, faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons';
 import { mkMi } from '@/mi-icon';
 import { localeNames } from '@/locale';
@@ -64,7 +65,7 @@ export default defineComponent({
         return path.join('/');
       },
 
-      faGithub, faPatreon, mkMi, faLanguage
+      faGithub, faPatreon, mkMi, faLanguage, faRocket
     }
   }
 });
