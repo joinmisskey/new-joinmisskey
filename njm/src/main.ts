@@ -6,6 +6,8 @@ if (location.href.includes('wiki/instances')) {
 
 import { createApp } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import ScriptX from 'vue-scriptx';
+import Ads from 'vue-google-adsense';
 
 import App from './App.vue'
 import { router } from './router';
@@ -22,6 +24,12 @@ app.config.globalProperties = {
 
 console.info('App create');
 
-app.use(store).use(router(lang)).component('Fa', FontAwesomeIcon).mount('#app');
+app
+.use(store)
+.use(router(lang))
+.use(ScriptX)
+.use(Ads.Adsense)
+.component('Fa', FontAwesomeIcon)
+.mount('#app');
 
 navigator.serviceWorker.register('/sw.js');

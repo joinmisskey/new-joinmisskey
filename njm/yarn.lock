@@ -5262,12 +5262,22 @@ vue-eslint-parser@^8.0.0, vue-eslint-parser@^8.0.1:
     lodash "^4.17.21"
     semver "^7.3.5"
 
+vue-google-adsense@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-google-adsense/-/vue-google-adsense-2.0.0.tgz#7a8007336cf1471923da8372ae986fbe84c10cc2"
+  integrity sha512-/Lds405KZEufu8VKjmxubu22qRQsr073MKmZuefC9ABs3ArvTZCWfqFMyG2xNjeFOHHr4vrngXUrNhuT8Zi9lw==
+
 vue-router@^4.0.0-0:
   version "4.0.15"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.15.tgz#b4a0661efe197f8c724e0f233308f8776e2c3667"
   integrity sha512-xa+pIN9ZqORdIW1MkN2+d9Ui2pCM1b/UMgwYUCZOiFYHAvz/slKKBDha8DLrh5aCG/RibtrpyhKjKOZ85tYyWg==
   dependencies:
     "@vue/devtools-api" "^6.0.0"
+
+vue-scriptx@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/vue-scriptx/-/vue-scriptx-0.2.5.tgz#521cb3e060a85f5cb3b58cbc50945de054b24093"
+  integrity sha512-jnZr6ZLyuT23xt6t6a6bimQf8nrOVxjZVQZ5V4vF/c0phXa3kHbi/F3LwMJAoblTKlXpfq+RlQDg40hfZG1hlw==
 
 vue@^3.2.11:
   version "3.2.33"

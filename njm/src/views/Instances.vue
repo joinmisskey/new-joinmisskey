@@ -22,7 +22,16 @@
     </div>
     <div id="instances-list" v-if="!loading">
       <transition-group name="instance-list-trans">
-      <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
+        <template v-for="item in sorted" :key="item.type === 'instance' ? item.data.url : `ad-${item.data}`">
+          <Instance v-if="item.type === 'instance'" :instance="item.data" />
+          <Adsense
+            v-else
+            data-ad-client="ca-pub-1736621122676736"
+            data-ad-slot="4980038327"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+        </template>
       </transition-group>
     </div>
     <div id="instances-loading" v-text="$ts['loading']" v-else/>
@@ -94,6 +103,8 @@ import Header from '@/components/header.vue';
 import Footer from '@/components/footer.vue';
 import { InstancesSetting, repositories, orderOptions, registrationStatuses, instanceLanguages } from '@/instances-list-setting';
 
+type SortedItem = { type: 'instance' | 'ad'; data: any | string };
+
 export default defineComponent({
   name: 'Instances',
 
@@ -107,7 +118,7 @@ export default defineComponent({
     return {
       loading: true,
       instances: [] as any[],
-      sorted: [] as any[],
+      sorted: [] as SortedItem[],
       showSetting: false,
 
       repositories,
@@ -212,7 +223,15 @@ export default defineComponent({
       }
       //#region
 
-      this.sorted = sorted;
+      this.sorted = sorted.reduce((acc, instance, i, arr) => {
+        acc.push({ type: 'instance', data: instance });
+        if (i === arr.length) {
+          acc.push({ type: 'ad', data: 'end' });
+        } else if (i % 7 === 6) {
+          acc.push({ type: 'ad', data: `${i / 5}` });
+        }
+        return acc;
+      }, [] as SortedItem[]);
     }
   },
 });
