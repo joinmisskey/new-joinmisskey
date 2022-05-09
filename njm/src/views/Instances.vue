@@ -225,7 +225,7 @@ export default defineComponent({
 
       this.sorted = sorted.reduce((acc, instance, i, arr) => {
         acc.push({ type: 'instance', data: instance });
-        if (i === arr.length) {
+        if (i === arr.length - 1) {
           acc.push({ type: 'ad', data: 'end' });
         } else if (i % 7 === 6) {
           acc.push({ type: 'ad', data: `${i / 5}` });
