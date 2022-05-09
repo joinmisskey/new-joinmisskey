@@ -42,7 +42,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import punycode from 'punycode/punycode';
-import * as numeral from 'numeral';
+import numeral from 'numeral';
 
 export default defineComponent({
   name: 'Instances',

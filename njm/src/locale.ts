@@ -1,4 +1,4 @@
-import * as extend from 'extend';
+import extend from 'extend';
 const localeMods = import.meta.glob('./locales/*.json');
 
 export const locales = Object.keys(localeMods).reduce((res, key) => {

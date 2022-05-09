@@ -79,7 +79,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import * as numeral from 'numeral';
+import numeral from 'numeral';
 import { } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
