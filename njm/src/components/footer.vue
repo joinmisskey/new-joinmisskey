@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <div class="pt-5">
+    <div class="pt-5 container">
       <Adsense
         data-ad-layout="in-article"
         data-ad-format="fluid"
