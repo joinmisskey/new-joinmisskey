@@ -229,8 +229,13 @@ export default defineComponent({
 
 #instances-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+@media (min-width: 26rem) {
+#instances-list {
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+}
 }
 
 .instance-list-trans-move,
