@@ -9,4 +9,11 @@ export default defineConfig({
 			'@/': __dirname + '/src/',
 		}
 	},
+	build: {
+		target: [
+			'chrome100',
+			'firefox100',
+			'safari15.5'
+		]
+	}
 })
