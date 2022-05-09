@@ -11,7 +11,7 @@
       }"
     >
       <div class="instance-title">
-        <template v-if="this.instance.meta.name && this.instance.meta.name !== uniUrl"><span class="instance-name" v-text="instance.meta.name" /><br><span class="instance-url" v-text="uniUrl" /></template>
+        <template v-if="instance.meta.name && instance.meta.name !== uniUrl"><span class="instance-name" v-text="instance.meta.name" /><br><span class="instance-url" v-text="uniUrl" /></template>
         <template v-else><span class="instance-name-url" v-text="uniUrl" /></template>
       </div>
     </div>
