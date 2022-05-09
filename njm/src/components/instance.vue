@@ -160,7 +160,7 @@ export default defineComponent({
   font-size: .8rem;
   grid-gap: 4px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(6.5em, 1fr));
   margin: 0 1rem .75rem 1rem;
   line-height: 1.3;
 }
