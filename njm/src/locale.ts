@@ -1,17 +1,23 @@
 import * as extend from 'extend';
-const localeMods = require.context('./locales', true, /\.json$/i);
-const ja = localeMods('./ja-JP.json');
+const localeMods = import.meta.glob('./locales/*.json');
 
-export const locales = localeMods.keys().reduce((res, key) => {
+export const locales = Object.keys(localeMods).reduce((res, key) => {
     const matched = key.match(/([A-Za-z0-9-_]+)\./i)
     if (matched && matched.length > 1) {
-      res[matched[1]] = extend({}, ja, localeMods(key));
+      res[matched[1]] = localeMods[key];
     }
     return res;
-}, {} as Record<string, Record<string, any>>);
+}, {} as Record<string, () => Promise<Record<string, any>>>);
 
 const supportedLangs = Object.keys(locales);
-export const localeNames = Object.entries(locales).map(([key, locale]) => [key, locale.language]);
+export const localeNames = [
+  ['ja-JP', '日本語'],
+  ['en-US', 'English'],
+  ['de-DE', 'Deutsch'],
+  ['ko-KR', '한국어'],
+  ['zh-CN', '简体中文'],
+  ['ru-RU', 'Русский'],
+];
 
 const path = location.pathname.split('/');
 let _lang: string | null | undefined = localStorage ? localStorage.getItem('lang') : null;
@@ -43,4 +49,5 @@ if (path[1] && supportedLangs.includes(path[1])) {
 }
 
 export const lang = _lang;
-export const locale = locales[lang];
+export const locale = extend({}, (await localeMods['./locales/ja-JP.json']()).default, (await locales[lang]()).default);
+console.log(locale)
