@@ -255,6 +255,7 @@ export default defineComponent({
 .instances-list-setting-alert {
   background-color: #2d2d2d;
   border-radius: var(--radius);
+  margin: 0 -5px 1rem;
 }
 
 .instances-setting-enter-active, .instances-setting-leave-active {
