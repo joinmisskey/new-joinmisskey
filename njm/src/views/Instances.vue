@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div id="instances-list" class="row p-2" v-if="!loading">
+    <div id="instances-list" v-if="!loading">
       <transition-group name="instance-list-trans">
       <Instance v-for="instance in sorted" :key="instance.url" :instance="instance" />
       </transition-group>
@@ -225,6 +225,12 @@ export default defineComponent({
   .instance {
     margin-bottom: 1rem;
   }
+}
+
+#instances-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  gap: 1rem;
 }
 
 .instance-list-trans-move,

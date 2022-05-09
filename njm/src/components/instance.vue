@@ -1,5 +1,5 @@
 <template>
-  <div class="instance-outer p-2 col-12 col-md-6 col-xl-4">
+  <div class="instance-outer">
   <a :href="`https://${instance.url}/`" target="_blank" class="instance _shadow m-0" :lang="instance.langs[0]">
     <div
       class="instance-header"
