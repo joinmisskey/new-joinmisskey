@@ -58,6 +58,20 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.0-5.tgz#6251e6917198362fa56510eb256cfb6aa6d30a32"
   integrity sha512-aNmBT4bOecrFsZTog1l6AJDQHPP3ocXV+WQ3Ogy8WZCqstB/ahfhH4CPu5i4N9Hw0MBKXqE+LX+NbUxcj8cVTw==
 
+"@gtm-support/core@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@gtm-support/core/-/core-1.2.0.tgz#fbc5cfe37f3962762b9cc8b9d79c2ed0ceb761bc"
+  integrity sha512-zBXBkQAmC5+cUyyHDy8syiiqRLnPV1hspFVncSaRhf62IQ0sn2opLr696uHvNmuD/+dup4IIB6qBu7F/NBqdgg==
+
+"@gtm-support/vue-gtm@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@gtm-support/vue-gtm/-/vue-gtm-1.4.0.tgz#e73d0f097dd8111b2bb71e0b4d3f4ef222571407"
+  integrity sha512-X5MgJbkxZLPV6SVtjgfJ4b3o/W/kqJvFrcK6nw4E0DxWI7H7SXwYAkSnNpfTAkp6POAF9d1w/4iPCll8OB6bvA==
+  dependencies:
+    "@gtm-support/core" "1.2.0"
+  optionalDependencies:
+    vue-router "^4.0.0"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
@@ -5267,7 +5281,7 @@ vue-google-adsense@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-google-adsense/-/vue-google-adsense-2.0.0.tgz#7a8007336cf1471923da8372ae986fbe84c10cc2"
   integrity sha512-/Lds405KZEufu8VKjmxubu22qRQsr073MKmZuefC9ABs3ArvTZCWfqFMyG2xNjeFOHHr4vrngXUrNhuT8Zi9lw==
 
-vue-router@^4.0.0-0:
+vue-router@^4.0.0, vue-router@^4.0.0-0:
   version "4.0.15"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.15.tgz#b4a0661efe197f8c724e0f233308f8776e2c3667"
   integrity sha512-xa+pIN9ZqORdIW1MkN2+d9Ui2pCM1b/UMgwYUCZOiFYHAvz/slKKBDha8DLrh5aCG/RibtrpyhKjKOZ85tYyWg==

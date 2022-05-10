@@ -8,6 +8,7 @@ import { createApp } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ScriptX from 'vue-scriptx';
 import Ads from 'vue-google-adsense';
+import { createGtm } from '@gtm-support/vue-gtm';
 
 import App from './App.vue'
 import { router } from './router';
@@ -30,6 +31,11 @@ app
 .use(ScriptX)
 .use(Ads.Adsense)
 .use(Ads.InArticleAdsense)
+.use(
+	createGtm({
+		id: 'GTM-M98RX87'
+	})
+)
 .component('Fa', FontAwesomeIcon)
 .mount('#app');
 
