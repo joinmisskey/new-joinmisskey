@@ -25,7 +25,7 @@
         <template v-for="item in sorted" :key="item.type === 'instance' ? item.data.url : `ad-${item.data}`">
           <Instance v-if="item.type === 'instance'" :instance="item.data" />
           <Adsense
-            v-else-if="date % 2 === 0"
+            v-else-if="date % 2 === 1"
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="4980038327"
             data-ad-format="auto"
