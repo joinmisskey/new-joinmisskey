@@ -50,4 +50,3 @@ if (path[1] && supportedLangs.includes(path[1])) {
 
 export const lang = _lang;
 export const locale = extend({}, (await localeMods['./locales/ja-JP.json']()).default, (await locales[lang]()).default);
-console.log(locale)
