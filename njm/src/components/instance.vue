@@ -143,9 +143,9 @@ export default defineComponent({
   margin: 0.8rem 1rem 1rem;
   line-height: 1.4;
   min-height: 4.2em;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  line-clamp: 2;
+  line-clamp: 3;
   box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
