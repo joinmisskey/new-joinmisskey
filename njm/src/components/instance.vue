@@ -111,13 +111,13 @@ export default defineComponent({
 }
 
 .instance-header:not(.nobanner) {
-  height: 10rem;
+  height: 13rem;
   padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   .instance-header.nobanner {
-    height: 10rem;
+    height: 13rem;
     padding-bottom: 1rem;
   }
 }
@@ -140,9 +140,9 @@ export default defineComponent({
 .instance-description {
   display: -webkit-box;
   font-size: .95em;
-  margin: 1rem 1rem 6px 1rem;
-  line-height: 1.3;
-  min-height: 2.6em;
+  margin: 0.8rem 1rem 1rem;
+  line-height: 1.4;
+  min-height: 4.2em;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-clamp: 2;
