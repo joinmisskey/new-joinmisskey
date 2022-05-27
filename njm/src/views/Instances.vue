@@ -25,11 +25,18 @@
         <template v-for="item in sorted" :key="item.type === 'instance' ? item.data.url : `ad-${item.data}`">
           <Instance v-if="item.type === 'instance'" :instance="item.data" />
           <Adsense
-            v-else
+            v-else-if="date % 2 === 0"
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="4980038327"
             data-ad-format="auto"
             data-full-width-responsive="true"
+          />
+          <InFeedAdsense
+            v-else
+            data-ad-format="fluid"
+            data-ad-layout-key="-6a+e1+4b-gn+s"
+            data-ad-client="ca-pub-1736621122676736"
+            data-ad-slot="9141582521"
           />
         </template>
       </transition-group>
@@ -129,6 +136,8 @@ export default defineComponent({
       ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
 
       faCog,
+
+      date: (new Date()).getDate(),
     };
   },
 
@@ -223,12 +232,15 @@ export default defineComponent({
       }
       //#region
 
+      let adNumber = 0;
+
       this.sorted = sorted.reduce((acc, instance, i, arr) => {
         acc.push({ type: 'instance', data: instance });
         if (i === arr.length - 1) {
           acc.push({ type: 'ad', data: 'end' });
         } else if (i % 9 === 2) {
-          acc.push({ type: 'ad', data: `${i / 5}` });
+          acc.push({ type: 'ad', data: adNumber });
+          adNumber++;
         }
         return acc;
       }, [] as SortedItem[]);

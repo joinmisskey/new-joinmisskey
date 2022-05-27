@@ -31,6 +31,7 @@ app
 .use(ScriptX)
 .use(Ads.Adsense)
 .use(Ads.InArticleAdsense)
+.use(Ads.InFeedAdsense)
 .use(
 	createGtm({
 		id: 'GTM-M98RX87'
