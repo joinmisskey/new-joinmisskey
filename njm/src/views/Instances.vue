@@ -253,7 +253,7 @@ export default defineComponent({
 
 <style lang="scss">
 #instances {
-  margin: 1rem;
+  padding: 1rem;
 
   .instance {
     margin-bottom: 1rem;
