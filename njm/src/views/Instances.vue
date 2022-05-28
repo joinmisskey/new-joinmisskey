@@ -342,7 +342,7 @@ export default defineComponent({
     justify-content: center;
 
     > ins {
-      width: 23rem;
+      min-width: 23rem;
     }
   }
 }
