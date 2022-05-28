@@ -29,7 +29,7 @@
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="4980038327"
             data-ad-format="auto"
-            data-full-width-responsive="true"
+            data-full-width-responsive="false"
             class="adswrapper-normal"
           />
           <InFeedAdsense
@@ -335,12 +335,6 @@ export default defineComponent({
   border-radius: var(--radius);
 }
 
-.adswrapper-normal {
-  > ins {
-    max-height: 22rem;
-  }
-}
-
 @media (min-width: 26rem) {
   .adswrapper-normal {
     display: flex;
@@ -350,6 +344,7 @@ export default defineComponent({
     > ins {
       min-width: 23rem;
       width: 100%;
+      max-height: 22rem;
     }
   }
 }
