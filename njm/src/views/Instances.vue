@@ -30,6 +30,7 @@
             data-ad-slot="4980038327"
             data-ad-format="auto"
             data-full-width-responsive="true"
+            class="adwrapper-normal"
           />
           <InFeedAdsense
             v-else
@@ -37,6 +38,7 @@
             data-ad-layout-key="-6t+de-31-76+qt"
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="9141582521"
+            class="adwrapper-infeed"
           />
         </template>
       </transition-group>
@@ -331,5 +333,13 @@ export default defineComponent({
   width: calc(100vw - 32px);
   background: var(--panel);
   border-radius: var(--radius);
+}
+
+.adswrapper-normal {
+  display: flex !important;
+
+  > ins {
+    margin: auto;
+  }
 }
 </style>
