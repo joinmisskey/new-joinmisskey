@@ -29,7 +29,7 @@
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="4980038327"
             data-ad-format="auto"
-            data-full-width-responsive="false"
+            data-full-width-responsive="true"
             class="adswrapper-normal"
           />
           <InFeedAdsense
@@ -261,14 +261,22 @@ export default defineComponent({
 }
 
 #instances-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  > * {
+    padding-bottom: 1rem;
+  }
 }
-@media (min-width: 26rem) {
-#instances-list {
-  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-}
+
+@media (min-width: 32rem) {
+  #instances-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+
+    > * {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .instance-list-trans-move,
@@ -335,7 +343,7 @@ export default defineComponent({
   border-radius: var(--radius);
 }
 
-@media (min-width: 26rem) {
+@media (min-width: 32rem) {
   .adswrapper-normal {
     display: flex;
     align-items: center;
