@@ -3,17 +3,24 @@
   <a :href="`https://${instance.url}/`" target="_blank" class="instance _shadow m-0" :lang="instance.langs[0]">
     <div
       class="instance-header"
-      :class="{ nobanner: !instance.banner && !instance.background }"
-      :style="{
-        'background-image':
-          instance.banner ? barr('banners', instance.url) :
-          instance.background ? barr('backgrounds', instance.url) : null
-      }"
+      :class="{ nobanner: b === null, noicon: !instance.icon }"
     >
-      <div class="instance-title">
-        <template v-if="instance.meta.name && instance.meta.name !== uniUrl"><span class="instance-name" v-text="instance.meta.name" /><br><span class="instance-url" v-text="uniUrl" /></template>
-        <template v-else><span class="instance-name-url" v-text="uniUrl" /></template>
+      <picture v-if="instance.icon === true">
+        <source :srcset="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" type="image/webp" />
+        <source :srcset="`https://instanceapp.misskey.page/instance-icons/${instance.url}.png`" type="image/png" />
+        <img loading="lazy" class="instance-icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.png`" />
+      </picture>
+      <div class="instance-title" :class="{ ['title-with-icon']: instance.icon }">
+        <div class="instance-title-inner">
+          <template v-if="instance.meta.name && instance.meta.name !== uniUrl"><span class="instance-name" v-text="instance.meta.name" /><br><span class="instance-url" v-text="uniUrl" /></template>
+          <template v-else><span class="instance-name-url" v-text="uniUrl" /></template>
+        </div>
       </div>
+      <picture v-if="b !== null">
+        <source :srcset="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.webp`" type="image/webp" />
+        <source :srcset="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.jpeg`" type="image/jpeg" />
+        <img loading="lazy" class="instance-header-bg" :src="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.jpeg`" />
+      </picture>
     </div>
     <div class="instance-description" v-text="description"/>
     <div class="instance-version">{{ instance.repo }} {{ instance.meta.version }}</div>
@@ -63,11 +70,6 @@ export default defineComponent({
     return {
       uniUrl,
       numeral,
-      barr: (b: string, url: string) => [
-        `url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg')`,
-        `-webkit-image-set(url('https://instanceapp.misskey.page/instance-${b}/${url}.webp') type('image/webp'), url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg') type('image/jpeg'))`,
-        `image-set(url('https://instanceapp.misskey.page/instance-${b}/${url}.webp') type('image/webp'), url('https://instanceapp.misskey.page/instance-${b}/${url}.jpeg') type('image/jpeg'))`
-      ]
     }
   },
 
@@ -80,7 +82,11 @@ export default defineComponent({
       }
 
       return null;
-    }
+    },
+
+    b() {
+      return this.instance.banner ? 'banners' : this.instance.background ? 'backgrounds' : null
+    },
   },
 
   methods: {
@@ -89,14 +95,18 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
 .instance {
   display: block;
-  color: var(--fg);
+  color: var(--fgPanel);
   background-color: var(--panel);
   text-decoration: none;
   border-radius: var(--radius);
   overflow: hidden;
+  overflow: clip;
   height: auto;
+  padding-bottom: 0.75rem;
+  
 
   &:hover {
     color: #fff !important;
@@ -108,6 +118,9 @@ export default defineComponent({
   padding: 1rem 1rem 0 1rem;
   background-position: center;
   margin: 0 0 auto 0;
+  position: relative;
+  display: flex;
+  font-feature-settings: "palt";
 }
 
 .instance-header:not(.nobanner) {
@@ -122,19 +135,52 @@ export default defineComponent({
   }
 }
 
+.instance-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .instance-title {
-  display: inline-block;
   text-decoration: none;
   line-height: 1.2;
+  font-weight: 700;
+  position: relative;
+  z-index: 1000;
+  flex: auto 0;
+
+  &.title-with-icon {
+    padding-left: 8px;
+  }
+}
+
+.instance-title-inner {
   padding: 0 1px;
   background-color: rgba(0,0,0,.7);
-  font-weight: 700;
 }
+
 .instance-name {
   font-size: 1.75rem;
 }
 .instance-name-url {
   font-size: 1.8rem;
+}
+
+.instance-icon {
+  position: relative;
+  height: 4rem;
+  max-width: 9rem;
+  z-index: 1000;
+  flex: 0;
+  margin-top: 0rem;
+  padding: 2px;
+  background-color: rgba(0,0,0,.7);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .instance-description {
@@ -161,7 +207,7 @@ export default defineComponent({
   grid-gap: 4px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6.5em, 1fr));
-  margin: 0 1rem .75rem 1rem;
+  margin: 0 1rem;
   line-height: 1.3;
 }
 

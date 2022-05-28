@@ -144,6 +144,7 @@ h6 {
 ._noGap_ ._list_,
 ._panel {
   background: var(--panel);
+  color: var(--fgPanel);
   border-radius: var(--radius);
   box-shadow: var(--panelShadow);
   overflow: hidden;
@@ -163,6 +164,7 @@ h6 {
   --panelShadow: 0 8px 24px rgb(0 0 0 / 25%);
   --acrylicBg: rgba(35, 35, 35, 0.5);
   --fg: rgb(199, 209, 216);
+  --fgPanel: rgb(211, 220, 227);
   --fgTransparentWeak: rgba(199, 209, 216, 0.75);
   --fgTransparent: rgba(199, 209, 216, 0.5);
   --fgHighlighted: rgb(255, 255, 255);
