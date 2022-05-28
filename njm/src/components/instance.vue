@@ -180,7 +180,7 @@ export default defineComponent({
   padding: 2px;
   background-color: rgba(0,0,0,.7);
   image-rendering: -webkit-optimize-contrast;
-image-rendering: high-quality;
+  image-rendering: high-quality;
 }
 
 .instance-description {
