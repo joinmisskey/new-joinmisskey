@@ -336,9 +336,8 @@ export default defineComponent({
 }
 
 .adswrapper-normal {
-  display: table-cell;
-
-  text-align: center;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
