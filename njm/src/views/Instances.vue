@@ -342,6 +342,7 @@ export default defineComponent({
 
   > ins {
     width: 23rem;
+    max-width: calc(100vw - 3rem);
   }
 }
 </style>
