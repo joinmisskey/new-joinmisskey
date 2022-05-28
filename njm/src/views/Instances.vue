@@ -30,7 +30,7 @@
             data-ad-slot="4980038327"
             data-ad-format="auto"
             data-full-width-responsive="true"
-            class="adwrapper-normal"
+            class="adswrapper-normal"
           />
           <InFeedAdsense
             v-else
@@ -38,7 +38,7 @@
             data-ad-layout-key="-6t+de-31-76+qt"
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="9141582521"
-            class="adwrapper-infeed"
+            class="adswrapper-infeed"
           />
         </template>
       </transition-group>
