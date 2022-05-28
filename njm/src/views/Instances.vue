@@ -335,14 +335,15 @@ export default defineComponent({
   border-radius: var(--radius);
 }
 
-.adswrapper-normal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 26rem) {
+  .adswrapper-normal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  > ins {
-    width: 23rem;
-    max-width: calc(100vw - 3rem);
+    > ins {
+      width: 23rem;
+    }
   }
 }
 </style>
