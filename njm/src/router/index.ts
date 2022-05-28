@@ -22,6 +22,9 @@ export function router(lang: string) {
   
   return createRouter({
     history: createWebHistory(`/${lang}/`),
-    routes
+    routes,
+    scrollBehavior() {
+      return { top: 0 };
+    },
   });
 }
