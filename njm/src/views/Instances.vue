@@ -344,6 +344,7 @@ export default defineComponent({
     > ins {
       min-width: 23rem;
       width: 100%;
+      max-height: 20rem;
     }
   }
 }
