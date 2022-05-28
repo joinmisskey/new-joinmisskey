@@ -339,5 +339,9 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
+
+  > ins {
+    width: 23rem;
+  }
 }
 </style>
