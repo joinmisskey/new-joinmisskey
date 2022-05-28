@@ -335,6 +335,12 @@ export default defineComponent({
   border-radius: var(--radius);
 }
 
+.adswrapper-normal {
+  > ins {
+    max-height: 22rem;
+  }
+}
+
 @media (min-width: 26rem) {
   .adswrapper-normal {
     display: flex;
@@ -344,7 +350,6 @@ export default defineComponent({
     > ins {
       min-width: 23rem;
       width: 100%;
-      max-height: 20rem;
     }
   }
 }
