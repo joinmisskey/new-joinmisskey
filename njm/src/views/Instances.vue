@@ -28,7 +28,7 @@
             v-else-if="date % 2 === 1"
             data-ad-client="ca-pub-1736621122676736"
             data-ad-slot="4980038327"
-            data-ad-format="auto"
+            data-ad-format="rectangle, horizontal"
             data-full-width-responsive="true"
             class="adswrapper-normal"
           />
