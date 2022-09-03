@@ -24,14 +24,6 @@
       <transition-group name="instance-list-trans">
         <template v-for="item in sorted" :key="item.type === 'instance' ? item.data.url : `ad-${item.data}`">
           <Instance v-if="item.type === 'instance'" :instance="item.data" />
-          <Adsense
-            v-else-if="date % 2 === 1"
-            data-ad-client="ca-pub-1736621122676736"
-            data-ad-slot="4980038327"
-            data-ad-format="rectangle, horizontal"
-            data-full-width-responsive="true"
-            class="adswrapper-normal"
-          />
           <InFeedAdsense
             v-else
             data-ad-format="fluid"
@@ -138,8 +130,6 @@ export default defineComponent({
       ...((this as any).$store.state['instancesSetting'] as InstancesSetting),
 
       faCog,
-
-      date: (new Date()).getDate(),
     };
   },
 
@@ -240,7 +230,7 @@ export default defineComponent({
         acc.push({ type: 'instance', data: instance });
         if (i === arr.length - 1) {
           acc.push({ type: 'ad', data: 'end' });
-        } else if (i % 9 === 2) {
+        } else if (i % 5 === 2) {
           acc.push({ type: 'ad', data: adNumber });
           adNumber++;
         }

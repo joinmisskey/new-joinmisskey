@@ -8,9 +8,9 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.31",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/fontawesome-svg-core": "6",
+    "@fortawesome/free-brands-svg-icons": "6",
+    "@fortawesome/free-solid-svg-icons": "6",
     "@fortawesome/vue-fontawesome": "^3.0.0-3",
     "@gtm-support/vue-gtm": "^1.4.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
