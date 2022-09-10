@@ -35,7 +35,12 @@ h6 {
   }
 }
 
-*:lang("zh") {
+*:lang("zh-TW") {
+  font-family: GenEiUniverSans-w, 'Noto Sans TC', SourceHanSans-w, sans-serif, -apple-system;
+}
+
+*:lang("zh"),
+*:lang("zh-CN") {
   font-family: GenEiUniverSans-w, 'Noto Sans SC', SourceHanSans-w, sans-serif, -apple-system;
 }
 
