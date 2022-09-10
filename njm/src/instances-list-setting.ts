@@ -11,6 +11,7 @@ export const languageLookup: { [x: string]: typeof instanceLanguages[number][] }
     'en-US': ['en', 'fr', 'th', 'es', 'nl'],
     'de-DE': ['de'],
     'ko-KR': ['ko'],
+    'zh-TW': ['zh'],
     'zh-CN': ['zh'],
     'ru-RU': ['ru']
 };
