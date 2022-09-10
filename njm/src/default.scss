@@ -39,7 +39,7 @@ h6 {
   font-family: GenEiUniverSans-w, 'Noto Sans TC', SourceHanSans-w, sans-serif, -apple-system;
 }
 
-*:lang("zh"),
+*:lang("zh"):not(*:lang("zh-TW")),
 *:lang("zh-CN") {
   font-family: GenEiUniverSans-w, 'Noto Sans SC', SourceHanSans-w, sans-serif, -apple-system;
 }
