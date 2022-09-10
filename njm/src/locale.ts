@@ -15,6 +15,7 @@ export const localeNames = [
   ['en-US', 'English'],
   ['de-DE', 'Deutsch'],
   ['ko-KR', '한국어'],
+  ['zh-TW', '繁體中文'],
   ['zh-CN', '简体中文'],
   ['ru-RU', 'Русский'],
 ];
