@@ -1,0 +1,52 @@
+{
+  "language": "繁體中文",
+  "joinmisskey": "開始使用 Misskey",
+  "description": "Misskey 是誕生於地球的分佈式微網誌 SNS。讓我們暫時遠離城市的喧囂，進入新的互聯網世界吧！",
+  "slogan": "在新世界中<wbr>互相聯繫",
+  "next": "繼續",
+  "prev": "返回",
+  "close": "關閉",
+  "loading": "載入中",
+  "feature": "特色",
+  "_home": {
+    "forever-evolving": "持續進化的分佈式微網誌平台  Misskey",
+    "setup": "搭建屬於自己的實例",
+    "misskeyisa-decenralized": "感謝您能找到 Misskey。 \n\nMisskey 是誕生於地球的分佈式微網誌 SNS。由於它存在於 Fediverse（由各種 SNS 組成的宇宙）中，因此它可以與其他 SNS 相互關聯。",
+    "whydontyou-take": "暫時遠離城市的喧囂，進入新的互聯網世界吧！",
+    "notes-count-pre": "總貼文數",
+    "users-count-pre": "總用戶數",
+    "instances-count-pre": "總實例數",
+    "donate-misskey": "Misskey 不是一家企業，由於它是免費使用的，開發者所能獲得的收入來自於各位的捐款（某些實例可能會有廣告收入，但那是運營者的收入而不是直接給開發人員的收入）。您的捐款讓開發能夠持續下去並為本專案做出貢獻。捐款基本上是透過 Patreon，如果您捐贈了一定的金額，就會將您的名字登載在 Misskey 資訊頁上。",
+    "donate-server": "此外，伺服器的運營者基本上不能賺錢。由於運營伺服器需要成本，請考慮支援運營者。雖然與開發沒有直接的關係，正因為有著伺服器才有了這個專案，因此維持運營是和開發同樣重要的。",
+    "develop-misskey": "如果您具備軟體工程師的技能，您可以透過編輯原始碼來為本專案做出貢獻。"
+  },
+  "instances-list": "實例列表",
+  "instances-list-description": "列出 Misskey 實例。",
+  "instances-list-setting": {
+    "setting": "列表設定",
+    "order": "排序",
+    "orders": {
+      "default": "預設",
+      "version": "版本",
+      "originalNotesCount": "貼文數",
+      "originalUsersCount": "用戶數",
+      "reactionsCount": "反應數"
+    },
+    "descending": "降冪",
+    "ascending": "昇冪",
+    "repository": "儲存庫",
+    "language": "語言",
+    "registration": "註冊",
+    "registration-statuses": {
+      "open": "開放",
+      "close": "邀請制"
+    },
+    "accept": "確認"
+  },
+  "notes-count": "貼文數",
+  "users-count": "用戶數",
+  "reactions-count": "反應數",
+  "404-text": "找不到您在尋找的頁面。",
+  "toppage": "首頁",
+  "privacy-policy": "隱私政策"
+}
