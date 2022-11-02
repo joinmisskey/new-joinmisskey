@@ -142,7 +142,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: 1;
 }
 
 .instance-title {
@@ -150,7 +150,7 @@ export default defineComponent({
   line-height: 1.2;
   font-weight: 700;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   flex: auto 0;
 
   &.title-with-icon {
@@ -174,7 +174,7 @@ export default defineComponent({
   position: relative;
   height: 4rem;
   max-width: 9rem;
-  z-index: 1000;
+  z-index: 100;
   flex: 0;
   margin-top: 0rem;
   padding: 2px;
