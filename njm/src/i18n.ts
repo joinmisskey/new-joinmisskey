@@ -1,4 +1,4 @@
-// Codes copied from https://github.com/syuilo/misskey/blob/develop/src/client/i18n.ts
+// Codes copied from https://github.com/misskey-dev/misskey/blob/develop/src/client/i18n.ts
 // AGPL 3.0 ©syuilo
 import { markRaw } from 'vue';
 import { locale } from '@/locale';
