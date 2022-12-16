@@ -57,7 +57,7 @@
     "ascending": "升序",
     "repository": "开发者",
     "language": "语言",
-    "registration": "语言",
+    "registration": "注册模式",
     "registration-statuses": {
       "open": "开放",
       "close": "邀请制"
