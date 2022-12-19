@@ -1,0 +1,52 @@
+{
+  "language": "Italiano (IT)",
+  "joinmisskey": "Inizia con Misskey",
+  "description": "Misskey è una piattaforma di microblog nata sul pianeta Terra. Prendi una pausa dal tran tran della vita quotidiana e immergiti nel nuovo modo di vivere Internet!",
+  "slogan": "Colleghiamoci nel nuovo mondo!",
+  "next": "avanti",
+  "prev": "indietro",
+  "close": "chiudi",
+  "loading": "caricamento...",
+  "feature": "caratteristica",
+  "_home": {
+    "forever-evolving": "Una piattaforma interplanetaria di microblog, in continua evoluzione.",
+    "setup": "Run your Instance",
+    "misskeyisa-decenralized": "Misskey è una piattaforma di microblog nata sul pianeta Terra. Poiché esiste all'interno del Fediverso (un universo di social network federati), è reciprocamente connessa alle altre piattaforme.",
+    "whydontyou-take": "Prendi una pausa dal tran tran quotidiano e immergiti nel nuovo modo di vivere Internet!",
+    "notes-count-pre": "Note totali",
+    "users-count-pre": "Profili totali",
+    "instances-count-pre": "Istanze totali",
+    "donate-misskey": "Misskey non è finanziata da una azienda, si può usare liberamente e gratuitamente, gli unici introiti arrivano dalle vostre donazioni (in alcune istanze potrebbero esserci annunci economici ma quelli soddisfano gli amministratori di quella istanza, non gli sviluppatori mondiali). Con la tua donazione puoi contribuire al progetto, permettendoci di continuarne lo sviluppo. Di solito ci aspettiamo donazioni tramite Patreon. Donando una certa cifra il tuo nome verrà elencato tra i benefattori, nella pagina «informazioni» di tutte le istanze Misskey.",
+    "donate-server": "Gli amministratori delle istanze di solito non ci guadagnano nulla, anche loro si affidano alle donazioni delle persone che compongono la loro fetta di Fediverso. Quindi considera una donazione anche per loro.",
+    "develop-misskey": "Se hai capacità informatiche, considera di contribuire al progetto migliorandone il codice sorgente."
+  },
+  "instances-list": "Elenco istanze",
+  "instances-list-description": "Questa pagina ti mostra quali istanze sono disponibili.",
+  "instances-list-setting": {
+    "setting": "Impostazioni di ricerca",
+    "order": "Ordinamento risultati",
+    "orders": {
+      "default": "Predefinito",
+      "version": "Versione",
+      "originalNotesCount": "Numero di Note",
+      "originalUsersCount": "Numero di profili",
+      "reactionsCount": "Numero di reazioni"
+    },
+    "descending": "che scende",
+    "ascending": "che sale",
+    "repository": "Repository",
+    "language": "Lingua",
+    "registration": "Iscrizioni",
+    "registration-statuses": {
+      "open": "Aperte",
+      "close": "Chiuse"
+    },
+    "accept": "Applica"
+  },
+  "notes-count": "Note",
+  "users-count": "Profili",
+  "reactions-count": "Reazioni",
+  "404-text": "La pagina che hai richiesto, non è disponibile.",
+  "toppage": "pagina iniziale",
+  "privacy-policy": "Politica sulla privacy"
+}
