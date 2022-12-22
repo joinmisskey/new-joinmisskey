@@ -18,6 +18,7 @@ export const localeNames = [
   ['zh-TW', '繁體中文'],
   ['zh-CN', '简体中文'],
   ['ru-RU', 'Русский'],
+  ['it-IT', 'Italiano'],
 ];
 
 const path = location.pathname.split('/');
