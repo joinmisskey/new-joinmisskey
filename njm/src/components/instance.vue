@@ -27,15 +27,15 @@
     <div class="instance-footer">
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['notes-count']" />
-        <div class="instance-footer-value" v-text="numeral(instance.stats.originalNotesCount).format('0,0')" />
+        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.originalNotesCount)" />
       </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['users-count']" />
-        <div class="instance-footer-value" v-text="numeral(instance.stats.originalUsersCount).format('0,0')" />
+        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.originalUsersCount)" />
       </div>
       <div class="instance-footer-cell" v-if="instance.stats.reactionsCount">
         <div class="instance-footer-key" v-text="$ts['reactions-count']" />
-        <div class="instance-footer-value" v-text="numeral(instance.stats.reactionsCount).format('0,0')" />
+        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.reactionsCount)" />
       </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['instances-list-setting']['registration']" />
@@ -49,7 +49,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import punycode from 'punycode/punycode';
-import numeral from 'numeral';
 
 export default defineComponent({
   name: 'Instances',
@@ -69,7 +68,6 @@ export default defineComponent({
 
     return {
       uniUrl,
-      numeral,
     }
   },
 

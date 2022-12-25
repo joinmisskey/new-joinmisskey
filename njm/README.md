@@ -4,23 +4,20 @@
 ```
 # setup node.js and...
 sudo apt install libimagequant-dev
-npx yarn install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npx yarn serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-npx yarn build
+yarn build
 ```
 
 ### Lints and fixes files
 ```
-npx yarn lint
+yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

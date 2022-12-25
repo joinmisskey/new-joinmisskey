@@ -1,7 +1,7 @@
 [build]
   base = "njm/"
   publish = "dist/"
-  command = "npm run build"
+  command = "yarn build"
 
 [[redirects]]
   from = "/*"

@@ -34,17 +34,17 @@
       <div id="home-2-inner" class="row" v-if="stats">
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
-          <div class="home-2-value" v-text="numeral(stats.notesCount).format('0,0')" />
+          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.notesCount)" />
           <div class="home-2-key" v-text="$ts._home['notes-count-post']" />
         </div>
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['users-count-pre']" />
-          <div class="home-2-value" v-text="numeral(stats.usersCount).format('0,0')" />
+          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.usersCount)" />
           <div class="home-2-key" v-text="$ts._home['users-count-post']" />
         </div>
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['instances-count-pre']" />
-          <div class="home-2-value" v-text="numeral(stats.instancesCount).format('0,0')" />
+          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.instancesCount)" />
           <div class="home-2-key" v-text="$ts._home['instances-count-post']" />
         </div>
       </div>
@@ -79,7 +79,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import numeral from 'numeral';
 import { } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
@@ -100,7 +99,6 @@ export default defineComponent({
       loadCount: 0,
       stats: null as any | null,
 
-      numeral,
       faGithub, faPatreon
     }
   },
