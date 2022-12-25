@@ -64,13 +64,13 @@
                 </select>
               </div>
             </div>
-            <div class="col-12 col-lg-6 mb-3">
+            <!--<div class="col-12 col-lg-6 mb-3">
               <div class="fw-bold" v-text="$ts['instances-list-setting']['repository']" />
               <div class="form-check form-check-inline"  v-for="repo in repositories" :key="repo">
                 <input class="form-check-input" type="checkbox" :id="`select-${repo}`" :value="repo" v-model="repository">
                 <label class="form-check-label" :for="`select-${repo}`" v-text="repo" />
               </div>
-            </div>
+            </div>-->
             <div class="col-12 mb-3">
               <div class="fw-bold" v-text="$ts['instances-list-setting']['language']" />
               <div class="form-check form-check-inline"  v-for="lang in instanceLanguages" :key="lang">
