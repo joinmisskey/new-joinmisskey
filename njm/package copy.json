@@ -38,6 +38,24 @@
     "vue-scriptx": "^0.2.5",
     "vuex": "^4.0.0-0"
   },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-image": "^6.2.1",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-rename": "^2.0.0",
+    "gulp-responsive": "^3.0.1",
+    "gulp-svgmin": "^4.1.0",
+    "lint-staged": "^12.1.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
   "resolutions": {
     "sharp": "~0.28.3",
     "glob-parent": "^6.0.1",
