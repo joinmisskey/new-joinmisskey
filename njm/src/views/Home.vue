@@ -34,17 +34,17 @@
       <div id="home-2-inner" class="row" v-if="stats">
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
-          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.notesCount)" />
+          <div class="home-2-value" v-text="langNumber.format(stats.notesCount)" />
           <div class="home-2-key" v-text="$ts._home['notes-count-post']" />
         </div>
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['users-count-pre']" />
-          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.usersCount)" />
+          <div class="home-2-value" v-text="langNumber.format(stats.usersCount)" />
           <div class="home-2-key" v-text="$ts._home['users-count-post']" />
         </div>
         <div class="home-2-item py-5 col-12 col-lg-4">
           <div class="home-2-key" v-text="$ts._home['instances-count-pre']" />
-          <div class="home-2-value" v-text="new Intl.NumberFormat().format(stats.instancesCount)" />
+          <div class="home-2-value" v-text="langNumber.format(stats.instancesCount)" />
           <div class="home-2-key" v-text="$ts._home['instances-count-post']" />
         </div>
       </div>
@@ -85,6 +85,7 @@ import { setDescription } from '@/description';
 // import FeatureButton from '@/components/feature-button.vue';
 import Img from '@/components/img.vue';
 import Footer from '@/components/footer.vue';
+import { langNumber } from '@/locale';
 
 export default defineComponent({
   name: 'Home',
@@ -99,6 +100,7 @@ export default defineComponent({
       loadCount: 0,
       stats: null as any | null,
 
+      langNubmber: langNumber,
       faGithub, faPatreon
     }
   },

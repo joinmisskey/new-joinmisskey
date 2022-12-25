@@ -27,15 +27,15 @@
     <div class="instance-footer">
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['notes-count']" />
-        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.originalNotesCount)" />
+        <div class="instance-footer-value" v-text="langNumber.format(instance.stats.originalNotesCount)" />
       </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['users-count']" />
-        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.originalUsersCount)" />
+        <div class="instance-footer-value" v-text="langNumber.format(instance.stats.originalUsersCount)" />
       </div>
       <div class="instance-footer-cell" v-if="instance.stats.reactionsCount">
         <div class="instance-footer-key" v-text="$ts['reactions-count']" />
-        <div class="instance-footer-value" v-text="new Intl.NumberFormat().format(instance.stats.reactionsCount)" />
+        <div class="instance-footer-value" v-text="langNumber.format(instance.stats.reactionsCount)" />
       </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['instances-list-setting']['registration']" />
@@ -49,6 +49,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import punycode from 'punycode/punycode';
+import { langNumber } from '@/locale';
 
 export default defineComponent({
   name: 'Instances',
@@ -67,6 +68,7 @@ export default defineComponent({
     const uniUrl = punycode.toUnicode(this.instance.url);
 
     return {
+      langNubmber: langNumber,
       uniUrl,
     }
   },
