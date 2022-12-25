@@ -100,7 +100,7 @@ export default defineComponent({
       loadCount: 0,
       stats: null as any | null,
 
-      langNubmber: langNumber,
+      langNumber,
       faGithub, faPatreon
     }
   },

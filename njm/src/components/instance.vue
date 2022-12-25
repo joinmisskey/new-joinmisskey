@@ -68,7 +68,7 @@ export default defineComponent({
     const uniUrl = punycode.toUnicode(this.instance.url);
 
     return {
-      langNubmber: langNumber,
+      langNumber,
       uniUrl,
     }
   },
