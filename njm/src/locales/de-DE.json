@@ -16,16 +16,6 @@
     "federation": "Föderierung",
     "federation-detail": "Misskey ist eine Open-Source-Software, mit der Sie Ihren eigenen Server (Instanz) erstellen und betreiben können. Misskey nutzt den Webstandard ActivityPub um zu kommunizieren. So können Sie Benutzern folgen, oder Inhalte von anderen Instanzen (z.B. auch Mastodon) anzeigen und mit diesen interagieren."
   },
-  "_features": {
-    "_details": {
-      "mfm": {
-      },
-      "reactions": {
-      },
-      "visibility": {
-      }
-    }
-  },
   "instances-list": "Instanz-Liste",
   "instances-list-description": "Listet Misskey-Instanzen auf.",
   "instances-list-setting": {
@@ -35,8 +25,7 @@
       "default": "Standard",
       "version": "Version",
       "originalNotesCount": "Anzahl der Notizen",
-      "originalUsersCount": "Anzahl der Nutzer",
-      "reactionsCount": "Anzahl der Reaktionen"
+      "originalUsersCount": "Anzahl der Nutzer"
     },
     "descending": "absteigend",
     "ascending": "aufsteigend",

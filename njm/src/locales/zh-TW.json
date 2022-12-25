@@ -29,8 +29,7 @@
       "default": "預設",
       "version": "版本",
       "originalNotesCount": "貼文數",
-      "originalUsersCount": "用戶數",
-      "reactionsCount": "反應數"
+      "originalUsersCount": "用戶數"
     },
     "descending": "降冪",
     "ascending": "昇冪",
@@ -45,7 +44,6 @@
   },
   "notes-count": "貼文數",
   "users-count": "用戶數",
-  "reactions-count": "反應數",
   "404-text": "找不到您在尋找的頁面。",
   "toppage": "首頁",
   "privacy-policy": "隱私政策"

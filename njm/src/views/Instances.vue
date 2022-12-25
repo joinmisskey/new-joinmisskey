@@ -195,9 +195,6 @@ export default defineComponent({
         case 'originalUsersCount':
           sorted = sorted.sort((a, b) => (b.stats.originalUsersCount - a.stats.originalUsersCount) * (this.orderDesc ? 1 : -1));
           break;
-        case 'reactionsCount':
-          sorted = sorted.sort((a, b) => (b.stats.reactionsCount - a.stats.reactionsCount) * (this.orderDesc ? 1 : -1));
-          break;
         default:
           sorted = sorted.sort((a, b) => (b.value - a.value) * (this.orderDesc ? 1 : -1));
           break;

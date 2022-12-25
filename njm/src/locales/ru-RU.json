@@ -29,8 +29,7 @@
       "default": "По умолчанию",
       "version": "Версия",
       "originalNotesCount": "По количеству записей",
-      "originalUsersCount": "По количеству пользователей",
-      "reactionsCount": "По количеству реакций"
+      "originalUsersCount": "По количеству пользователей"
     },
     "descending": "По убыванию",
     "ascending": "По возрастанию",
@@ -45,7 +44,6 @@
   },
   "notes-count": "Записей",
   "users-count": "Пользователей",
-  "reactions-count": "Реакций",
   "404-text": "Страница, которую вы искали, не найдена.",
   "toppage": "главная страница",
   "privacy-policy": "Политика конфиденциальности"

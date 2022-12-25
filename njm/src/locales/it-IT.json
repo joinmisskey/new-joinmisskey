@@ -29,8 +29,7 @@
       "default": "Predefinito",
       "version": "Versione",
       "originalNotesCount": "Numero di Note",
-      "originalUsersCount": "Numero di profili",
-      "reactionsCount": "Numero di reazioni"
+      "originalUsersCount": "Numero di profili"
     },
     "descending": "che scende",
     "ascending": "che sale",
@@ -45,7 +44,6 @@
   },
   "notes-count": "Note",
   "users-count": "Profili",
-  "reactions-count": "Reazioni",
   "404-text": "La pagina che hai richiesto, non è disponibile.",
   "toppage": "pagina iniziale",
   "privacy-policy": "Politica sulla privacy"

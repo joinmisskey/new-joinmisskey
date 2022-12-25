@@ -2,14 +2,9 @@ import { reactive } from "vue";
 import { lang } from "./locale";
 
 export const repositories = [
-	"thatonecalculator/calckey",
-	"FoundKeyGang/FoundKey",
-	"mei23/misskey",
-	"mei23/misskey-v11",
-	//"kokonect-link/cherrypick",
 	"misskey-dev/misskey"
 ] as const;
-export const orderOptions = ['default', 'originalNotesCount', 'originalUsersCount', 'reactionsCount'] as const;
+export const orderOptions = ['default', 'originalNotesCount', 'originalUsersCount'] as const;
 export const registrationStatuses = ['open', 'close'] as const;
 export const instanceLanguages = ['ja', 'en', 'de', 'fr', 'zh', 'ko', 'ru', 'th', 'es', 'nl', 'bh', 'sv', 'it', 'cs', 'id', 'uk', 'pt'] as const;
 

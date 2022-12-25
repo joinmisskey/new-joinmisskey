@@ -24,23 +24,6 @@
     "notes": "노트",
     "notes-detail": "기본적인 게시 기능(Misskey에서는 게시물을 [노트]라고 부릅니다)은 다른 서비스에 비해 많은 기능이 있습니다."
   },
-  "_features": {
-    "posting": "게시",
-    "_details": {
-      "mfm": {
-        "title": "Misskey Flavored Markdown",
-        "description": "MFM에 대해"
-      },
-      "reactions": {
-        "title": "리액션",
-        "description": "리액션에 대해"
-      },
-      "visibility": {
-        "title": "공개 범위",
-        "description": "공개 범위에 대해"
-      }
-    }
-  },
   "instances-list": "인스턴스 목록",
   "instances-list-description": "Misskey 인스턴스를 목록으로 표시합니다.",
   "instances-list-setting": {
@@ -50,8 +33,7 @@
       "default": "기본",
       "version": "버전",
       "originalNotesCount": "노트 수",
-      "originalUsersCount": "사용자 수",
-      "reactionsCount": "리액션 수"
+      "originalUsersCount": "사용자 수"
     },
     "descending": "내림차순",
     "ascending": "오름차순",
@@ -66,7 +48,6 @@
   },
   "notes-count": "노트 수",
   "users-count": "사용자 수",
-  "reactions-count": "리액션 수",
   "404-text": "찾으시는 페이지는 발견할 수 없었습니다.",
   "toppage": "메인 페이지로 돌아가기"
 }

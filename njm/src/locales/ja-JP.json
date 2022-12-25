@@ -40,8 +40,7 @@
       "default": "デフォルト",
       "version": "バージョン",
       "originalNotesCount": "ノート数",
-      "originalUsersCount": "ユーザー数",
-      "reactionsCount": "リアクション数"
+      "originalUsersCount": "ユーザー数"
     },
     "descending": "降順",
     "ascending": "昇順",
@@ -60,7 +59,6 @@
 
   "notes-count": "ノート数",
   "users-count": "ユーザー数",
-  "reactions-count": "リアクション数",
 
   "404-text": "お探しのページは見つかりませんでした。",
   "toppage": "トップページ",

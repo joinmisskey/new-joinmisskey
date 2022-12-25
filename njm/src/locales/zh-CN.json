@@ -24,23 +24,6 @@
     "notes": "帖子",
     "notes-detail": "与其他服务相比，Misskey的发布功能上（在 Misskey 中，发布的帖子称为“Note”）具有许多功能。"
   },
-  "_features": {
-    "posting": "投稿",
-    "_details": {
-      "mfm": {
-        "title": "Misskey Flavored Markdown",
-        "description": "MFM的介绍"
-      },
-      "reactions": {
-        "title": "回应",
-        "description": "回应的介绍"
-      },
-      "visibility": {
-        "title": "公开范围",
-        "description": "公开范围的说明"
-      }
-    }
-  },
   "instances-list": "实例列表",
   "instances-list-description": "列出 Misskey 实例。",
   "instances-list-setting": {
@@ -50,8 +33,7 @@
       "default": "默认",
       "version": "版本",
       "originalNotesCount": "帖子数",
-      "originalUsersCount": "用户数",
-      "reactionsCount": "回应数"
+      "originalUsersCount": "用户数"
     },
     "descending": "降序",
     "ascending": "升序",
@@ -66,7 +48,6 @@
   },
   "notes-count": "帖子数",
   "users-count": "用户数",
-  "reactions-count": "回应数",
   "404-text": "未能找到您要查找的页面。",
   "toppage": "首页"
 }

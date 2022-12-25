@@ -33,10 +33,6 @@
         <div class="instance-footer-key" v-text="$ts['users-count']" />
         <div class="instance-footer-value" v-text="langNumber.format(instance.stats.originalUsersCount)" />
       </div>
-      <div class="instance-footer-cell" v-if="instance.stats.reactionsCount">
-        <div class="instance-footer-key" v-text="$ts['reactions-count']" />
-        <div class="instance-footer-value" v-text="langNumber.format(instance.stats.reactionsCount)" />
-      </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['instances-list-setting']['registration']" />
         <div class="instance-footer-value" v-text="instance.meta.features.registration ? $ts['instances-list-setting']['registration-statuses'].open : $ts['instances-list-setting']['registration-statuses'].close" />

@@ -29,8 +29,7 @@
       "default": "Default",
       "version": "Version",
       "originalNotesCount": "Number of Notes",
-      "originalUsersCount": "Number of Users",
-      "reactionsCount": "Number of Reactions"
+      "originalUsersCount": "Number of Users"
     },
     "descending": "Descending",
     "ascending": "Ascending",
@@ -45,7 +44,6 @@
   },
   "notes-count": "Notes",
   "users-count": "Users",
-  "reactions-count": "Reactions",
   "404-text": "The page you were looking for is not found.",
   "toppage": "home page",
   "privacy-policy": "Privacy Policy"
