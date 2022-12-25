@@ -12,7 +12,7 @@
           <span v-text="$ts['instances-list-setting']['orders'][orderBy]" /> 
           - 
           <span v-text="orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending " /><br>
-          <span v-text="repository.join(', ')" /><br>
+          <!--<span v-text="repository.join(', ')" /><br>-->
           <span v-text="language.join(', ')" /><br>
           <span v-text="$ts['instances-list-setting'].registration"/> 
           - 
