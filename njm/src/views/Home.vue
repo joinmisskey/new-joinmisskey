@@ -86,6 +86,7 @@ import { setDescription } from '@/description';
 import Img from '@/components/img.vue';
 import Footer from '@/components/footer.vue';
 import { langNumber } from '@/locale';
+import { splash } from '@/splash';
 
 export default defineComponent({
   name: 'Home',
@@ -106,7 +107,7 @@ export default defineComponent({
   },
 
   created() {
-    (this as any).$store.commit('showSplash');
+    splash.value = true;
     fetch('https://instanceapp.misskey.page/instances.json')
       .then(res => res.json())
       .then(res => {
@@ -120,13 +121,10 @@ export default defineComponent({
   },
 
   methods: {
-    showFeature(v: string | null) {
-      (this as any).$store.commit('feature', v);
-    },
     imgOnLoad() {
       this.loadCount = this.loadCount + 1;
 
-      if (this.loadCount >= 4) (this as any).$store.commit('hideSplash');
+      if (this.loadCount >= 4) splash.value = false;
     }
   },
 });

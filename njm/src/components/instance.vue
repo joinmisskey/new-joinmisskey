@@ -8,7 +8,7 @@
       <picture v-if="instance.icon === true">
         <source :srcset="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" type="image/webp" />
         <source :srcset="`https://instanceapp.misskey.page/instance-icons/${instance.url}.png`" type="image/png" />
-        <img loading="lazy" class="instance-icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.png`" />
+        <img :loading="eager ? 'eager' : 'lazy'" class="instance-icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.png`" />
       </picture>
       <div class="instance-title" :class="{ ['title-with-icon']: instance.icon }">
         <div class="instance-title-inner">
@@ -19,7 +19,7 @@
       <picture v-if="b !== null">
         <source :srcset="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.webp`" type="image/webp" />
         <source :srcset="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.jpeg`" type="image/jpeg" />
-        <img loading="lazy" class="instance-header-bg" :src="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.jpeg`" />
+        <img :loading="eager ? 'eager' : 'lazy'" class="instance-header-bg" :src="`https://instanceapp.misskey.page/instance-${b}/${instance.url}.jpeg`" />
       </picture>
     </div>
     <div class="instance-description" v-text="description"/>
@@ -54,6 +54,10 @@ export default defineComponent({
     instance: {
       type: Object,
       required: true
+    },
+    eager: {
+      type: Boolean,
+      required: false,
     },
   },
 

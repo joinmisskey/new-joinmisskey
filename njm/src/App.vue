@@ -1,30 +1,18 @@
 <template>
   <div id="app">
-    <Splash :show="$store.state.splash" />
+    <Splash :show="splash" />
     <router-view/>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { defineComponent, onMounted } from 'vue';
 import Splash from '@/components/splash.vue';
 import { lang } from '@/locale';
 import { injectLang } from '@/inject-lang';
+import { splash } from './splash';
 
-export default defineComponent({
-  components: {
-    Splash,
-  },
-
-  data() {
-    return {
-      lang,
-    };
-  },
-
-  mounted() {
-    injectLang();
-  }
-
-});
+onMounted(() => {
+  injectLang();
+})
 </script>

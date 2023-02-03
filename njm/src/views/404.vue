@@ -13,12 +13,13 @@
 </template>
 
 <script lang="ts">
+import { splash } from '@/splash';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: '404',
   beforeCreate() {
-    (this as any).$store.commit('hideSplash');
+    splash.value = false;
   },
 });
 </script>

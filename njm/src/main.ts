@@ -12,7 +12,6 @@ import { createGtm } from '@gtm-support/vue-gtm';
 
 import App from './App.vue'
 import { router } from './router';
-import store from './store';
 import { i18n } from './i18n';
 import { lang } from './locale';
 
@@ -26,7 +25,6 @@ app.config.globalProperties = {
 console.info('App create');
 
 app
-.use(store)
 .use(router(lang))
 .use(ScriptX)
 .use(Ads.Adsense)
