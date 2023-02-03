@@ -119,6 +119,8 @@ let observeEl = $ref<HTMLDivElement>()
 
 const addObserver = new IntersectionObserver(
   (entries) => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+
     $$(counter).value++
 
     console.log('doit', sortedShowing.length, sorted.length)
