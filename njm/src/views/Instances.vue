@@ -122,8 +122,6 @@ const addObserver = new IntersectionObserver(
     if (!entries.some(entry => entry.isIntersecting)) return;
 
     $$(counter).value++
-
-    console.log('doit', sortedShowing.length, sorted.length)
   }
 )
 
@@ -225,8 +223,6 @@ function sort() {
     }
     return acc;
   }, [] as SortedItem[]);
-
-  console.log(sorted)
 
   counter = 1;
 }
