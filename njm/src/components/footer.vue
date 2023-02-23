@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="p-3 text-end">
-      Ⓒ2022 {{ $ts['joinmisskey'] }}
+      Ⓒ2023 {{ $ts['joinmisskey'] }}
     </div>
   </div>
 </template>
