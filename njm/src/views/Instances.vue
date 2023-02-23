@@ -215,19 +215,19 @@ function sort() {
 
   let adNumber = 0;
 
-  // REMOVE_GAD_$2000
-  /*
   sorted = _sorted.reduce((acc, instance, i, arr) => {
     acc.push({ type: 'instance', data: instance });
+    // REMOVE_GAD_$2000
+    /*
     if (i === arr.length - 1) {
       acc.push({ type: 'ad', data: 'end' });
     } else if (i % 5 === 2) {
       acc.push({ type: 'ad', data: adNumber });
       adNumber++;
     }
+    */
     return acc;
   }, [] as SortedItem[]);
-  */
 
   counter = 1;
 }
