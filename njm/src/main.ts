@@ -7,7 +7,7 @@ if (location.href.includes('wiki/instances')) {
 import { createApp } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ScriptX from 'vue-scriptx';
-import Ads from 'vue-google-adsense';
+//import Ads from 'vue-google-adsense';
 import { createGtm } from '@gtm-support/vue-gtm';
 
 import App from './App.vue'
@@ -27,9 +27,10 @@ console.info('App create');
 app
 .use(router(lang))
 .use(ScriptX)
-.use(Ads.Adsense)
-.use(Ads.InArticleAdsense)
-.use(Ads.InFeedAdsense)
+// REMOVE_GAD_$2000
+//.use(Ads.Adsense)
+//.use(Ads.InArticleAdsense)
+//.use(Ads.InFeedAdsense)
 .use(
 	createGtm({
 		id: 'GTM-M98RX87'

@@ -1,11 +1,13 @@
 <template>
   <div id="footer">
-    <div class="pt-5 container">
-      <InArticleAdsense
-        data-ad-client="ca-pub-1736621122676736"
-        data-ad-slot="9725932695"
-      />
-    </div>
+    <!-- REMOVE_GAD_$2000
+      <div class="pt-5 container">
+        <InArticleAdsense
+          data-ad-client="ca-pub-1736621122676736"
+          data-ad-slot="9725932695"
+        />
+      </div>
+    -->
     <div class="row w-100 py-5 justify-content-end lh-lg">
       <div class="col-12 col-lg-4">
         <div class="p-3 pl-xl-5">
