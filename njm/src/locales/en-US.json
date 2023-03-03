@@ -10,18 +10,18 @@
   "feature": "feature",
   "_home": {
     "forever-evolving": "A forever evolving, interplanetary microblogging platform.",
-    "setup": "Run your Instance",
+    "setup": "Run your Server",
     "misskeyisa-decenralized": "Misskey is a decentralized microblogging platform born on Earth. Since it exists within the Fediverse (a universe where various social media platforms are organized), it is mutually linked with other social media platforms.",
     "whydontyou-take": "Why don't you take a short break from the hustle and bustle of the city, and dive into a new Internet?",
     "notes-count-pre": "Total Notes",
     "users-count-pre": "Total Users",
-    "instances-count-pre": "Total Instances",
+    "instances-count-pre": "Total Servers",
     "donate-misskey": "Misskey is not a business, it's free to use, so the only revenue we get is from your donations (in some instances we may get advertising revenue, but that's the operator's revenue and not directly to the developers). If you donate, you will be contributing to the project by allowing us to continue development. Donations are generally accepted via Patreon. If you donate a certain amount, your name will be listed on Misskey's information page.",
     "donate-server": "Also, the server operators are essentially not earning any revenue. Running a server is expensive, so please consider supporting the server operator.",
     "develop-misskey": "If you have software engineering skills, you can contribute to the project by editing the source code."
   },
-  "instances-list": "List of Instances",
-  "instances-list-description": "This page shows a list of Misskey instances.",
+  "instances-list": "List of Servers",
+  "instances-list-description": "This page shows a list of Misskey servers.",
   "instances-list-setting": {
     "setting": "Settings",
     "order": "Sorting Order",
