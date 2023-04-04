@@ -317,7 +317,8 @@ export default defineComponent({
 }
 
 #home-shape-1-end {
-  background: #fff;
+  //background: #fff;
+  background: var(--fg);
 
   > div {
     width: 100%;
