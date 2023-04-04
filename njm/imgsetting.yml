@@ -1,112 +1,39 @@
-image_compressing_strategy_version: 1.0.0
-images:
-  files:
-    all:
-      image:
-        pngquant:
-        - "--speed=1"
-        mozjpeg:
-        - "-optimize"
-        - "-progressive"
-        concurrent: 16
-      responsive:
-        rotate: true
-        quality: 99
-        compressionLevel: 0
-        progressive: true
-        errorOnEnlargement: false
-        errorOnUnusedConfig: false
-        errorOnUnusedImage: false
-        passThroughUnused: false
-    responsive:
-    - crop: false
-    - crop: false
-      quality: 90
-      # format: webp
-      rename:
-        extname: ".webp"
-    #- width: 2000
-    #  withoutEnlargement: true
-    #  crop: false
-    #  rename:
-    #    suffix: ".2000"
-    #- width: 2000
-    #  crop: false
-    #  withoutEnlargement: true
-    #  # sharpen: "0.5x0.5+0.5+0.008"
-    #  quality: 90
-    #  # format: webp
-    #  rename:
-    #    suffix: ".2000"
-    #    extname: ".webp"
-    - width: 1200
-      withoutEnlargement: true
-      crop: false
-      rename:
-        suffix: ".1200"
-    - width: 1200
-      crop: false
-      withoutEnlargement: true
-      # sharpen: "0.5x0.5+0.5+0.008"
-      quality: 90
-      # format: webp
-      rename:
-        suffix: ".1200"
-        extname: ".webp"
-    - width: 720
-      crop: false
-      withoutEnlargement: true
-      # sharpen: "0.5x0.5+0.5+0.008"
-      rename:
-        suffix: ".720"
-    - width: 720
-      crop: false
-      withoutEnlargement: true
-      # sharpen: "0.5x0.5+0.5+0.008"
-      quality: 90
-      # format: webp
-      rename:
-        suffix: ".720"
-        extname: ".webp"
-    - width: 360
-      crop: false
-      withoutEnlargement: true
-      # sharpen: "0.5x0.5+0.5+0.008"
-      rename:
-        suffix: ".360"
-    - width: 360
-      crop: false
-      withoutEnlargement: true
-      # sharpen: "0.5x0.5+0.5+0.008"
-      quality: 90
-      # format: webp
-      rename:
-        suffix: ".360"
-        extname: ".webp"
-icons:
-  - path: "/files/images/imports/2020/03/icon-2.svg"
-    sizes: 192x192
-    type: "image/svg+xml"
-  - path: "/files/images/imports/2020/03/icon-2-maskable.svg"
-    sizes: 192x192
-    type: "image/svg+xml"
-    purpose: maskable
-  - path: "/files/images/imports/2020/03/icon-2.svg"
-    sizes: 1200x1200
-    type: "image/svg+xml"
-  - path: "/files/images/imports/2020/03/icon-2-maskable.svg"
-    sizes: 1200x1200
-    type: "image/svg+xml"
-    purpose: maskable
-  - path: "/files/images/imports/2020/03/icon-2-maskable.360.png"
-    sizes: 360x360
-    type: "image/png"
-    purpose: maskable
-  - path: "/files/images/imports/2020/03/icon-2-maskable.720.png"
-    sizes: 720x720
-    type: "image/png"
-    purpose: maskable
-  - path: "/files/images/imports/2020/03/icon-2-maskable.png"
-    sizes: 1200x1200
-    type: "image/png"
-    purpose: maskable
+image_compressing_strategy_version: 2.0.0
+defaultFormatOptions:
+  webp:
+    quality: 77
+    alphaQuality: 95
+    lossless: false
+    nearLossless: false
+    smartSubsample: true
+    mixed: true
+    effort: 2
+  png:
+    progressive: true
+    palette: true
+    compressionLevel: 9
+    adaptiveFiltering: true
+processes:
+  - format: null # null is keep original file type
+  - format: 'webp'
+  - format: null # null is keep original file type
+    width: 1200
+    withoutEnlargement: true
+  - format: 'webp'
+    width: 1200
+    withoutEnlargement: true
+  - format: null # null is keep original file type
+    width: 720
+    withoutEnlargement: true
+  - format: 'webp'
+    width: 720
+    withoutEnlargement: true
+  - format: null # null is keep original file type
+    width: 360
+    withoutEnlargement: true
+  - format: 'webp'
+    formatOptions:
+      quality: 85
+      effort: 4
+    width: 360
+    withoutEnlargement: true

@@ -17,7 +17,7 @@
       </div>
 
       <Img src="2021/09/scnsht-3.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200, 2000]" :original="5100" />
-      <Img src="2021/09/scnsht-9t.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" :original="1080" />
+      <Img src="2023/04/scnsht-mobile.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" :original="921" />
 
       <div id="home-shape-1-top" />
     </div>
@@ -238,13 +238,15 @@ export default defineComponent({
 #home-0-mobile {
   position: absolute;
   z-index: 3;
-  bottom: 0;
+  bottom: -15%;
   left: 5%;
 
   img {
     width: 18rem;
     max-width: 44vw;
     min-width: 18vw;
+    border-radius: 8px;
+    box-shadow: 0 0 32px #ffffff33;
   }
 }
 
