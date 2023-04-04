@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <Img src="2021/09/scnsht-3.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200, 2000]" :original="5100" />
+      <Img src="2023/04/scnsht-deck.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200]" :original="3016" />
       <Img src="2023/04/scnsht-mobile.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" :original="921" />
 
       <div id="home-shape-1-top" />
@@ -232,6 +232,7 @@ export default defineComponent({
     object-position: left top;
     height: 100%;
     width: 100%;
+    box-shadow: 0 0 32px #000000aa;
   }
 }
 
@@ -246,7 +247,7 @@ export default defineComponent({
     max-width: 44vw;
     min-width: 18vw;
     border-radius: 8px;
-    box-shadow: 0 0 32px #ffffff33;
+    box-shadow: 0 0 32px #000000aa;
   }
 }
 
@@ -318,7 +319,7 @@ export default defineComponent({
 
 #home-shape-1-end {
   //background: #fff;
-  background: var(--fg);
+  background: var(--bg);
 
   > div {
     width: 100%;
