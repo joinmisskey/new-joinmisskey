@@ -23,7 +23,7 @@
       </picture>
     </div>
     <div class="instance-description" v-text="description"/>
-    <div class="instance-version">{{ instance.repo }} {{ instance.meta.version }}</div>
+    <div class="instance-version">{{ instance.meta.version }}</div>
     <div class="instance-footer">
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="$ts['notes-count']" />
