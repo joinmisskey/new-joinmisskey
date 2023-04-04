@@ -17,10 +17,5 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
   },
   globals: {
-		// Vue
-		'$$': false,
-		'$ref': false,
-		'$shallowRef': false,
-		'$computed': false,
   }
 }

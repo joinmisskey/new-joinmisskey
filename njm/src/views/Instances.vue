@@ -1,24 +1,24 @@
 <template>
-  <Header :title="$ts['instances-list']" :icon="faCog" :rightClicked="openSetting" />
+  <Header :title="i18n.locale['instances-list']" :icon="faCog" :rightClicked="openSetting" />
   <div id="instances">
     <div class="row">
       <div class="px-3 col-12 col-xl-7">
-        <h1 v-text="$ts['instances-list']" class="my-2" />
-        <p v-text="$ts['instances-list-description']" />
+        <h1 v-text="i18n.locale['instances-list']" class="my-2" />
+        <p v-text="i18n.locale['instances-list-description']" />
       </div>
       <div class="px-3 col-12 col-xl-5">
         <div class="alert small instances-list-setting-alert" role="alert" @click="openSetting">
-          <div class="fw-bold" v-text="$ts['instances-list-setting']['setting']" />
-          <span v-text="$ts['instances-list-setting']['orders'][instancesSetting.orderBy]" />
+          <div class="fw-bold" v-text="i18n.locale['instances-list-setting']['setting']" />
+          <span v-text="i18n.locale['instances-list-setting']['orders'][instancesSetting.orderBy]" />
           -
           <span
-            v-text="instancesSetting.orderDesc ? $ts['instances-list-setting'].descending : $ts['instances-list-setting'].ascending" /><br>
+            v-text="instancesSetting.orderDesc ? i18n.locale['instances-list-setting'].descending : i18n.locale['instances-list-setting'].ascending" /><br>
           <!--<span v-text="instancesSetting.repository.join(', ')" /><br>-->
           <span v-text="instancesSetting.language.join(', ')" /><br>
-          <span v-text="$ts['instances-list-setting'].registration" />
+          <span v-text="i18n.locale['instances-list-setting'].registration" />
           -
           <span
-            v-text="instancesSetting.registrationStatus.map(v => $ts['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
+            v-text="instancesSetting.registrationStatus.map(v => i18n.locale['instances-list-setting']['registration-statuses'][v]).join(', ')" /><br>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         </template>
       </transition-group>
     </div>
-    <div id="instances-loading" v-text="$ts['loading']" v-else />
+    <div id="instances-loading" v-text="i18n.locale['loading']" v-else />
 
     <div ref="observeEl" v-show="sorted.length !== sortedShowing.length && !loading"> Loading... </div>
   </div>
@@ -45,45 +45,45 @@
         <div class="p-3">
           <div class="row">
             <div class="col-12 col-lg-6 mb-3">
-              <label for="order-by" class="fw-bold" v-text="$ts['instances-list-setting']['order']" />
+              <label for="order-by" class="fw-bold" v-text="i18n.locale['instances-list-setting']['order']" />
               <div class="input-group">
                 <select class="form-select bg-dark text-light" id="order-by" v-model="instancesSetting.orderBy">
                   <option v-for="option in orderOptions" :key="option" :value="option"
-                    v-text="$ts['instances-list-setting']['orders'][option]" />
+                    v-text="i18n.locale['instances-list-setting']['orders'][option]" />
                 </select>
                 <select class="form-select bg-dark text-light" v-model="instancesSetting.orderDesc"
-                  :aria-label="$ts['instances-list-setting']['descending']">
-                  <option :value="true" v-text="$ts['instances-list-setting']['descending']" />
-                  <option :value="false" v-text="$ts['instances-list-setting']['ascending']" />
+                  :aria-label="i18n.locale['instances-list-setting']['descending']">
+                  <option :value="true" v-text="i18n.locale['instances-list-setting']['descending']" />
+                  <option :value="false" v-text="i18n.locale['instances-list-setting']['ascending']" />
                 </select>
               </div>
             </div>
             <!--<div class="col-12 col-lg-6 mb-3">
-              <div class="fw-bold" v-text="$ts['instances-list-setting']['repository']" />
+              <div class="fw-bold" v-text="i18n.locale['instances-list-setting']['repository']" />
               <div class="form-check form-check-inline"  v-for="repo in repositories" :key="repo">
                 <input class="form-check-input" type="checkbox" :id="`select-${repo}`" :value="repo" v-model="instancesSetting.repository">
                 <label class="form-check-label" :for="`select-${repo}`" v-text="repo" />
               </div>
             </div>-->
             <div class="col-12 mb-3">
-              <div class="fw-bold" v-text="$ts['instances-list-setting']['language']" />
+              <div class="fw-bold" v-text="i18n.locale['instances-list-setting']['language']" />
               <div class="form-check form-check-inline" v-for="lang in instanceLanguages" :key="lang">
                 <input class="form-check-input" type="checkbox" :id="`select-${lang}`" :value="lang" v-model="instancesSetting.language">
                 <label class="form-check-label" :for="`select-${lang}`" v-text="lang" />
               </div>
             </div>
             <div class="col-12 mb-3">
-              <div class="fw-bold" v-text="$ts['instances-list-setting']['registration']" />
+              <div class="fw-bold" v-text="i18n.locale['instances-list-setting']['registration']" />
               <div class="form-check form-check-inline" v-for="stat in registrationStatuses" :key="stat">
                 <input class="form-check-input" type="checkbox" :id="`select-${stat}`" :value="stat"
                   v-model="instancesSetting.registrationStatus">
                 <label class="form-check-label" :for="`select-${stat}`"
-                  v-text="$ts['instances-list-setting']['registration-statuses'][stat]" />
+                  v-text="i18n.locale['instances-list-setting']['registration-statuses'][stat]" />
               </div>
             </div>
             <div class="col-12">
               <button type="button" class="btn btn-primary ml-auto" @click="acceptSetting"
-                v-text="$ts['instances-list-setting']['accept']" />
+                v-text="i18n.locale['instances-list-setting']['accept']" />
             </div>
           </div>
         </div>
@@ -93,12 +93,13 @@
 </template>
 
 <script lang="ts">
+import { ref } from 'vue';
 import { InstancesSetting, defaultInstancesSetting } from '@/instances-list-setting';
-let instancesSetting = $ref<InstancesSetting>({ ...defaultInstancesSetting })
+const instancesSetting = ref<InstancesSetting>({ ...defaultInstancesSetting })
 </script>
 
 <script lang="ts" setup>
-import { defineComponent, nextTick, onMounted, onUnmounted } from 'vue';
+import { defineComponent, nextTick, onMounted, onUnmounted, computed } from 'vue';
 import { faCog } from '@fortawesome/free-solid-svg-icons'
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
@@ -110,20 +111,20 @@ import { i18n } from '@/i18n';
 
 type SortedItem = { type: 'instance' | 'ad'; data: any | string };
 
-let loading = $ref(true)
-let instances = $ref<any[]>([])
-let sorted = $ref<SortedItem[]>([])
-let sortedShowing = $computed<SortedItem[]>(() => [...sorted.slice(0, counter * 20)])
-let counter = $ref(0);
-let showSetting = $ref(false)
+const loading = ref(true)
+const instances = ref<any[]>([])
+const sorted = ref<SortedItem[]>([])
+const sortedShowing = computed<SortedItem[]>(() => [...sorted.value.slice(0, counter.value * 20)])
+const counter = ref(0);
+const showSetting = ref(false)
 
-let observeEl = $ref<HTMLDivElement>() 
+const observeEl = ref<HTMLDivElement>() 
 
 const addObserver = new IntersectionObserver(
   (entries) => {
     if (!entries.some(entry => entry.isIntersecting)) return;
 
-    $$(counter).value++
+    counter.value++
   }
 )
 
@@ -132,15 +133,15 @@ splash.value = false;
 fetch('https://instanceapp.misskey.page/instances.json')
   .then(res => res.json())
   .then(res => {
-    loading = false;
-    instances = [...res.instancesInfos];
+    loading.value = false;
+    instances.value = [...res.instancesInfos];
     sort();
   });
 
 onMounted(() => {
   setDescription(i18n.t('instances-list'), i18n.t('instances-list-description'));
 
-  addObserver.observe(observeEl);
+  if (observeEl.value) addObserver.observe(observeEl.value);
 });
 
 onUnmounted(() => {
@@ -148,60 +149,60 @@ onUnmounted(() => {
 });
 
 function openSetting() {
-  showSetting = true;
+  showSetting.value = true;
 }
 
 function acceptSetting() {
-  showSetting = false
-  if (instancesSetting.repository.length === 0) {
-    instancesSetting.repository = [...repositories];
+  showSetting.value = false
+  if (instancesSetting.value.repository.length === 0) {
+    instancesSetting.value.repository = [...repositories];
   }
 
-  if (instancesSetting.registrationStatus.length === 0) {
-    instancesSetting.registrationStatus = [...registrationStatuses];
+  if (instancesSetting.value.registrationStatus.length === 0) {
+    instancesSetting.value.registrationStatus = [...registrationStatuses];
   }
 
-  if (instancesSetting.language.length === 0) {
-    instancesSetting.language = [...instanceLanguages];
+  if (instancesSetting.value.language.length === 0) {
+    instancesSetting.value.language = [...instanceLanguages];
   }
 
   sort();
 }
 
 function sort() {
-  let _sorted = instances;
-  counter = 0;
+  let _sorted = instances.value;
+  counter.value = 0;
   nextTick().then(() => window.scroll({ top: 0, behavior: 'smooth' }))
 
   //#region filter repository
   _sorted = _sorted.filter(instance => {
-    return instancesSetting.repository.includes(instance.repo);
+    return instancesSetting.value.repository.includes(instance.repo);
   });
   //#region
 
   //#region sort order
-  switch (instancesSetting.orderBy) {
+  switch (instancesSetting.value.orderBy) {
     case 'originalNotesCount':
-      _sorted = _sorted.sort((a, b) => (b.stats.originalNotesCount - a.stats.originalNotesCount) * (instancesSetting.orderDesc ? 1 : -1));
+      _sorted = _sorted.sort((a, b) => (b.stats.originalNotesCount - a.stats.originalNotesCount) * (instancesSetting.value.orderDesc ? 1 : -1));
       break;
     case 'originalUsersCount':
-      _sorted = _sorted.sort((a, b) => (b.stats.originalUsersCount - a.stats.originalUsersCount) * (instancesSetting.orderDesc ? 1 : -1));
+      _sorted = _sorted.sort((a, b) => (b.stats.originalUsersCount - a.stats.originalUsersCount) * (instancesSetting.value.orderDesc ? 1 : -1));
       break;
     default:
-      _sorted = _sorted.sort((a, b) => (b.value - a.value) * (instancesSetting.orderDesc ? 1 : -1));
+      _sorted = _sorted.sort((a, b) => (b.value - a.value) * (instancesSetting.value.orderDesc ? 1 : -1));
       break;
   }
   //#endregion
 
   //#region filter language
   _sorted = _sorted.filter(instance => {
-    return instancesSetting.language.some(condlang => instance.langs.includes(condlang));
+    return instancesSetting.value.language.some(condlang => instance.langs.includes(condlang));
   });
   //#region
 
   //#region filter registration
-  if (instancesSetting.registrationStatus.length == 1) {
-    if (instancesSetting.registrationStatus[0] === 'open') {
+  if (instancesSetting.value.registrationStatus.length == 1) {
+    if (instancesSetting.value.registrationStatus[0] === 'open') {
       _sorted = _sorted.filter(instance => {
         return instance.meta.features.registration;
       });
@@ -213,9 +214,9 @@ function sort() {
   }
   //#region
 
-  let adNumber = 0;
+  //let adNumber = 0;
 
-  sorted = _sorted.reduce((acc, instance, i, arr) => {
+  sorted.value = _sorted.reduce((acc, instance, i, arr) => {
     acc.push({ type: 'instance', data: instance });
     // REMOVE_GAD_$2000
     /*
@@ -229,7 +230,7 @@ function sort() {
     return acc;
   }, [] as SortedItem[]);
 
-  counter = 1;
+  counter.value = 1;
 }
 </script>
 

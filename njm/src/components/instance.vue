@@ -26,16 +26,16 @@
     <div class="instance-version">{{ instance.meta.version }}</div>
     <div class="instance-footer">
       <div class="instance-footer-cell">
-        <div class="instance-footer-key" v-text="$ts['notes-count']" />
+        <div class="instance-footer-key" v-text="i18n.locale['notes-count']" />
         <div class="instance-footer-value" v-text="langNumber.format(instance.stats.originalNotesCount)" />
       </div>
       <div class="instance-footer-cell">
-        <div class="instance-footer-key" v-text="$ts['users-count']" />
+        <div class="instance-footer-key" v-text="i18n.locale['users-count']" />
         <div class="instance-footer-value" v-text="langNumber.format(instance.stats.originalUsersCount)" />
       </div>
       <div class="instance-footer-cell">
-        <div class="instance-footer-key" v-text="$ts['instances-list-setting']['registration']" />
-        <div class="instance-footer-value" v-text="instance.meta.features.registration ? $ts['instances-list-setting']['registration-statuses'].open : $ts['instances-list-setting']['registration-statuses'].close" />
+        <div class="instance-footer-key" v-text="i18n.locale['instances-list-setting']['registration']" />
+        <div class="instance-footer-value" v-text="instance.meta.features.registration ? i18n.locale['instances-list-setting']['registration-statuses'].open : i18n.locale['instances-list-setting']['registration-statuses'].close" />
       </div>
     </div>
   </a>
@@ -46,6 +46,7 @@
 import { defineComponent } from 'vue';
 import punycode from 'punycode/punycode';
 import { langNumber } from '@/locale';
+import { i18n } from "@/i18n";
 
 export default defineComponent({
   name: 'Instances',
@@ -68,6 +69,7 @@ export default defineComponent({
     const uniUrl = punycode.toUnicode(this.instance.url);
 
     return {
+      i18n,
       langNumber,
       uniUrl,
     }

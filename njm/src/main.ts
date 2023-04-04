@@ -17,11 +17,6 @@ import { lang } from './locale';
 
 const app = createApp(App);
 
-app.config.globalProperties = {
-	$t: i18n.t,
-	$ts: i18n.locale,
-};
-
 console.info('App create');
 
 app

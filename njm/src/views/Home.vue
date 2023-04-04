@@ -3,66 +3,67 @@
 
     <div id="home-0">
       <div id="home-0-texts">
-        <p id="home-0-new-world" v-html="$ts['slogan']" />
+        <p id="home-0-new-world" v-html="i18n.locale['slogan']" />
         <Img src="2021/03/misskey.png" alt="Misskey" id="home-0-join-misskey" sizes="18rem" :imgOnLoad="imgOnLoad" />
-        <p id="home-0-forever-evolving" v-html="$ts._home['forever-evolving']" />
+        <p id="home-0-forever-evolving" v-html="i18n.locale._home['forever-evolving']" />
         <div id="home-0-instances-list-button-div">
           <a href="https://misskey-hub.net" class="_textPrimaryButton home-0-button fw-bold" target="_blank">Misskey Hub</a>
           <router-link
             to="/instances"
             class="_textPrimaryButton home-0-button"
-            v-text="$ts['instances-list']"
+            v-text="i18n.locale['instances-list']"
           />
         </div>
       </div>
 
-      <Img src="2021/09/scnsht-3.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200, 2000]" original="5100" />
-      <Img src="2021/09/scnsht-9t.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" original="1080" />
+      <Img src="2021/09/scnsht-3.png" id="home-0-desktop" alt="Desktop" sizes="(max-width: 1000px) 720px, 70vw" :imgOnLoad="imgOnLoad" :images="[360, 720, 1200, 2000]" :original="5100" />
+      <Img src="2021/09/scnsht-9t.png" id="home-0-mobile" alt="Mobile" sizes="(max-width: 654px) 44vw, 18rem, (min-width: 1600px) 18vw" :imgOnLoad="imgOnLoad" :images="[360, 720]" :original="1080" />
 
       <div id="home-shape-1-top" />
     </div>
 
     <div id="home-1">
-      <p v-text="$ts._home['misskeyisa-decenralized']" />
-      <p v-text="$ts._home['whydontyou-take']" />
+      <div class="container">
+      <div id="home-2-inner" class="row" v-if="stats">
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="i18n.locale._home['notes-count-pre']" />
+          <div class="home-2-value" v-text="langNumber.format(stats.notesCount)" />
+          <div class="home-2-key" v-text="i18n.locale._home['notes-count-post']" />
+        </div>
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="i18n.locale._home['users-count-pre']" />
+          <div class="home-2-value" v-text="langNumber.format(stats.usersCount)" />
+          <div class="home-2-key" v-text="i18n.locale._home['users-count-post']" />
+        </div>
+        <div class="home-2-item py-5 col-12 col-lg-4">
+          <div class="home-2-key" v-text="i18n.locale._home['instances-count-pre']" />
+          <div class="home-2-value" v-text="langNumber.format(stats.instancesCount)" />
+          <div class="home-2-key" v-text="i18n.locale._home['instances-count-post']" />
+        </div>
+      </div>
+      </div>
     </div>
 
     <div id="home-shape-1-end"><div></div></div>
 
+    <!--
     <div id="home-2">
-      <div class="container">
-      <div id="home-2-inner" class="row" v-if="stats">
-        <div class="home-2-item py-5 col-12 col-lg-4">
-          <div class="home-2-key" v-text="$ts._home['notes-count-pre']" />
-          <div class="home-2-value" v-text="langNumber.format(stats.notesCount)" />
-          <div class="home-2-key" v-text="$ts._home['notes-count-post']" />
-        </div>
-        <div class="home-2-item py-5 col-12 col-lg-4">
-          <div class="home-2-key" v-text="$ts._home['users-count-pre']" />
-          <div class="home-2-value" v-text="langNumber.format(stats.usersCount)" />
-          <div class="home-2-key" v-text="$ts._home['users-count-post']" />
-        </div>
-        <div class="home-2-item py-5 col-12 col-lg-4">
-          <div class="home-2-key" v-text="$ts._home['instances-count-pre']" />
-          <div class="home-2-value" v-text="langNumber.format(stats.instancesCount)" />
-          <div class="home-2-key" v-text="$ts._home['instances-count-post']" />
-        </div>
-      </div>
-      </div>
     </div>
 
     <div id="home-shape-2-end"><div></div></div>
+    -->
 
+    <!--
     <div id="home-3">
-      <p v-text="$ts._home['donate-misskey']" />
+      <p v-text="i18n.locale._home['donate-misskey']" />
       <div class="home-1-buttons">
         <a href="https://www.patreon.com/syuilo" class="_textButton home-1-pa" target="_blank">
           <fa :icon="faPatreon" />
           Patreon
         </a>
       </div>
-      <p v-text="$ts._home['donate-server']" class="mt-3" />
-      <p v-text="$ts._home['develop-misskey']" class="pt-5" />
+      <p v-text="i18n.locale._home['donate-server']" class="mt-3" />
+      <p v-text="i18n.locale._home['develop-misskey']" class="pt-5" />
       <div class="home-1-buttons">
         <a href="https://github.com/misskey-dev/misskey" class="_textButton home-1-gh" target="_blank">
           <fa :icon="faGithub" />
@@ -70,8 +71,7 @@
         </a>
       </div>
     </div>
-
-    <!--<FeatureButton name="mfm" />-->
+    -->
   </div>
 
   <Footer />
@@ -87,6 +87,7 @@ import Img from '@/components/img.vue';
 import Footer from '@/components/footer.vue';
 import { langNumber } from '@/locale';
 import { splash } from '@/splash';
+import { i18n } from "@/i18n";
 
 export default defineComponent({
   name: 'Home',
@@ -101,6 +102,7 @@ export default defineComponent({
       loadCount: 0,
       stats: null as any | null,
 
+      i18n,
       langNumber,
       faGithub, faPatreon
     }
@@ -117,7 +119,7 @@ export default defineComponent({
   },
 
   mounted() {
-    setDescription(this.$t('joinmisskey'), this.$t('description'));
+    setDescription(i18n.t('joinmisskey'), i18n.t('description'));
   },
 
   methods: {
@@ -335,12 +337,12 @@ export default defineComponent({
 
   > .home-2-key {
     font-size: calc(1.25rem + .05vw);
-    color: #333;
+    color: rgba($color: #fff, $alpha: .85);
     font-weight: 700;
   }
   > .home-2-value {
     font-size: calc(2rem + .05vw);
-    color: #000;
+    color: #fff;
     font-weight: 700;
   }
 }

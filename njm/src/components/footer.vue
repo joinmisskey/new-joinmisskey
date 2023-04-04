@@ -11,7 +11,7 @@
     <div class="row w-100 py-5 justify-content-end lh-lg">
       <div class="col-12 col-lg-4">
         <div class="p-3 pl-xl-5">
-          <p><router-link to="/" class="h3 fw-light" v-text="$ts['joinmisskey']" /></p>
+          <p><router-link to="/" class="h3 fw-light" v-text="i18n.locale['joinmisskey']" /></p>
           <ul class="list-inline">
             <li v-for="([key, lang]) in localeNames" :key="key" class="list-inline-item" :lang="key">
               <a :href="localeLink(key)" v-text="lang" />
@@ -37,13 +37,13 @@
             <li><a href="https://github.com/joinmisskey/api" target="_blank"><Fa :icon="faGithub" fixed-width /> joinmisskey/api</a></li>
             <li><a href="https://gitlocalize.com/repo/6342" target="_blank"><Fa :icon="faLanguage" fixed-width /> GitLocalize</a></li>
             <li><a href="https://misskey.io/@joinmisskey" target="_blank"><Fa :icon="mkMi" fixed-width /> @joinmisskey@misskey.io</a></li>
-            <li><a href="https://github.com/joinmisskey/new-joinmisskey/wiki" target="_blank" v-text="$ts['privacy-policy']" /></li>
+            <li><a href="https://github.com/joinmisskey/new-joinmisskey/wiki" target="_blank" v-text="i18n.locale['privacy-policy']" /></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="p-3 text-end">
-      Ⓒ2023 {{ $ts['joinmisskey'] }}
+      Ⓒ2023 {{ i18n.locale['joinmisskey'] }}
     </div>
   </div>
 </template>
@@ -54,10 +54,12 @@ import { faLanguage, faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons';
 import { mkMi } from '@/mi-icon';
 import { localeNames } from '@/locale';
+import { i18n } from "@/i18n";
 
 export default defineComponent({
   data() {
     return {
+      i18n,
       localeNames,
       localeLink: lang => {
         const path = location.pathname.split('/');

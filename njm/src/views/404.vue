@@ -1,10 +1,10 @@
 <template>
   <div id="nf">
     <h1>404 Not Found</h1>
-    <p v-text="$ts['404-text']" />
+    <p v-text="i18n.locale['404-text']" />
     <p>
-      <router-link to="/" v-text="$ts['toppage']" /> /
-      <router-link to="/instances" v-text="$ts['instances-list']" /><br />
+      <router-link to="/" v-text="i18n.locale['toppage']" /> /
+      <router-link to="/instances" v-text="i18n.locale['instances-list']" /><br />
       <a href="https://misskey-hub.net">Misskey Hub</a><br />
       <a href="https://hide.ac/articles/kTkaNrnEP">joinmisskey Wikiの一部記事はHiÐΞへ移転しました。</a><br />
       <a href="https://github.com/tamaina/joinmisskey.github.io/tree/pages/ja/wiki">移転しなかった記事はGitHubのアーカイブをご覧ください。</a>
@@ -15,9 +15,15 @@
 <script lang="ts">
 import { splash } from '@/splash';
 import { defineComponent } from 'vue';
+import { i18n } from "@/i18n";
 
 export default defineComponent({
   name: '404',
+  data() {
+    return {
+      i18n,
+    };
+  },
   beforeCreate() {
     splash.value = false;
   },
