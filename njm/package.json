@@ -10,11 +10,8 @@
   "type": "module",
   "packageManager": "pnpm@8.1.1",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@gtm-support/vue-gtm": "^2.0.0",
+    "@tabler/icons-vue": "^2.14.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-vue": "^4.1.0",

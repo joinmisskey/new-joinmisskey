@@ -1,5 +1,5 @@
 <template>
-  <Header :title="i18n.locale['instances-list']" :icon="faCog" :rightClicked="openSetting" />
+  <Header :title="i18n.locale['instances-list']" :rightClicked="openSetting" />
   <div id="instances">
     <div class="row">
       <div class="px-3 col-12 col-xl-7">
@@ -99,8 +99,7 @@ const instancesSetting = ref<InstancesSetting>({ ...defaultInstancesSetting })
 </script>
 
 <script lang="ts" setup>
-import { defineComponent, nextTick, onMounted, onUnmounted, computed } from 'vue';
-import { faCog } from '@fortawesome/free-solid-svg-icons'
+import { nextTick, onMounted, onUnmounted, computed } from 'vue';
 import { setDescription } from '@/description';
 import Instance from '@/components/instance.vue';
 import Header from '@/components/header.vue';

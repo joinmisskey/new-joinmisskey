@@ -2,32 +2,30 @@
   <div id="header">
     <div class="buttons left">
       <router-link to="/" class="_button button">
-        <Fa :icon="faChevronLeft" fixed-width />
+        <IconChevronLeft />
       </router-link>
     </div>
     <div v-text="title" class="title mx-auto" />
-    <div class="buttons right" v-if="icon">
+    <div class="buttons right">
       <button @click="rightClicked" class="_button button">
-        <Fa :icon="icon" fixed-width />
+        <IconSettings />
       </button>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+<script lang="ts" setup>
+import { Component, defineProps } from "vue";
+import {
+  IconChevronLeft,
+  IconSettings,
+} from '@tabler/icons-vue';
 
-export default defineComponent({
-  props: ['title', 'icon', 'rightClicked'],
+defineProps<{
+  title: string;
+  rightClicked: (ev: MouseEvent) => unknown;
+}>();
 
-  data() {
-    return {
-
-      faChevronLeft,
-    }
-  }
-});
 </script>
 
 

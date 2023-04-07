@@ -5,7 +5,6 @@ if (location.href.includes('wiki/instances')) {
 }
 
 import { createApp } from 'vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ScriptX from 'vue-scriptx';
 //import Ads from 'vue-google-adsense';
 import { createGtm } from '@gtm-support/vue-gtm';
@@ -31,7 +30,6 @@ app
 		id: 'GTM-M98RX87'
 	})
 )
-.component('Fa', FontAwesomeIcon)
 .mount('#app');
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');

@@ -79,8 +79,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 import { setDescription } from '@/description';
 // import FeatureButton from '@/components/feature-button.vue';
 import Img from '@/components/img.vue';
@@ -104,7 +102,6 @@ export default defineComponent({
 
       i18n,
       langNumber,
-      faGithub, faPatreon
     }
   },
 
@@ -135,12 +132,12 @@ export default defineComponent({
 <style lang="scss">
 #home {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 #home-0 {
-  height: 100vh;
-  min-height: calc(37rem + 10vw);
+  height: 100svh;
+  min-height: calc(37rem + 10svw);
   position: relative;
   overflow: hidden;
 }
@@ -167,7 +164,7 @@ export default defineComponent({
 }
 
 #home-0-new-world {
-  font-size: calc(1.5rem + 0.75vw);
+  font-size: calc(1.5rem + 0.75svw);
   font-weight: 200;
   line-height: 1.2;
   margin: 0;
@@ -191,7 +188,7 @@ export default defineComponent({
 }
 
 #home-0-forever-evolving {
-  font-size: calc(1rem + 0.1vw);
+  font-size: calc(1rem + 0.1svw);
   margin-bottom: 1rem;
 }
 
@@ -209,7 +206,7 @@ export default defineComponent({
     padding: 0.6em 1.5em;
     text-align: center;
     font-weight: 400;
-    font-size: calc(1rem + 0.1vw);
+    font-size: calc(1rem + 0.1svw);
     line-height: 1.5em;
     &._textButton {
       background: #2e2e2e;
@@ -221,10 +218,10 @@ export default defineComponent({
   display: flex;
   position: absolute;
   z-index: 2;
-  top: calc(55% + (1030px - 100vw) * 0.1);
+  top: calc(55% + (1030px - 100svw) * 0.1);
   bottom: 0;
   right: 0;
-  left: 30vw;
+  left: 30svw;
   max-width: 100%;
 
   img {
@@ -244,8 +241,8 @@ export default defineComponent({
 
   img {
     width: 18rem;
-    max-width: 44vw;
-    min-width: 18vw;
+    max-width: 44svw;
+    min-width: 18svw;
     border-radius: 8px;
     box-shadow: 0 0 32px #000000aa;
   }
@@ -253,7 +250,7 @@ export default defineComponent({
 
 #home-shape-1-top {
   width: 100%;
-  height: 10vw;
+  height: 10svw;
   background: var(--accentDarken);
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
   position: absolute;
@@ -277,7 +274,7 @@ export default defineComponent({
   }
 
   p {
-    font-size: calc(1rem + 0.1vw);
+    font-size: calc(1rem + 0.1svw);
     text-align: center;
     width: 100%;
     max-width: 65rem;
@@ -300,7 +297,7 @@ export default defineComponent({
     padding: 0.6em 1.5em;
     text-align: center;
     font-weight: 400;
-    font-size: calc(1rem + 0.05vw);
+    font-size: calc(1rem + 0.05svw);
     line-height: 1.5em;
     min-width: 8rem;
     &:hover {
@@ -323,7 +320,7 @@ export default defineComponent({
 
   > div {
     width: 100%;
-    height: 10vw;
+    height: 10svw;
     background: var(--accentDarken);
     clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
     // margin-top: -3vw;
@@ -340,12 +337,12 @@ export default defineComponent({
   text-align: center;
 
   > .home-2-key {
-    font-size: calc(1.25rem + .05vw);
+    font-size: calc(1.25rem + .05svw);
     color: rgba($color: #fff, $alpha: .85);
     font-weight: 700;
   }
   > .home-2-value {
-    font-size: calc(2rem + .05vw);
+    font-size: calc(2rem + .05svw);
     color: #fff;
     font-weight: 700;
   }
@@ -356,7 +353,7 @@ export default defineComponent({
 
   > div {
     width: 100%;
-    height: 10vw;
+    height: 10svw;
     background: #fff;
     clip-path: polygon(0 -0.5px, 0 100%, 100% -0.5px);
     // margin-top: -3vw;
@@ -373,7 +370,7 @@ export default defineComponent({
   padding: 5rem 1rem;
 
   p {
-    font-size: calc(1rem + 0.05vw);
+    font-size: calc(1rem + 0.05svw);
     text-align: center;
     width: 100%;
     max-width: 65rem;
