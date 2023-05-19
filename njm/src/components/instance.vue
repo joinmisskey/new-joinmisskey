@@ -187,7 +187,7 @@ export default defineComponent({
 
 .instance-description {
   display: -webkit-box;
-  font-size: .95em;
+  font-size: .9em;
   margin: 0.8rem 1rem 1rem;
   line-height: 1.4;
   min-height: 4.2em;
@@ -208,7 +208,7 @@ export default defineComponent({
   font-size: .8rem;
   grid-gap: 4px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6.5em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));
   margin: 0 1rem;
   line-height: 1.3;
 }
@@ -218,7 +218,7 @@ export default defineComponent({
 }
 
 .instance-footer-value {
-  font-size: 1rem;
+  font-size: .9rem;
   color: var(--accent)
 }
 </style>
