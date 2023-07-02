@@ -35,7 +35,7 @@
       </div>
       <div class="instance-footer-cell">
         <div class="instance-footer-key" v-text="i18n.locale['instances-list-setting']['registration']" />
-        <div class="instance-footer-value" v-text="instance.meta.features.registration ? i18n.locale['instances-list-setting']['registration-statuses'].open : i18n.locale['instances-list-setting']['registration-statuses'].close" />
+        <div class="instance-footer-value" v-text="!instance.meta.disableRegistration ? i18n.locale['instances-list-setting']['registration-statuses'].open : i18n.locale['instances-list-setting']['registration-statuses'].close" />
       </div>
     </div>
   </a>

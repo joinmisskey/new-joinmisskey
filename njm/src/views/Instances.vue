@@ -203,11 +203,11 @@ function sort() {
   if (instancesSetting.value.registrationStatus.length == 1) {
     if (instancesSetting.value.registrationStatus[0] === 'open') {
       _sorted = _sorted.filter(instance => {
-        return instance.meta.features.registration;
+        return !instance.meta?.disableRegistration;
       });
     } else {
       _sorted = _sorted.filter(instance => {
-        return !instance.meta.features.registration;
+        return instance.meta?.disableRegistration;
       });
     }
   }
