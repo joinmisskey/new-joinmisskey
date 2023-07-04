@@ -1,0 +1,50 @@
+{
+  "language": "Español (ES)",
+  "joinmisskey": "\t\nComienza con Misskey",
+  "description": "Misskey es una plataforma de microblogging descentralizada nacida en la tierra ¿Por qué no tomarse un descanso de las bulliciosas ciudades y aventurarse en un nuevo internet?  ",
+  "slogan": "\t\nConectémonos en el nuevo mundo",
+  "next": "\t\nsiguiente",
+  "prev": "anterior",
+  "close": "cerrar",
+  "loading": "cargando...",
+  "feature": "función",
+  "_home": {
+    "forever-evolving": "Una plataforma de microblogging interplanetaria, siempre evolucionando.",
+    "setup": "Crea tu servidor",
+    "misskeyisa-decenralized": "Misskey es una plataforma de microblogging descentralizada nacida en la tierra. Debido a que existe dentro del Fediverso (un universo donde varias plataformas de redes sociales están organizadas) esta mutualmente vinculada con otras redes sociales.",
+    "whydontyou-take": "¿Por qué no tomarse un descanso de las bulliciosas ciudades y aventurarse en un nuevo internet?",
+    "notes-count-pre": "Notas totales",
+    "users-count-pre": "Usuarios totales",
+    "instances-count-pre": "Servidores totales\n",
+    "donate-misskey": "Misskey no es un negocio, es gratis de usar; por lo cual los únicos ingresos que obtenemos son de sus donaciones (en algunos casos obtenemos ingresos por anuncios, pero esos son los ingresos del operador y no de los desarrolladores directamente) Si donas, estarás contribuyendo al proyecto permitiéndonos continuar con el desarrollo. Las donaciones generalmente se aceptan a través de Patreon. Si donas cierta cantidad, tu nombre aparecerá en la página de información de Misskey.",
+    "donate-server": "También, los operadores de los servidores no están generando ningún ingreso. Mantener un servidor es caro, así que por favor coincidiera apoyar al operador del servidor.",
+    "develop-misskey": "Si tienes habilidades de ingeniería de software, puedes contribuir al proyecto editando el código fuente."
+  },
+  "instances-list": "Lista de servidores",
+  "instances-list-description": "Esta pagina muestra una lista de servidores de Misskey.",
+  "instances-list-setting": {
+    "setting": "Configuración",
+    "order": "Orden de búsqueda",
+    "orders": {
+      "default": "Por defecto",
+      "version": "Versión",
+      "originalNotesCount": "Numero de notas",
+      "originalUsersCount": "Numero de usuarios"
+    },
+    "descending": "Descendente ",
+    "ascending": "Ascendente ",
+    "repository": "Repositorio",
+    "language": "Idioma",
+    "registration": "Registro",
+    "registration-statuses": {
+      "open": "Abierto",
+      "close": "Cerrado"
+    },
+    "accept": "Aplicar"
+  },
+  "notes-count": "Notas",
+  "users-count": "Usuarios",
+  "404-text": "La pagina que estabas buscando no se encuentra.",
+  "toppage": "página de inicio",
+  "privacy-policy": "política de privacidad"
+}
