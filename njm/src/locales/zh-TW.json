@@ -20,8 +20,8 @@
     "donate-server": "此外，伺服器的運營者基本上不能賺錢。由於運營伺服器需要成本，請考慮支援運營者。雖然與開發沒有直接的關係，正因為有著伺服器才有了這個專案，因此維持運營是和開發同樣重要的。",
     "develop-misskey": "如果您具備軟體工程師的技能，您可以透過編輯原始碼來為本專案做出貢獻。"
   },
-  "instances-list": "實例列表",
-  "instances-list-description": "列出 Misskey 實例。",
+  "instances-list": "伺服器列表",
+  "instances-list-description": "此頁面顯示 Misskey 伺服器列表。",
   "instances-list-setting": {
     "setting": "列表設定",
     "order": "排序",
