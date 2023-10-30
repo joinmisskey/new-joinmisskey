@@ -1,41 +1,41 @@
 {
-  "language": "O'zbek",
-  "joinmisskey": "Misskey ni boshlaylik",
-  "description": "Misskey - yerda yaralgan, desentrallashgan mikroblog platforma. Shahardagi ish va shovqinlardan dam olib yangi internetga sari sho'ng'ishni xohlamaysizmi?",
-  "slogan": "Keling yangi dunyoga ulanamiz",
+  "language": "O‘zbekcha",
+  "joinmisskey": "Misskeyga qo‘shilish",
+  "description": "Misskey - yerda yaralgan, markazlashmagan mikroblog platforma. Shahardagi ish va shovqinlardan dam olib yangi internet ummoni sari sho‘ng‘ishni xohlamaysizmi?",
+  "slogan": "Keling yangi dunyoga bog‘lanamiz",
   "next": "keyingi",
-  "prev": "oldingi",
+  "prev": "avvalgi",
   "close": "yopish",
   "loading": "yuklash...",
-  "feature": "qulaylik",
+  "feature": "imkoniyatlar",
   "_home": {
     "forever-evolving": "Doimiy rivojlanuvchan sayyoralararo mikroblog platforma.",
-    "setup": "O`zingizning instansiyangizni ishga tushuring",
-    "misskeyisa-decenralized": "Misskey - Yer sharida tug'ilgan desentralizatsiyalashtirilgan mikroblog platformasi. U Fedivers (turli ijtimoiy tarmoqlar platformalarining tashkil etilgan olam) doirasida mavjudligi sababli, u boshqa ijtimoiy tarmoqlar platformalari bilan o'zaro bog'liq.",
-    "whydontyou-take": "Shahardagi ish va shovqinlardan dam olib yangi internetga sari sho'ng'ishni xohlamaysizmi?",
+    "setup": "O‘zingizning Misskey nusxangizni ishga tushiring",
+    "misskeyisa-decenralized": "Misskey - yer sharida tug‘ilgan markazlashmagan mikroblog platformasi. U Fedivers (turli ijtimoiy tarmoqlar platformalarining tashkil etilgan olam) doirasida mavjudligi sababli, u boshqa ijtimoiy tarmoqlar platformalari bilan o‘zaro bog‘liq.",
+    "whydontyou-take": "Shahardagi ish va shovqinlardan dam olib yangi internet ummoni sari sho‘ng‘ishni xohlamaysizmi?",
     "notes-count-pre": "Jami yozuvlar",
     "users-count-pre": "Jami foydalanuvchilar",
-    "instances-count-pre": "Jami instansiyalar",
-    "donate-misskey": "Misskey - bu biznes emas, u ishlatishga tekindir, shuning uchun ham bizning yagona oladigan foydamiz, - bu sizning xayriyangiz (ba'zi holatlarda biz reklamalardan ham olishimiz mumkin, lekin bu operator foydasiga, dasturchilarniki emas). Agar siz xayriya qilsangiz, siz loyiha va bizning rivojlanishimizga hissa qo'shasiz. Xayriyalar odatda Patreon orqali qabul qilinadi. Agar siz ma'lum summa xayriya qilsangiz, sizning ismingiz Misskey ma'lumotlar sahifasida ko'rsatiladi.",
-    "donate-server": "Bundan tashqari, server operatorlari aslida hech qanday daromadni olishmaydi. Serverni eplash arzonga tushmaydi, shuning uchun, iltimos, server operatorini qo'llab-quvvatlash haqida ham o'ylang.",
-    "develop-misskey": "Agar sizda dasturiy ta'minot ishlab chiqish bo'yicha tajribangiz bo'lsa, siz loyihaga manba kodini tahrirlash orqali hissa qo'shishingiz mumkin."
+    "instances-count-pre": "Jami nusxalar",
+    "donate-misskey": "Misskey - bu biznes emas, u ishlatish uchun tekindir, shuning uchun ham bizning yagona oladigan foydamiz - bu sizning xayriyangiz (ba‘zi holatlarda biz reklamalardan ham olishimiz mumkin, lekin bu operator foydasiga, dasturchilarniki emas). Agar siz xayriya qilsangiz, siz loyiha va bizning rivojlanishimizga hissa qo‘shasiz. Xayriyalar odatda Patreon orqali qabul qilinadi. Agar siz ma‘lum summa xayriya qilsangiz, sizning ismingiz Misskey ma‘lumotlar sahifasida ko‘rsatiladi.",
+    "donate-server": "Bundan tashqari, server operatorlari aslida hech qanday daromadni olishmaydi. Serverni boshqarish arzonga tushmaydi, shuning uchun, iltimos, server operatorini qo‘llab-quvvatlash haqida ham o‘ylang.",
+    "develop-misskey": "Agar sizda dasturiy ta‘minot ishlab chiqish bo‘yicha tajribangiz bo‘lsa, siz loyihaga manba kodini tahrirlash orqali hissa qo‘shishingiz mumkin."
   },
-  "instances-list": "Instansiyalar ro`yxati",
-  "instances-list-description": "Ushbu sahifada Misskey instansiyalarining ro`yxati ko`rsatiladi.",
+  "instances-list": "Nusxalar ro‘yxati",
+  "instances-list-description": "Ushbu sahifada Misskey nusxalarining ro‘yxati ko‘rsatiladi.",
   "instances-list-setting": {
-    "setting": "Parametrlar",
-    "order": "Saralash",
+    "setting": "Sozlamalar",
+    "order": "Tartiblash",
     "orders": {
-      "default": "Standart holat",
-      "version": "Versiya",
-      "originalNotesCount": "Yozuvlar soni bo`yicha",
-      "originalUsersCount": "Foydalanuvchilar soni bo'yicha"
+      "default": "Odatiy holat",
+      "version": "Talqin",
+      "originalNotesCount": "Yozuvlar soni bo‘yicha",
+      "originalUsersCount": "Foydalanuvchilar soni bo‘yicha"
     },
     "descending": "Kamayish tartibida",
-    "ascending": "O`sish tartibida",
+    "ascending": "O‘sish tartibida",
     "repository": "Ombor",
     "language": "Til",
-    "registration": "Ro`yxatdan o`tish",
+    "registration": "Ro‘yxatdan o‘tish",
     "registration-statuses": {
       "open": "Ochiq",
       "close": "Yopiq"
@@ -44,7 +44,7 @@
   },
   "notes-count": "Yozuvlar",
   "users-count": "Foydalanuvchilar",
-  "404-text": "Siz qidirgan sahifa mavjud emas.",
+  "404-text": "Siz izlagan sahifa mavjud emas.",
   "toppage": "asosiy sahifa",
-  "privacy-policy": "Politika shartlari"
+  "privacy-policy": "Maxfiylik siyosati"
 }
