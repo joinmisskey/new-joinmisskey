@@ -4,7 +4,7 @@ import { lang } from "./locale";
 export const repositories = [
   "misskey-dev/misskey"
 ] as const;
-export const orderOptions = ['default', 'originalNotesCount', 'originalUsersCount'] as const;
+export const orderOptions = ['default', 'notesPerDay', 'originalNotesCount', 'originalUsersCount'] as const;
 export const registrationStatuses = ['open', 'close'] as const;
 export const instanceLanguages = ['ja', 'en', 'de', 'fr', 'zh', 'ko', 'ru', 'th', 'es', 'nl', 'bh', 'sv', 'it', 'cs', 'id', 'uk', 'pt', 'uz'] as const;
 

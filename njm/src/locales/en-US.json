@@ -28,6 +28,7 @@
     "orders": {
       "default": "Default",
       "version": "Version",
+      "notesPerDay": "Number of Notes per Day (15-day average)",
       "originalNotesCount": "Number of Notes",
       "originalUsersCount": "Number of Users"
     },

@@ -39,6 +39,7 @@
     "orders": {
       "default": "デフォルト",
       "version": "バージョン",
+      "notesPerDay": "1日あたりのノート数（15日平均）",
       "originalNotesCount": "ノート数",
       "originalUsersCount": "ユーザー数"
     },

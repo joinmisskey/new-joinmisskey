@@ -15,17 +15,11 @@
 </template>
 
 <script lang="ts" setup>
-import { Component, defineProps } from "vue";
+import { } from "vue";
 import {
   IconChevronLeft,
   IconSettings,
 } from '@tabler/icons-vue';
-
-defineProps<{
-  title: string;
-  rightClicked: (ev: MouseEvent) => unknown;
-}>();
-
 </script>
 
 

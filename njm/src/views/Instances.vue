@@ -181,6 +181,9 @@ function sort() {
 
   //#region sort order
   switch (instancesSetting.value.orderBy) {
+    case 'notesPerDay':
+      _sorted = _sorted.sort((a, b) => (b.npd15 - a.npd15) * (instancesSetting.value.orderDesc ? 1 : -1));
+      break;
     case 'originalNotesCount':
       _sorted = _sorted.sort((a, b) => (b.stats.originalNotesCount - a.stats.originalNotesCount) * (instancesSetting.value.orderDesc ? 1 : -1));
       break;
