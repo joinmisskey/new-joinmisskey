@@ -20,6 +20,11 @@ import {
   IconChevronLeft,
   IconSettings,
 } from '@tabler/icons-vue';
+
+defineProps<{
+  title: string;
+  rightClicked: (ev: MouseEvent) => unknown;
+}>();
 </script>
 
 
