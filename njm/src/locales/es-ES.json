@@ -1,9 +1,9 @@
 {
   "language": "Español (ES)",
-  "joinmisskey": "\t\nComienza con Misskey",
+  "joinmisskey": "Comienza con Misskey",
   "description": "Misskey es una plataforma de microblogging descentralizada nacida en la tierra ¿Por qué no tomarse un descanso de las bulliciosas ciudades y aventurarse en un nuevo internet?  ",
-  "slogan": "\t\nConectémonos en el nuevo mundo",
-  "next": "\t\nsiguiente",
+  "slogan": "Conectémonos en el nuevo mundo",
+  "next": "siguiente",
   "prev": "anterior",
   "close": "cerrar",
   "loading": "cargando...",
@@ -16,8 +16,8 @@
     "notes-count-pre": "Notas totales",
     "users-count-pre": "Usuarios totales",
     "instances-count-pre": "Servidores totales\n",
-    "donate-misskey": "Misskey no es un negocio, es gratis de usar; por lo cual los únicos ingresos que obtenemos son de sus donaciones (en algunos casos obtenemos ingresos por anuncios, pero esos son los ingresos del operador y no de los desarrolladores directamente) Si donas, estarás contribuyendo al proyecto permitiéndonos continuar con el desarrollo. Las donaciones generalmente se aceptan a través de Patreon. Si donas cierta cantidad, tu nombre aparecerá en la página de información de Misskey.",
-    "donate-server": "También, los operadores de los servidores no están generando ningún ingreso. Mantener un servidor es caro, así que por favor coincidiera apoyar al operador del servidor.",
+    "donate-misskey": "Misskey no es un negocio, es gratis de usar; por lo cual los únicos ingresos que obtenemos son de sus donaciones (en algunos casos obtenemos ingresos por anuncios, pero esos son los ingresos del operador y no van directamente a los desarrolladores). Si donas, estarás contribuyendo al proyecto permitiéndonos continuar con el desarrollo. Las donaciones generalmente se aceptan a través de Patreon. Si donas cierta cantidad, tu nombre aparecerá en la página de información de Misskey.",
+    "donate-server": "Además, los operadores de los servidores no están generan ningún ingreso. Mantener un servidor es caro, así que por favor coinsidere apoyar al operador del servidor.",
     "develop-misskey": "Si tienes habilidades de ingeniería de software, puedes contribuir al proyecto editando el código fuente."
   },
   "instances-list": "Lista de servidores",
