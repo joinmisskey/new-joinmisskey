@@ -1,5 +1,5 @@
 import extend from 'extend';
-const localeMods = import.meta.glob('./locales/*.json');
+const localeMods = import.meta.glob('./locales/*.json') as Record<string, () => Promise<Record<string, any>>>;
 
 export const locales = Object.keys(localeMods).reduce((res, key) => {
   const matched = key.match(/([A-Za-z0-9-_]+)\./i)
